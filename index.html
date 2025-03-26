@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👻 Ghostbyte.dev — Boo! Under Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c2c54, #0f0f2d);
+            color: #fff;
+            font-family: 'Fredoka', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            /* This is key */
+        }
+
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            opacity: 0.85;
+            margin: 0.2rem;
+        }
+
+        .ghost {
+            position: absolute;
+            margin-bottom: 200px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 200px;
+            background: white;
+            border-radius: 70% 70% 0 0;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+
+        .eye {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #2c2c54;
+            border-radius: 50%;
+            top: 60px;
+        }
+
+        .eye.left {
+            left: 45px;
+        }
+
+        .eye.right {
+            right: 45px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) translateY(-20px);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ghost">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+    </div>
+    <h1>Ghostbyte.dev</h1>
+    <p>Boo! We're not quite here yet...</p>
+    <p>Our little ghosts are working behind the scenes 👻</p>
+    <p>Coming soon to haunt the web!</p>
+    <footer>
+        &copy; <span id="year"></span> Ghostbyte — Building in the shadows
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
