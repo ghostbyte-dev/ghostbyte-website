@@ -11,7 +11,7 @@ export default function Home() {
 
       {/* Title & Text */}
       <h1 className="text-4xl mb-2">Ghostbyte.dev</h1>
-      <p className="text-lg opacity-85 mb-2">Boo! We're not quite here yet...</p>
+      <p className="text-lg opacity-85 mb-2">Boo! We&apos;re not quite here yet...</p>
       <p className="text-lg opacity-85 mb-2">Our little ghosts are working behind the scenes 👻</p>
       <p className="text-lg opacity-85 mb-8">Coming soon to haunt the web!</p>
 
