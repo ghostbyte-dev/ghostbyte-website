@@ -13,7 +13,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">

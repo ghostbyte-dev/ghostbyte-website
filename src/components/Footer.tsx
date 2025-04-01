@@ -2,7 +2,7 @@ import { Code, Github, Twitter, Linkedin, ChevronRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-black/70 backdrop-blur-sm py-12 relative z-10">
+    <footer className="w-full border-t border-white/10 bg-black/70 backdrop-blur-sm py-12 relative z-10 flex justify-center">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}

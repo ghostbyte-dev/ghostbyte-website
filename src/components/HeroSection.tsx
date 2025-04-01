@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
-export default function HeroSection () {
+export default function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0">
@@ -29,13 +29,13 @@ export default function HeroSection () {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <button className="bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6">
+              <button className="bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md">
                 <span className="relative z-10 flex items-center">
                   View Our Work
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               </button>
-              <button className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6">
+              <button className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
                 Contact Us
               </button>
             </div>

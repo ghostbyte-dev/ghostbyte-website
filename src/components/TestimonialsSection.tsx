@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TeamSection () {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">
@@ -19,21 +19,6 @@ export default function TeamSection () {
                 experiences.
               </p>
             </div>
-            <div className="space-y-2 max-w-[800px] mx-auto text-center">
-              <p className="text-muted-foreground">
-                Founded in 2018, we've grown from a small team of two to a
-                boutique studio of talented professionals. Our mission is to
-                help businesses leverage technology to achieve their goals and
-                stay ahead of the competition.
-              </p>
-              <p className="text-muted-foreground">
-                We believe in a collaborative approach, working closely with our
-                clients to understand their needs and deliver solutions that
-                exceed their expectations. Our commitment to quality,
-                innovation, and customer satisfaction has earned us a reputation
-                as a trusted partner for businesses of all sizes.
-              </p>
-            </div>
           </div>
 
           {/* Team Members - 2 people */}
@@ -47,8 +32,8 @@ export default function TeamSection () {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-70 blur-sm"></div>
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
-                      src="/placeholder.svg?height=128&width=128"
-                      alt="Alex Morgan"
+                      src="/img/daniel.webp"
+                      alt="Daniel Hiebeler"
                       width={128}
                       height={128}
                       className="object-cover"
@@ -57,7 +42,7 @@ export default function TeamSection () {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Alex Morgan</h3>
+                  <h3 className="text-xl font-bold">Daniel Hiebeler</h3>
                   <p className="text-sm text-fuchsia-400 font-medium">
                     Founder & Lead Developer
                   </p>
@@ -103,8 +88,8 @@ export default function TeamSection () {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-600 opacity-70 blur-sm"></div>
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
-                      src="/placeholder.svg?height=128&width=128"
-                      alt="Jamie Chen"
+                      src="/img/emanuel.webp"
+                      alt="Emanuel Hiebeler"
                       width={128}
                       height={128}
                       className="object-cover"
@@ -113,7 +98,7 @@ export default function TeamSection () {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Jamie Chen</h3>
+                  <h3 className="text-xl font-bold">Emanuel Hiebeler</h3>
                   <p className="text-sm text-cyan-400 font-medium">
                     Creative Director & UX Designer
                   </p>
@@ -150,16 +135,6 @@ export default function TeamSection () {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex justify-center gap-4">
-            <button className="bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0">
-              Our Process
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
-            <button className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10">
-              Our Technologies
-            </button>
           </div>
         </div>
       </div>
