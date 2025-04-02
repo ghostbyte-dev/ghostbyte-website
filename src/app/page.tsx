@@ -50,7 +50,7 @@ export default function LandingPage() {
 
         <TeamSection />
 
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         <ContactSection />
       </main>

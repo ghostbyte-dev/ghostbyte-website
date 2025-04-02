@@ -1,180 +1,93 @@
-import { Code, Github, Twitter, Linkedin, ChevronRight } from "lucide-react";
+import {
+  Code,
+  Github,
+  Twitter,
+  Linkedin,
+  ChevronRight,
+  Heart,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-black/70 backdrop-blur-sm py-12 relative z-10 flex justify-center">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-80 blur-sm"></div>
-                <div className="relative flex items-center justify-center rounded-full bg-black p-1.5">
-                  <Code className="h-5 w-5 text-white" />
-                </div>
-              </div>
-              <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
-                Ghostbyte
-              </span>
+    <footer className="text-white pt-20 pb-3">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
+          {/* Brand column */}
+          <div className="md:w-1/3">
+            <div className="flex items-center gap-3 mb-8">
+              {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
+                <img src="/logo_dark.svg" height={22} width={22} />
+              </div> */}
+              <h3 className="text-3xl font-bold">Ghostbyte</h3>
             </div>
-            <p className="text-sm text-gray-400">
-              Transforming ideas into digital reality since 2018. We specialize
-              in creating exceptional software solutions for businesses of all
-              sizes.
+            <p className="mb-8 text-zinc-400 text-lg">
+              Turning Ideas Into Digital Reality
             </p>
             <div className="flex gap-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-fuchsia-400 transition-colors"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-fuchsia-400 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-fuchsia-400 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
+              <Link href="https://github.com/ghostbyte-dev">
+                <Github className="h-6 w-6" />
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-white">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Home</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>About Us</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Services</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Projects</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Contact</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-white">Our Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Mobile Development</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Web Development</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Custom Software</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>UI/UX Design</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors flex items-center gap-1"
-                >
-                  <ChevronRight className="h-3 w-3" />
-                  <span>Digital Strategy</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-white">Stay Updated</h3>
-            <p className="text-sm text-gray-400">
-              Subscribe to our newsletter to receive the latest updates and
-              news.
-            </p>
-            <form className="space-y-2">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                />
+          {/* Links columns */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-white">Navigation</h3>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="/#projects"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#services"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#about"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#contact"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-white">Contact us</h3>
+              <div className="mb-3">
+                <Link href="mailto:hey@ghostbyte.dev">hey@ghostbyte.dev</Link>
               </div>
-              <button className="w-full h-10 bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 text-sm">
-                Subscribe
-              </button>
-            </form>
+
+              <div>
+                <Link href="tel:+4367761332011">+43 677 61332011</Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-10 pb-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-center text-sm text-gray-400 md:text-left">
             &copy; {new Date().getFullYear()} Ghostbyte. All rights reserved.
           </p>
@@ -189,13 +102,7 @@ export default function Footer() {
               href="#"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
-            >
-              Cookie Policy
+              Imprint
             </a>
           </div>
         </div>

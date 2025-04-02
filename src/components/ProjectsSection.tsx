@@ -98,14 +98,14 @@ export default function ProjectsSection () {
             </div>
           </div>
 
-          {/* Project 3 - Veritate */}
+          {/* Project 3 - Ghostbyte Library */}
           <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/10">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative aspect-video overflow-hidden rounded-t-xl">
               <div className="absolute inset-0 z-10 bg-black/40 transition-colors group-hover:bg-black/30"></div>
               <Image
                 src="/placeholder.svg?height=300&width=500"
-                alt="Veritate Band Website"
+                alt="Ghostbyte Library"
                 width={500}
                 height={300}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -118,15 +118,14 @@ export default function ProjectsSection () {
                       <Music className="h-6 w-6" />
                     </div>
                   </div>
-                  <h3 className="mt-2 text-xl font-bold">Veritate</h3>
-                  <p className="text-sm text-white/80">Band Website</p>
+                  <h3 className="mt-2 text-xl font-bold">Ghostbyte Library</h3>
+                  <p className="text-sm text-white/80"></p>
                 </div>
               </div>
             </div>
             <div className="p-6">
               <p className="text-sm text-muted-foreground">
-                An immersive website for the band Veritate, featuring music
-                streaming, tour dates, and merchandise sales.
+                Placeholder Placeholder Placeholder PlaceholderPlaceholder Placeholder
               </p>
               <div className="mt-4 flex justify-end">
                 <button className="bg-transparent hover:bg-white/5 text-white group/btn">
@@ -136,13 +135,6 @@ export default function ProjectsSection () {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex justify-center">
-          <button className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 group">
-            View All Projects
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
         </div>
       </div>
     </section>

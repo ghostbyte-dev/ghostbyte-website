@@ -1,9 +1,12 @@
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
-export default function TeamSection () {
+export default function TeamSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
+    <section
+      id="about"
+      className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">
@@ -14,9 +17,8 @@ export default function TeamSection () {
                 Who We Are
               </h2>
               <p className="max-w-[800px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Ghostbyte is a team of passionate developers, designers, and
-                strategists dedicated to creating exceptional digital
-                experiences.
+                Ghostbyte is a small but dedicated team of developers passionate
+                about creating innovative and high-quality digital experiences.
               </p>
             </div>
           </div>
@@ -44,32 +46,31 @@ export default function TeamSection () {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Daniel Hiebeler</h3>
                   <p className="text-sm text-fuchsia-400 font-medium">
-                    Founder & Lead Developer
+                    Creative Director
                   </p>
                   <p className="text-sm text-gray-400">
-                    With over 10 years of experience in software development,
-                    Alex leads our technical team and oversees all project
-                    architecture and implementation.
+                    Daniel is a developer passionate about crafting innovative
+                    and user-friendly software solutions.
                   </p>
                 </div>
 
                 <div className="flex gap-3 pt-2">
                   <a
-                    href="#"
+                    href="https://github.com/daniebeler"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/daniebeler"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
+                    <Instagram className="h-5 w-5" />
+                    <span className="sr-only">Instagram</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/danielhiebeler"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
@@ -100,37 +101,29 @@ export default function TeamSection () {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Emanuel Hiebeler</h3>
                   <p className="text-sm text-cyan-400 font-medium">
-                    Creative Director & UX Designer
+                    Lead Developer
                   </p>
                   <p className="text-sm text-gray-400">
-                    Jamie brings creative vision to every project, with
-                    expertise in UI/UX design, branding, and digital strategy
-                    that transforms ideas into beautiful, functional
-                    experiences.
+                    Emanuel brings expertise in development and problem-solving,
+                    ensuring high-quality and efficient applications at
+                    Ghostbyte.
                   </p>
                 </div>
 
                 <div className="flex gap-3 pt-2">
                   <a
-                    href="#"
+                    href="https://github.com/Hiebeler"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/hiebeler05"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
+                    <Instagram className="h-5 w-5" />
+                    <span className="sr-only">Instagram</span>
                   </a>
                 </div>
               </div>
