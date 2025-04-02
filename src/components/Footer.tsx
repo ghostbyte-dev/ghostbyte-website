@@ -1,10 +1,5 @@
 import {
-  Code,
   Github,
-  Twitter,
-  Linkedin,
-  ChevronRight,
-  Heart,
 } from "lucide-react";
 import Link from "next/link";
 

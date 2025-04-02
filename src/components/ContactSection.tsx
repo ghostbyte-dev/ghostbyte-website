@@ -1,16 +1,3 @@
-import {
-  Send,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Calendar,
-  Github,
-  Twitter,
-  Linkedin,
-  MessageSquare,
-} from "lucide-react";
-
 export default function ContactSection() {
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">

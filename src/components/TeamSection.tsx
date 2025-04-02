@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export default function TeamSection() {
