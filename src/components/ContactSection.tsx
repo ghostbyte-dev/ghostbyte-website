@@ -85,10 +85,10 @@ export default function ContactSection() {
                     <div className="text-center text-sm text-gray-400">
                       Or email us directly at{" "}
                       <a
-                        href="mailto:info@ghostbyte.com"
+                        href="mailto:hey@ghostbyte.com"
                         className="text-fuchsia-400 hover:text-cyan-400 transition-colors"
                       >
-                        info@ghostbyte.com
+                        hey@ghostbyte.com
                       </a>
                     </div>
                   </div>

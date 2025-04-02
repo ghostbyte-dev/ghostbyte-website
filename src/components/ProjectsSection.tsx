@@ -1,9 +1,12 @@
 import { ArrowRight, Globe, Music, Smartphone } from "lucide-react";
 import Image from "next/image";
 
-export default function ProjectsSection () {
+export default function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
+    <section
+      id="projects"
+      className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">
@@ -51,7 +54,7 @@ export default function ProjectsSection () {
                 capabilities and social sharing features.
               </p>
               <div className="mt-4 flex justify-end">
-                <button className="bg-transparent hover:bg-white/5 text-white group/btn">
+                <button className="bg-transparent hover:bg-white/5 text-white group/btn flex items-center">
                   <span>View Project</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </button>
@@ -90,7 +93,7 @@ export default function ProjectsSection () {
                 portfolio and connect with others in their industry.
               </p>
               <div className="mt-4 flex justify-end">
-                <button className="bg-transparent hover:bg-white/5 text-white group/btn">
+                <button className="bg-transparent hover:bg-white/5 text-white group/btn flex items-center">
                   <span>View Project</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </button>
@@ -125,10 +128,11 @@ export default function ProjectsSection () {
             </div>
             <div className="p-6">
               <p className="text-sm text-muted-foreground">
-                Placeholder Placeholder Placeholder PlaceholderPlaceholder Placeholder
+                Placeholder Placeholder Placeholder PlaceholderPlaceholder
+                Placeholder
               </p>
               <div className="mt-4 flex justify-end">
-                <button className="bg-transparent hover:bg-white/5 text-white group/btn">
+                <button className="bg-transparent hover:bg-white/5 text-white group/btn flex items-center">
                   <span>View Project</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </button>
