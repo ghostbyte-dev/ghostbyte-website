@@ -23,7 +23,7 @@ export default function HeroSection() {
                   Digital Reality
                 </span>
               </h1>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
+              <p className="max-w-[600px] text-zinc-300 mt-6 md:text-xl">
                 Ghostbyte is a software development studio specializing in
                 creating exceptional digital experiences for businesses and
                 brands.

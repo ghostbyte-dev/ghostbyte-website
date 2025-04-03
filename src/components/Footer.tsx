@@ -12,7 +12,11 @@ export default function Footer() {
               {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
                 <img src="/logo_dark.svg" height={22} width={22} />
               </div> */}
-              <h3 className="text-3xl font-bold">Ghostbyte</h3>
+              <h3 className="text-3xl font-bold">
+                <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
+                  Ghostbyte
+                </span>
+              </h3>
             </div>
             <p className="mb-8 text-zinc-400 text-lg">
               Turning Ideas Into Digital Reality
