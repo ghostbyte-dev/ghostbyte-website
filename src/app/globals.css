@@ -43,6 +43,12 @@
   }
 }
 
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -77,4 +83,3 @@
 .animate-glow {
   animation: glow 3s infinite;
 }
-
