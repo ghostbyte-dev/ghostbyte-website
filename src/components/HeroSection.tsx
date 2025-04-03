@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -29,15 +30,15 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <button className="bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md">
+              <Link href="/#projects" className="flex bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md">
                 <span className="relative z-10 flex items-center">
                   View Our Work
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
-              </button>
-              <button className="bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
+              </Link>
+              <Link href="/#contact" className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
 

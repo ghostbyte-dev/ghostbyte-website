@@ -15,8 +15,6 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat opacity-[0.02]"></div>
       </div>
 
-      <Navbar />
-
       <main className="flex-1 relative z-10">
         <HeroSection />
 
@@ -30,8 +28,6 @@ export default function LandingPage() {
 
         <ContactSection />
       </main>
-
-      <Footer />
     </div>
   );
 }

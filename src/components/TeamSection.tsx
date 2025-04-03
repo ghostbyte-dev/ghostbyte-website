@@ -1,5 +1,6 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TeamSection() {
   return (
@@ -55,27 +56,33 @@ export default function TeamSection() {
                 </div>
 
                 <div className="flex gap-3 pt-2">
-                  <a
+                  <Link
                     href="https://github.com/daniebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.instagram.com/daniebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/in/danielhiebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-fuchsia-400 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -111,20 +118,24 @@ export default function TeamSection() {
                 </div>
 
                 <div className="flex gap-3 pt-2">
-                  <a
+                  <Link
                     href="https://github.com/Hiebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.instagram.com/hiebeler05"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

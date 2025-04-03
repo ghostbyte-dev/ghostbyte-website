@@ -10,35 +10,37 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur-xl flex justify-center">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
-            Ghostbyte
-          </span>
+          <Link href="/">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
+              Ghostbyte
+            </span>
+          </Link>
         </div>
 
         <nav className="hidden md:flex gap-6">
           <Link
-            href="#projects"
+            href="/#projects"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
             Projects
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
-            href="#services"
+            href="/#services"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
             Services
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
-            href="#about"
+            href="/#about"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
             About
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
             Contact
@@ -47,9 +49,12 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button className="relative overflow-hidden p-2 rounded-md group bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 hover:cursor-pointer">
+          <Link
+            href="/#contact"
+            className="relative overflow-hidden px-4 py-2 rounded-md group bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 hover:cursor-pointer"
+          >
             <span className="relative z-10">Get in Touch</span>
-          </button>
+          </Link>
 
           <button
             className="md:hidden relative z-20"

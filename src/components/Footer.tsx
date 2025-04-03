@@ -1,6 +1,4 @@
-import {
-  Github,
-} from "lucide-react";
+import { Github } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -20,7 +18,11 @@ export default function Footer() {
               Turning Ideas Into Digital Reality
             </p>
             <div className="flex gap-4">
-              <Link href="https://github.com/ghostbyte-dev">
+              <Link
+                href="https://github.com/ghostbyte-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="h-6 w-6" />
               </Link>
             </div>
@@ -87,18 +89,18 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ghostbyte. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a
-              href="#"
+            <Link
+              href="/privacy"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/imprint"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
               Imprint
-            </a>
+            </Link>
           </div>
         </div>
       </div>
