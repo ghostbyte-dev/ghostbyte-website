@@ -1,19 +1,26 @@
 import { Smartphone, Globe, Code } from "lucide-react";
+import { getDictionary } from "../dictionaries";
 
-export default function ServiceSection() {
+export default function ServiceSection({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["services"];
+}) {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center">
+    <section
+      id="services"
+      className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
-              What We Do
+              {dictionary.title}
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              We offer a comprehensive range of software development services to
-              help your business succeed.
+              {dictionary.description}
             </p>
           </div>
         </div>

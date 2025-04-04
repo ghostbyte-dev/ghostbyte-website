@@ -1,8 +1,13 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { getDictionary } from "../dictionaries";
 
-export default function TeamSection() {
+export default function TeamSection({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["team"];
+}) {
   return (
     <section
       id="about"
@@ -14,12 +19,11 @@ export default function TeamSection() {
         <div className="flex flex-col space-y-12">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
-                Who We Are
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                {dictionary.title}
               </h2>
               <p className="max-w-[800px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Ghostbyte is a small but dedicated team of developers passionate
-                about creating innovative and high-quality digital experiences.
+                {dictionary.description}
               </p>
             </div>
           </div>
@@ -47,11 +51,10 @@ export default function TeamSection() {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Daniel Hiebeler</h3>
                   <p className="text-sm text-fuchsia-400 font-medium">
-                    Creative Director
+                    {dictionary.daniel_job}
                   </p>
                   <p className="text-sm text-gray-400">
-                    Daniel is a developer passionate about crafting innovative
-                    and user-friendly software solutions.
+                    {dictionary.daniel_description}
                   </p>
                 </div>
 
@@ -108,12 +111,10 @@ export default function TeamSection() {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Emanuel Hiebeler</h3>
                   <p className="text-sm text-cyan-400 font-medium">
-                    Lead Developer
+                    {dictionary.emanuel_job}
                   </p>
                   <p className="text-sm text-gray-400">
-                    Emanuel brings expertise in development and problem-solving,
-                    ensuring high-quality and efficient applications at
-                    Ghostbyte.
+                    {dictionary.emanuel_description}
                   </p>
                 </div>
 

@@ -14,7 +14,7 @@ export default async function LandingPage(props: {
   const { lang } = await props.params;
 
   const dictionary = await getDictionary(lang);
-  
+
   return (
     <div className="dark bg-[#030014] pt-16">
       <div className="absolute inset-0 z-0">
@@ -26,15 +26,15 @@ export default async function LandingPage(props: {
       <main className="flex-1 relative z-10">
         <HeroSection dictionary={dictionary.hero} />
 
-        <ProjectsSection dictionary={dictionary.projects}/>
+        <ProjectsSection dictionary={dictionary.projects} />
 
-        <ServiceSection />
+        <ServiceSection dictionary={dictionary.services} />
 
-        <TeamSection />
+        <TeamSection dictionary={dictionary.team} />
 
         {/* <TestimonialsSection /> */}
 
-        <ContactSection />
+        <ContactSection dictionary={dictionary.contact} />
       </main>
     </div>
   );

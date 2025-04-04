@@ -24,5 +24,31 @@
         "mobile_application": "Mobile Application",
         "web_app": "Web App",
         "pixelix_description": "A feature-rich mobile application with advanced image editing capabilities and social sharing features."
+    },
+    "team": {
+        "title": "Who We Are",
+        "description": "Ghostbyte is a small but dedicated team of developers passionate about creating innovative and high-quality digital experiences.",
+        "daniel_job": "Creative Director",
+        "daniel_description": "Daniel is a developer passionate about crafting innovative and user-friendly software solutions.",
+        "emanuel_job": "Lead Developer",
+        "emanuel_description": "Emanuel brings expertise in development and problem-solving, ensuring high-quality and efficient applications at Ghostbyte."
+    },
+    "contact": {
+        "title": "Get in touch",
+        "description": "Have a project in mind? Send us a message and let's create something amazing together.",
+        "name_label": "Name",
+        "name_placeholder": "Your name",
+        "email_label": "Email",
+        "email_placeholder": "your@email.com",
+        "subject_label": "Subject",
+        "subject_placeholder": "What's this about?",
+        "message_label": "Message",
+        "message_placeholder": "Tell us about yur project...",
+        "send_message": "Send Message",
+        "mail_directly": "Or email us directly at"
+    },
+    "services": {
+        "title": "Services",
+        "description": "We offer a comprehensive range of software development services to help your business succeed."
     }
 }
