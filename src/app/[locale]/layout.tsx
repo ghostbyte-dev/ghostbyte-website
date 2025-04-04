@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
-import { i18n, Locale } from "@/i18n-config";
-import { getDictionary } from "@/src/dictionaries";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/src/i18n/routing";

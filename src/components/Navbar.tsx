@@ -1,9 +1,8 @@
 "use client";
 
 import { X, Menu } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 import { useState } from "react";
-import { getDictionary } from "../dictionaries";
 import { useTranslations } from "use-intl";
 
 export default function Navbar() {

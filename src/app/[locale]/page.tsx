@@ -1,13 +1,9 @@
 import HeroSection from "../../components/HeroSection";
-import Navbar from "../../components/Navbar";
 import ProjectsSection from "../../components/ProjectsSection";
 import TeamSection from "../../components/TeamSection";
 import ServiceSection from "../../components/ServicesSection";
-import Footer from "../../components/Footer";
 import ContactSection from "../../components/ContactSection";
 import { Locale } from "@/i18n-config";
-import { getDictionary } from "@/src/dictionaries";
-import { useTranslations } from "next-intl";
 
 export default function LandingPage(props: {
   params: Promise<{ lang: Locale }>;

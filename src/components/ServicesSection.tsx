@@ -1,5 +1,4 @@
 import { Smartphone, Globe, Code } from "lucide-react";
-import { getDictionary } from "../dictionaries";
 import { useTranslations } from "next-intl";
 
 export default function ServiceSection() {

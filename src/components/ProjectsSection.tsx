@@ -1,7 +1,4 @@
-import { ArrowRight, Globe, Music, Smartphone } from "lucide-react";
-import Image from "next/image";
 import Project from "./Project";
-import { getDictionary } from "../dictionaries";
 import { useTranslations } from "next-intl";
 
 export default function ProjectsSection() {

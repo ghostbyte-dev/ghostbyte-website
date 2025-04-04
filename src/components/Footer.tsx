@@ -1,10 +1,9 @@
 import { Github } from "lucide-react";
-import Link from "next/link";
-import { getDictionary } from "../dictionaries";
+import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
-  const t = useTranslations("navigation")
+  const t = useTranslations("navigation");
   return (
     <footer className="text-white pt-20 pb-3">
       <div className="container mx-auto px-4">
@@ -38,7 +37,9 @@ export default function Footer() {
           {/* Links columns */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
             <div>
-              <h3 className="text-xl font-bold mb-6 text-white">{t("navigation")}</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">
+                {t("navigation")}
+              </h3>
               <ul className="space-y-4">
                 <li>
                   <Link

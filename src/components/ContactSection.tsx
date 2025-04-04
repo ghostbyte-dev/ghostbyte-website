@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/sendEmail";
-import { getDictionary } from "../dictionaries";
 import { useTranslations } from "next-intl";
 
 export type FormData = {

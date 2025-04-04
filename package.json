@@ -9,13 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.6.1",
-    "@types/negotiator": "^0.6.3",
     "@types/nodemailer": "^6.4.17",
     "dotenv": "^16.4.7",
     "i": "^0.3.7",
     "lucide-react": "^0.479.0",
-    "negotiator": "^1.0.0",
     "next": "15.2.4",
     "next-intl": "^4.0.2",
     "nodemailer": "^6.10.0",
