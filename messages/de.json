@@ -1,5 +1,5 @@
 {
-    "navigation": {
+    "Navigation": {
         "projects": "Projekte",
         "services": "Leistungen",
         "about": "Über uns",
@@ -11,21 +11,21 @@
         "ghostbyte_all_rights_reserved": "Ghostbyte. Alle Rechte vorbehalten.",
         "navigation": "Navigation"
     },
-    "hero": {
+    "Hero": {
         "title_line_1": "Wir verwandeln Ideen",
         "title_line_2": "in digitale Realität",
         "description": "Ghostbyte ist ein Softwareentwicklungsstudio, das sich auf die Erstellung herausragender digitaler Erlebnisse für Unternehmen und Marken spezialisiert hat.",
         "view_our_work": "Unsere Arbeit",
         "contact_us": "Kontaktieren Sie uns"
     },
-    "projects": {
+    "Projects": {
         "features_projects": "Unsere Projekte",
         "description": "Von mobilen Apps bis zu Web-Plattformen - sieh dir an, woran wir gearbeitet haben.",
         "mobile_application": "Mobile App",
         "web_app": "Webanwendung",
         "pixelix_description": "Eine funktionsreiche mobile Anwendung mit erweiterten Bildbearbeitungsfunktionen und sozialen Sharing-Features."
     },
-    "team": {
+    "Team": {
         "title": "Über uns",
         "description": "Ghostbyte is a small but dedicated team of developers passionate about creating innovative and high-quality digital experiences.",
         "daniel_job": "Creative Director",
@@ -33,7 +33,7 @@
         "emanuel_job": "Lead Developer",
         "emanuel_description": "Emanuel brings expertise in development and problem-solving, ensuring high-quality and efficient applications at Ghostbyte."
     },
-    "contact": {
+    "Contact": {
         "title": "Kontakt",
         "description": "Haben Sie ein Projekt im Kopf? Schicken Sie uns eine Nachricht und lassen Sie uns gemeinsam etwas Großartiges erschaffen.",
         "name_label": "Name",
@@ -47,7 +47,7 @@
         "send_message": "Nachricht senden",
         "mail_directly": "Oder erreiche uns direkt unter"
     },
-    "services": {
+    "Services": {
         "title": "Leistungen",
         "description": "Wir bieten ein umfassendes Spektrum an Softwareentwicklungsdiensten, um Ihr Unternehmen zum Erfolg zu führen."
     }

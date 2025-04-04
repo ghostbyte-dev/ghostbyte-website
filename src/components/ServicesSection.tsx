@@ -2,7 +2,7 @@ import { Smartphone, Globe, Code } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function ServiceSection() {
-  const t = useTranslations("services")
+  const t = useTranslations("Services")
   return (
     <section
       id="services"

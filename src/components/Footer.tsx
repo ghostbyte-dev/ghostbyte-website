@@ -1,9 +1,11 @@
 import { Github } from "lucide-react";
-import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { Link as LinkI18n } from "@/src/i18n/navigation"
+
 
 export default function Footer() {
-  const t = useTranslations("navigation");
+  const t = useTranslations("Navigation");
   return (
     <footer className="text-white pt-20 pb-3">
       <div className="container mx-auto px-4">
@@ -43,7 +45,7 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="/#projects"
+                    href="#projects"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -52,7 +54,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/#services"
+                    href="#services"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -61,7 +63,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/#about"
+                    href="#about"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -70,7 +72,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/#contact"
+                    href="#contact"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -101,7 +103,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <Link
-              href="/privacy"
+              href="/privacy-policy"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
               {t("privacy_policy")}

@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "@/src/i18n/navigation";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
-  const t = useTranslations("hero")
+  const t = useTranslations("Hero")
   return (
     
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">

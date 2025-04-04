@@ -1,10 +1,10 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
-import { Link } from "@/src/i18n/navigation";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function TeamSection() {
-  const t = useTranslations("team")
+  const t = useTranslations("Team")
   return (
     <section
       id="about"

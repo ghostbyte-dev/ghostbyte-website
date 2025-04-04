@@ -1,18 +1,18 @@
 "use client";
 
 import { X, Menu } from "lucide-react";
-import { Link } from "@/src/i18n/navigation";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
+import Link from "next/link";
 
 export default function Navbar() {
-  const t = useTranslations("navigation");
+  const t = useTranslations("Navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur-xl flex justify-center">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/">
+          <Link href="">
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
               Ghostbyte
             </span>
@@ -76,32 +76,32 @@ export default function Navbar() {
         <div className="fixed inset-0 z-10 bg-black/95 backdrop-blur-xl pt-16">
           <nav className="container flex flex-col items-center justify-center gap-8 py-8">
             <Link
-              href="#projects"
+              href="/#projects"
               className="text-2xl font-bold transition-colors hover:text-fuchsia-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Projects
+              {t("projects")}
             </Link>
             <Link
-              href="#services"
+              href="/#services"
               className="text-2xl font-bold transition-colors hover:text-fuchsia-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Services
+              {t("services")}
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               className="text-2xl font-bold transition-colors hover:text-fuchsia-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              {t("about")}
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-2xl font-bold transition-colors hover:text-fuchsia-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              {t("contact")}
             </Link>
           </nav>
         </div>

@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/sendEmail";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export type FormData = {
   name: string;
@@ -12,7 +13,7 @@ export type FormData = {
 };
 
 export default function ContactSection() {
-  const t = useTranslations("contact")
+  const t = useTranslations("Contact")
   const { register, handleSubmit } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
@@ -108,12 +109,12 @@ export default function ContactSection() {
 
                 <div className="text-center text-sm text-gray-400">
                   {t("mail_directly")}{" "}
-                  <a
+                  <Link
                     href="mailto:hey@ghostbyte.com"
                     className="text-fuchsia-400 hover:text-cyan-400 transition-colors"
                   >
                     hey@ghostbyte.com
-                  </a>
+                  </Link>
                 </div>
               </div>
             </form>

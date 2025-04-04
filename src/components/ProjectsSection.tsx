@@ -2,7 +2,7 @@ import Project from "./Project";
 import { useTranslations } from "next-intl";
 
 export default function ProjectsSection() {
-  const t = useTranslations("projects")
+  const t = useTranslations("Projects")
   return (
     <section
       id="projects"

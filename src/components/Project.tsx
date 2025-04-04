@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Link } from "@/src/i18n/navigation";
+import Link from "next/link";
 
 interface ProjectProps {
   image: string;
@@ -51,7 +51,7 @@ export default function Project({
             className="bg-transparent hover:bg-white/5 text-white group/btn flex items-center"
           >
             <span>View Project</span>
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+            <LinkrrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
           </Link> */}
           </div>
         </div>
