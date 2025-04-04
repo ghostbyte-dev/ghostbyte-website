@@ -1,8 +1,17 @@
+import { Locale } from "@/i18n-config";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { type getDictionary } from "../dictionaries";
 
-export default function HeroSection() {
+export default async function HeroSection({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>;
+}) {
+
+
   return (
+    
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-fuchsia-500/40 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob"></div>
@@ -39,6 +48,7 @@ export default function HeroSection() {
               <Link href="/#contact" className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
                 Contact Us
               </Link>
+              <p>{dictionary.test}</p>
             </div>
           </div>
 

@@ -1,12 +1,20 @@
-import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import ProjectsSection from "../components/ProjectsSection";
-import TeamSection from "../components/TeamSection";
-import ServiceSection from "../components/ServicesSection";
-import Footer from "../components/Footer";
-import ContactSection from "../components/ContactSection";
+import HeroSection from "../../components/HeroSection";
+import Navbar from "../../components/Navbar";
+import ProjectsSection from "../../components/ProjectsSection";
+import TeamSection from "../../components/TeamSection";
+import ServiceSection from "../../components/ServicesSection";
+import Footer from "../../components/Footer";
+import ContactSection from "../../components/ContactSection";
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/src/dictionaries";
 
-export default function LandingPage() {
+export default async function LandingPage(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+
+  const dictionary = await getDictionary(lang);
+  
   return (
     <div className="dark bg-[#030014] pt-16">
       <div className="absolute inset-0 z-0">
@@ -16,7 +24,7 @@ export default function LandingPage() {
       </div>
 
       <main className="flex-1 relative z-10">
-        <HeroSection />
+        <HeroSection dictionary={dictionary} />
 
         <ProjectsSection />
 
