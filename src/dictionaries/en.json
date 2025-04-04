@@ -1,6 +1,28 @@
 {
-    "hero": {
-        "title": "Title english"
+    "navigation": {
+        "projects": "Projects",
+        "services": "Services",
+        "about": "about",
+        "contact": "Contact",
+        "privacy_policy": "Privacy Policy",
+        "imprint": "Imprint",
+        "get_in_touch": "Get in Touch",
+        "turning_ideas_in_digital_reality": "Turning Ideas Into Digital Reality",
+        "ghostbyte_all_rights_reserved": "Ghostbyte. All rights reserved.",
+        "navigation": "Navigation"
     },
-    "test": "test english"
+    "hero": {
+        "title_line_1": "Turning Ideas Into",
+        "title_line_2": "Digital Reality",
+        "description": "Ghostbyte is a software development studio specializing in creating exceptional digital experiences for businesses and brands.",
+        "view_our_work": "View our Work",
+        "contact_us": "Contact us"
+    },
+    "projects": {
+        "features_projects": "Featured Projects",
+        "description": "From mobile apps to web platforms — see what we've been building.",
+        "mobile_application": "Mobile Application",
+        "web_app": "Web App",
+        "pixelix_description": "A feature-rich mobile application with advanced image editing capabilities and social sharing features."
+    }
 }

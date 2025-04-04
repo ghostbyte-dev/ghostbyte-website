@@ -3,8 +3,13 @@
 import { X, Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { getDictionary } from "../dictionaries";
 
-export default function Navbar() {
+export default function Navbar({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["navigation"];
+}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur-xl flex justify-center">
@@ -22,28 +27,28 @@ export default function Navbar() {
             href="/#projects"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
-            Projects
+            {dictionary.projects}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             href="/#services"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
-            Services
+            {dictionary.services}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             href="/#about"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
-            About
+            {dictionary.about}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
           <Link
             href="/#contact"
             className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
           >
-            Contact
+            {dictionary.contact}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
@@ -53,7 +58,7 @@ export default function Navbar() {
             href="/#contact"
             className="relative overflow-hidden px-4 py-2 rounded-md group bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 hover:cursor-pointer"
           >
-            <span className="relative z-10">Get in Touch</span>
+            <span className="relative z-10">{dictionary.get_in_touch}</span>
           </Link>
 
           <button

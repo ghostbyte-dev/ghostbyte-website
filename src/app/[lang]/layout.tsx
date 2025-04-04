@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { i18n, Locale } from "@/i18n-config";
+import { getDictionary } from "@/src/dictionaries";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,14 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{lang: Locale}>
+  params: Promise<{ lang: Locale }>;
 }>) {
-  const lang = (await params).lang
+  const lang = (await params).lang;
+  const dictionary = await getDictionary(lang);
+
   return (
     <html
       className="text-white bg-[#030014] scroll-smooth"
@@ -33,10 +36,10 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <Navbar />
+        <Navbar dictionary={dictionary.navigation}/>
         {children}
 
-        <Footer />
+        <Footer dictionary={dictionary.navigation}/>
       </body>
     </html>
   );

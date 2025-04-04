@@ -26,7 +26,7 @@ export default async function LandingPage(props: {
       <main className="flex-1 relative z-10">
         <HeroSection dictionary={dictionary.hero} />
 
-        <ProjectsSection />
+        <ProjectsSection dictionary={dictionary.projects}/>
 
         <ServiceSection />
 

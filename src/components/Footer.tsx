@@ -1,7 +1,12 @@
 import { Github } from "lucide-react";
 import Link from "next/link";
+import { getDictionary } from "../dictionaries";
 
-export default function Footer() {
+export default function Footer({
+  dictionary,
+}: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["navigation"];
+}) {
   return (
     <footer className="text-white pt-20 pb-3">
       <div className="container mx-auto px-4">
@@ -19,7 +24,7 @@ export default function Footer() {
               </h3>
             </div>
             <p className="mb-8 text-zinc-400 text-lg">
-              Turning Ideas Into Digital Reality
+              {dictionary.turning_ideas_in_digital_reality}
             </p>
             <div className="flex gap-4">
               <Link
@@ -35,7 +40,7 @@ export default function Footer() {
           {/* Links columns */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
             <div>
-              <h3 className="text-xl font-bold mb-6 text-white">Navigation</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">{dictionary.navigation}</h3>
               <ul className="space-y-4">
                 <li>
                   <Link
@@ -43,7 +48,7 @@ export default function Footer() {
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    Projects
+                    {dictionary.projects}
                   </Link>
                 </li>
                 <li>
@@ -52,7 +57,7 @@ export default function Footer() {
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    Services
+                    {dictionary.services}
                   </Link>
                 </li>
                 <li>
@@ -61,7 +66,7 @@ export default function Footer() {
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    About
+                    {dictionary.about}
                   </Link>
                 </li>
                 <li>
@@ -70,13 +75,15 @@ export default function Footer() {
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    Contact
+                    {dictionary.contact}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-6 text-white">Contact us</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">
+                {dictionary.get_in_touch}
+              </h3>
               <div className="mb-3">
                 <Link href="mailto:hey@ghostbyte.dev">hey@ghostbyte.dev</Link>
               </div>
@@ -90,20 +97,21 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-10 pb-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-center text-sm text-gray-400 md:text-left">
-            &copy; {new Date().getFullYear()} Ghostbyte. All rights reserved.
+            &copy; {new Date().getFullYear()}{" "}
+            {dictionary.ghostbyte_all_rights_reserved}
           </p>
           <div className="flex gap-6">
             <Link
               href="/privacy"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
-              Privacy Policy
+              {dictionary.privacy_policy}
             </Link>
             <Link
               href="/imprint"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
-              Imprint
+              {dictionary.imprint}
             </Link>
           </div>
         </div>

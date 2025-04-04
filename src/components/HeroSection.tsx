@@ -1,4 +1,3 @@
-import { Locale } from "@/i18n-config";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { type getDictionary } from "../dictionaries";
@@ -8,7 +7,6 @@ export default async function HeroSection({
 }: {
   dictionary: Awaited<ReturnType<typeof getDictionary>>["hero"];
 }) {
-
 
   return (
     
@@ -25,30 +23,27 @@ export default async function HeroSection({
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-white to-cyan-300">
-                  Turning Ideas Into
+                  {dictionary.title_line_1}
                 </span>
                 <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-br from-fuchsia-500 to-cyan-400">
-                  Digital Reality
+                  {dictionary.title_line_2}
                 </span>
               </h1>
               <p className="max-w-[600px] text-zinc-300 mt-6 md:text-xl">
-                Ghostbyte is a software development studio specializing in
-                creating exceptional digital experiences for businesses and
-                brands.
+                {dictionary.description}
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/#projects" className="flex bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md">
                 <span className="relative z-10 flex items-center">
-                  View Our Work
+                  {dictionary.view_our_work}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               </Link>
               <Link href="/#contact" className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
-                Contact Us
+                {dictionary.contact_us}
               </Link>
-              <p>{dictionary.title}</p>
             </div>
           </div>
 
