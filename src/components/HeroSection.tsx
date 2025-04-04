@@ -1,13 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { type getDictionary } from "../dictionaries";
+import { useTranslations } from "next-intl";
 
-export default async function HeroSection({
-  dictionary,
-}: {
-  dictionary: Awaited<ReturnType<typeof getDictionary>>["hero"];
-}) {
-
+export default function HeroSection() {
+  const t = useTranslations("hero")
   return (
     
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">
@@ -23,26 +19,26 @@ export default async function HeroSection({
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-white to-cyan-300">
-                  {dictionary.title_line_1}
+                  {t('title_line_1')}
                 </span>
                 <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-br from-fuchsia-500 to-cyan-400">
-                  {dictionary.title_line_2}
+                {t('title_line_2')}
                 </span>
               </h1>
               <p className="max-w-[600px] text-zinc-300 mt-6 md:text-xl">
-                {dictionary.description}
+              {t('description')}
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href="/#projects" className="flex bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md">
                 <span className="relative z-10 flex items-center">
-                  {dictionary.view_our_work}
+                  {t("view_our_work")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               </Link>
               <Link href="/#contact" className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
-                {dictionary.contact_us}
+                {t("contact_us")}
               </Link>
             </div>
           </div>

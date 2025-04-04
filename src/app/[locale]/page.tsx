@@ -7,14 +7,11 @@ import Footer from "../../components/Footer";
 import ContactSection from "../../components/ContactSection";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/src/dictionaries";
+import { useTranslations } from "next-intl";
 
-export default async function LandingPage(props: {
+export default function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
 }) {
-  const { lang } = await props.params;
-
-  const dictionary = await getDictionary(lang);
-
   return (
     <div className="dark bg-[#030014] pt-16">
       <div className="absolute inset-0 z-0">
@@ -24,17 +21,17 @@ export default async function LandingPage(props: {
       </div>
 
       <main className="flex-1 relative z-10">
-        <HeroSection dictionary={dictionary.hero} />
+        <HeroSection />
 
-        <ProjectsSection dictionary={dictionary.projects} />
+        <ProjectsSection />
 
-        <ServiceSection dictionary={dictionary.services} />
+        <ServiceSection />
 
-        <TeamSection dictionary={dictionary.team} />
+        <TeamSection  />
 
         {/* <TestimonialsSection /> */}
 
-        <ContactSection dictionary={dictionary.contact} />
+        <ContactSection />
       </main>
     </div>
   );

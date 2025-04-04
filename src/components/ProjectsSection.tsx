@@ -2,12 +2,10 @@ import { ArrowRight, Globe, Music, Smartphone } from "lucide-react";
 import Image from "next/image";
 import Project from "./Project";
 import { getDictionary } from "../dictionaries";
+import { useTranslations } from "next-intl";
 
-export default function ProjectsSection({
-  dictionary,
-}: {
-  dictionary: Awaited<ReturnType<typeof getDictionary>>["projects"];
-}) {
+export default function ProjectsSection() {
+  const t = useTranslations("projects")
   return (
     <section
       id="projects"
@@ -19,10 +17,10 @@ export default function ProjectsSection({
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
-              {dictionary.features_projects}
+              {t("features_projects")}
             </h2>
             <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {dictionary.description}
+              {t("description")}
             </p>
           </div>
         </div>
@@ -31,8 +29,8 @@ export default function ProjectsSection({
           <Project
             name="Pixelix"
             image="/img/pixelix.png"
-            category={dictionary.mobile_application}
-            description={dictionary.pixelix_description}
+            category={t("mobile_application")}
+            description={t("pixelix_description")}
             link="https://app.pixelix.social"
             gradientColor="from-fuchsia-600/30"
           />
@@ -40,7 +38,7 @@ export default function ProjectsSection({
           <Project
             name="Socialfolio"
             image="/img/socialfolio.png"
-            category={dictionary.web_app}
+            category={t("web_app")}
             description=""
             link="https://socialfolio.me"
             gradientColor="from-cyan-500/30"
@@ -49,7 +47,7 @@ export default function ProjectsSection({
           <Project
             name="Ghostbyte Library"
             image="/img/library.png"
-            category={dictionary.web_app}
+            category={t("web_app")}
             description=""
             link="https://library.ghostbyte.dev"
             gradientColor="from-blue-500/30"

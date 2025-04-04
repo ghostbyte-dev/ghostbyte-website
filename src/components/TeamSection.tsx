@@ -2,12 +2,10 @@ import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "../dictionaries";
+import { useTranslations } from "next-intl";
 
-export default function TeamSection({
-  dictionary,
-}: {
-  dictionary: Awaited<ReturnType<typeof getDictionary>>["team"];
-}) {
+export default function TeamSection() {
+  const t = useTranslations("team")
   return (
     <section
       id="about"
@@ -20,10 +18,10 @@ export default function TeamSection({
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                {dictionary.title}
+                {t("title")}
               </h2>
               <p className="max-w-[800px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {dictionary.description}
+                {t("description")}
               </p>
             </div>
           </div>
@@ -51,10 +49,10 @@ export default function TeamSection({
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Daniel Hiebeler</h3>
                   <p className="text-sm text-fuchsia-400 font-medium">
-                    {dictionary.daniel_job}
+                    {t("daniel_job")}
                   </p>
                   <p className="text-sm text-gray-400">
-                    {dictionary.daniel_description}
+                    {t("daniel_description")}
                   </p>
                 </div>
 
@@ -111,10 +109,10 @@ export default function TeamSection({
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Emanuel Hiebeler</h3>
                   <p className="text-sm text-cyan-400 font-medium">
-                    {dictionary.emanuel_job}
+                    {t("emanuel_job")}
                   </p>
                   <p className="text-sm text-gray-400">
-                    {dictionary.emanuel_description}
+                    {t("emanuel_description")}
                   </p>
                 </div>
 

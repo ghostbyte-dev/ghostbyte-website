@@ -6,6 +6,10 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { i18n, Locale } from "@/i18n-config";
 import { getDictionary } from "@/src/dictionaries";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/src/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +19,8 @@ export const metadata: Metadata = {
     "We build software that matters - Mobile apps, web applications, and custom software solutions",
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
 }
 
 export default async function RootLayout({
@@ -24,22 +28,29 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ locale: string }>;
 }>) {
-  const lang = (await params).lang;
-  const dictionary = await getDictionary(lang);
+ 
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
+  setRequestLocale(locale)
+  
   return (
     <html
       className="text-white bg-[#030014] scroll-smooth"
-      lang={lang}
+      lang={locale}
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <Navbar dictionary={dictionary.navigation}/>
+      <NextIntlClientProvider>
+        {<Navbar/>}
         {children}
 
-        <Footer dictionary={dictionary.navigation}/>
+        <Footer/>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
