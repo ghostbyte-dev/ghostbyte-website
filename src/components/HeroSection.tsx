@@ -6,7 +6,7 @@ import { type getDictionary } from "../dictionaries";
 export default async function HeroSection({
   dictionary,
 }: {
-  dictionary: Awaited<ReturnType<typeof getDictionary>>;
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["hero"];
 }) {
 
 
@@ -48,7 +48,7 @@ export default async function HeroSection({
               <Link href="/#contact" className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md">
                 Contact Us
               </Link>
-              <p>{dictionary.test}</p>
+              <p>{dictionary.title}</p>
             </div>
           </div>
 
