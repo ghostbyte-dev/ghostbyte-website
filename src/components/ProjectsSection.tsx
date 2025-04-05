@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
               {t("features_projects")}
             </h2>
             <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

@@ -9,7 +9,7 @@ export default function Navbar() {
   const t = useTranslations("Navigation");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black/60 backdrop-blur-xl flex justify-center">
+    <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-[#030014]/60 backdrop-blur-xl flex justify-center">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/">
