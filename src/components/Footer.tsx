@@ -1,8 +1,8 @@
 import { Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Link as LinkI18n } from "@/src/i18n/navigation"
-
+import { Link as LinkI18n } from "@/src/i18n/navigation";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Footer() {
   const t = useTranslations("Navigation");
@@ -33,6 +33,9 @@ export default function Footer() {
               >
                 <Github className="h-6 w-6" />
               </Link>
+            </div>
+            <div className="mt-4">
+              <LocaleSwitcher />
             </div>
           </div>
 
