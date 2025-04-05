@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Link as LinkI18n } from "@/src/i18n/navigation";
@@ -33,8 +33,22 @@ export default function Footer() {
               >
                 <Github className="h-6 w-6" />
               </Link>
+              <Link
+                href="https://www.linkedin.com/company/ghostbyte/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-6 w-6" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/ghostbyte.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-6 w-6" />
+              </Link>
             </div>
-            <div className="mt-4">
+            <div className="mt-8">
               <LocaleSwitcher />
             </div>
           </div>

@@ -14,11 +14,11 @@ const LocaleSwitcher = () => {
 
   return (
     <div className="flex space-x-4 items-center">
-      <button onClick={() => handleLocaleChange("de")} className={`${locale == "de" ? "brightness-100": "brightness-50"}`}>
-        <Flag code="DE" style={{ height: 24 }} />
+      <button onClick={() => handleLocaleChange("de")}>
+        <Flag code="DE" style={{ height: 24 }} className="rounded-xs" />
       </button>
-      <button onClick={() => handleLocaleChange("en")} className={`${locale == "en" ? "brightness-100": "brightness-50"}`}>
-        <Flag code="GB" style={{ height: 24 }} />
+      <button onClick={() => handleLocaleChange("en")}>
+        <Flag code="GB" style={{ height: 24 }} className="rounded-xs" />
       </button>
     </div>
   );
