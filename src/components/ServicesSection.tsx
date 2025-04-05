@@ -1,8 +1,15 @@
-import { Smartphone, Globe, Code } from "lucide-react";
+import {
+  Smartphone,
+  Globe,
+  Search,
+  Laptop,
+  ServerIcon,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
+import Service from "./Service";
 
 export default function ServiceSection() {
-  const t = useTranslations("Services")
+  const t = useTranslations("Services");
   return (
     <section
       id="services"
@@ -23,144 +30,40 @@ export default function ServiceSection() {
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
-          {/* Service 1 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <Smartphone className="h-8 w-8 text-cyan-300" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">Mobile Development</h3>
-            <p className="text-muted-foreground">
-              We build native and cross-platform mobile applications for iOS and
-              Android that deliver exceptional user experiences.
-            </p>
-          </div>
+          <Service
+            icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
+            name="Mobile Development"
+            description="We build native and cross-platform mobile applications for iOS and
+              Android that deliver exceptional user experiences."
+          />
 
-          {/* Service 2 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <Globe className="h-8 w-8 text-cyan-300" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">Web Development</h3>
-            <p className="text-muted-foreground">
-              From simple websites to complex web applications, we create
-              responsive and performant web solutions.
-            </p>
-          </div>
+          <Service
+            icon={<Globe className="h-8 w-8 text-cyan-300" />}
+            name="Web Development"
+            description="From simple websites to complex web applications, we create
+              responsive and performant web solutions."
+          />
 
-          {/* Service 3 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <Code className="h-8 w-8 text-cyan-300" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">Custom Software</h3>
-            <p className="text-muted-foreground">
-              We develop bespoke software solutions tailored to your specific
-              business needs and requirements.
-            </p>
-          </div>
+          <Service
+            icon={<Search className="h-8 w-8 text-cyan-300" />}
+            name="SEO"
+            description="We optimize your website for search engines to improve visibility,
+              increase traffic, and help your audience find you organically."
+          />
 
-          {/* Service 4 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-8 w-8 text-cyan-300"
-                >
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                  <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-                  <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-                  <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                </svg>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">UI/UX Design</h3>
-            <p className="text-muted-foreground">
-              We create intuitive and visually appealing user interfaces that
-              enhance user experience and engagement.
-            </p>
-          </div>
+          <Service
+            icon={<Laptop className="h-8 w-8 text-cyan-300" />}
+            name="UI/UX Design"
+            description="We create intuitive and visually appealing user interfaces that
+              enhance user experience and engagement."
+          />
 
-          {/* Service 5 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-8 w-8 text-cyan-300"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
-                  <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
-                  <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
-                </svg>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">Digital Strategy</h3>
-            <p className="text-muted-foreground">
-              We help businesses develop effective digital strategies to achieve
-              their goals and stay ahead of the competition.
-            </p>
-          </div>
-
-          {/* Service 6 */}
-          <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80"></div>
-              <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-8 w-8 text-cyan-300"
-                >
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-            </div>
-            <h3 className="text-xl font-bold">Maintenance & Support</h3>
-            <p className="text-muted-foreground">
-              We provide ongoing maintenance and support services to ensure your
-              software continues to perform optimally.
-            </p>
-          </div>
+          <Service
+            icon={<ServerIcon className="h-8 w-8 text-cyan-300" />}
+            name="Maintenance & Support"
+            description="We provide ongoing maintenance and support services to ensure your
+              software continues to perform optimally."
+          />
         </div>
       </div>
     </section>
