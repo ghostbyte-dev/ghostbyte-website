@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Navbar toggle overlay */}
       <div
-        className="fixed right-0 z-50 flex h-full flex-col overflow-x-hidden bg-black duration-500 "
+        className="fixed right-0 z-50 flex h-full flex-col overflow-x-hidden bg-[#030014]/60 backdrop-blur-xl duration-500 "
         style={{ width: isOpen ? "75vw" : "0vw" }}
       >
         <button
