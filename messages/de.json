@@ -49,6 +49,16 @@
     },
     "Services": {
         "title": "Leistungen",
-        "description": "Wir bieten ein umfassendes Spektrum an Softwareentwicklungsdiensten, um Ihr Unternehmen zum Erfolg zu führen."
+        "description": "Wir bieten ein umfassendes Spektrum an Softwareentwicklungsdiensten, um Ihr Unternehmen zum Erfolg zu führen.",
+        "mobile_development": "App-Entwicklung",
+        "mobile_development_description": "Wir entwickeln native und plattformübergreifende Apps für iOS und Android, die herausragende Nutzererlebnisse bieten.",
+        "web_development": "Web Entwicklung",
+        "web_development_description": "Von einfachen Websites bis hin zu komplexen Webanwendungen – wir entwickeln responsive und leistungsstarke Weblösungen.",
+        "seo": "SEO",
+        "seo_description": "Wir optimieren Ihre Website für Suchmaschinen, um die Sichtbarkeit zu erhöhen, mehr Besucher zu gewinnen und Ihrer Zielgruppe zu helfen, Sie auf natürliche Weise zu finden.",
+        "ui_ux_design": "UI/UX Design",
+        "ui_ux_design_description": "Wir gestalten intuitive und visuell ansprechende Benutzeroberflächen, die das Nutzererlebnis verbessern und die Interaktion fördern.",
+        "maintainance_support": "Wartung & Support",
+        "maintainance_support_description": "Wir bieten kontinuierliche Wartungs- und Supportleistungen, damit Ihre Software dauerhaft optimal funktioniert."
     }
 }

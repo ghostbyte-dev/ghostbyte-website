@@ -49,6 +49,16 @@
   },
   "Services": {
     "title": "Services",
-    "description": "We offer a comprehensive range of software development services to help your business succeed."
+    "description": "We offer a comprehensive range of software development services to help your business succeed.",
+    "mobile_development": "Mobile Development",
+    "mobile_development_description": "We build native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.",
+    "web_development": "Web Development",
+    "web_development_description": "From simple websites to complex web applications, we create responsive and performant web solutions.",
+    "seo": "SEO",
+    "seo_description": "We optimize your website for search engines to improve visibility, increase traffic, and help your audience find you organically.",
+    "ui_ux_design": "UI/UX Design",
+    "ui_ux_design_description": "We create intuitive and visually appealing user interfaces that enhance user experience and engagement.",
+    "maintainance_support": "Maintenance & Support",
+    "maintainance_support_description": "We provide ongoing maintenance and support services to ensure your software continues to perform optimally."
   }
 }

@@ -32,37 +32,32 @@ export default function ServiceSection() {
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
           <Service
             icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
-            name="Mobile Development"
-            description="We build native and cross-platform mobile applications for iOS and
-              Android that deliver exceptional user experiences."
+            name={t('mobile_development')}
+            description={t("mobile_development_description")}
           />
 
           <Service
             icon={<Globe className="h-8 w-8 text-cyan-300" />}
-            name="Web Development"
-            description="From simple websites to complex web applications, we create
-              responsive and performant web solutions."
+            name={t("web_development")}
+            description={t("web_development_description")}
           />
 
           <Service
             icon={<Search className="h-8 w-8 text-cyan-300" />}
-            name="SEO"
-            description="We optimize your website for search engines to improve visibility,
-              increase traffic, and help your audience find you organically."
+            name={t("seo")}
+            description={t("seo_description")}
           />
 
           <Service
             icon={<Laptop className="h-8 w-8 text-cyan-300" />}
-            name="UI/UX Design"
-            description="We create intuitive and visually appealing user interfaces that
-              enhance user experience and engagement."
+            name={t("ui_ux_design")}
+            description={t("ui_ux_design_description")}
           />
 
           <Service
             icon={<ServerIcon className="h-8 w-8 text-cyan-300" />}
-            name="Maintenance & Support"
-            description="We provide ongoing maintenance and support services to ensure your
-              software continues to perform optimally."
+            name={t("maintainance_support")}
+            description={t("maintainance_support_description")}
           />
         </div>
       </div>
