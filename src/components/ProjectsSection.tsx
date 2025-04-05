@@ -25,7 +25,7 @@ export default function ProjectsSection() {
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 auto-rows-fr">
           <Project
             name="Pixelix"
-            image="/img/pixelix.png"
+            image="/img/pixelix_screenshots.png"
             category={t("mobile_application")}
             description={t("pixelix_description")}
             link="https://app.pixelix.social"
