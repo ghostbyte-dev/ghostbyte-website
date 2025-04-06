@@ -23,7 +23,7 @@
         "description": "Von mobilen Apps bis zu Web-Plattformen - sieh dir an, woran wir gearbeitet haben.",
         "mobile_application": "Mobile App",
         "web_app": "Webanwendung",
-        "resource_hub": "Ressource Sammlung",
+        "resource_hub": "Ressourcen Sammlung",
         "pixelix_description": "Eine funktionsreiche mobile App mit vielen coolen Features.",
         "socialfolio_description": "Eine einfache Möglichkeit, alle Social-Media-Profile an einem Ort zu teilen.",
         "library_description": "Eine Sammlung vieler nützlicher Websites und Tools. Sie sind nach Kategorien sortiert und mit Tags versehen, um schnell das Richtige zu finden."
@@ -63,5 +63,15 @@
         "ui_ux_design_description": "Wir gestalten intuitive und visuell ansprechende Benutzeroberflächen, die das Nutzererlebnis verbessern und die Interaktion fördern.",
         "maintainance_support": "Wartung & Support",
         "maintainance_support_description": "Wir bieten kontinuierliche Wartungs- und Supportleistungen, damit Ihre Software dauerhaft optimal funktioniert."
+    },
+    "Imprint": {
+        "title": "Impressum",
+        "austria": "Österreich",
+        "shareholder": "Gesellschafter",
+        "contact_information": "Kontakt Informationen",
+        "disclaimer_headline": "Haftungsausschluss",
+        "disclaimer_content": "Die auf dieser Website bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken. Ghostbyte GesbR übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Nützlichkeit der auf dieser Seite enthaltenen Informationen.",
+        "liability_headline": "Haftung für Links",
+        "liability_content": "Diese Website kann Links zu externen Webseiten enthalten. Ghostbyte GesbR hat keinen Einfluss auf den Inhalt externer Webseiten und übernimmt keine Verantwortung für diese."
     }
 }

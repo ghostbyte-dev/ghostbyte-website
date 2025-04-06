@@ -63,5 +63,15 @@
     "ui_ux_design_description": "We create intuitive and visually appealing user interfaces that enhance user experience and engagement.",
     "maintainance_support": "Maintenance & Support",
     "maintainance_support_description": "We provide ongoing maintenance and support services to ensure your software continues to perform optimally."
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "austria": "Austria",
+    "shareholder": "Shareholder",
+    "contact_information": "Contact information",
+    "disclaimer_headline": "Disclaimer",
+    "disclaimer_content": "The information contained on this website is for general information purposes only. Ghostbyte GesbR does not guarantee the accuracy, completeness, or usefulness of any information on this site.",
+    "liability_headline": "Liability for Links",
+    "liability_content": "This website may contain links to external websites. Ghostbyte GesbR has no control over the content of external websites and is not responsible for them."
   }
 }
