@@ -134,6 +134,15 @@ export default function TeamSection() {
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
                   </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/emanuelhiebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                    <span className="sr-only">LinkedIn</span>
+                  </Link>
                 </div>
               </div>
             </div>

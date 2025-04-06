@@ -30,11 +30,11 @@
     },
     "Team": {
         "title": "Über uns",
-        "description": "Ghostbyte is a small but dedicated team of developers passionate about creating innovative and high-quality digital experiences.",
-        "daniel_job": "Creative Director",
-        "daniel_description": "Daniel is a developer passionate about crafting innovative and user-friendly software solutions.",
-        "emanuel_job": "Lead Developer",
-        "emanuel_description": "Emanuel brings expertise in development and problem-solving, ensuring high-quality and efficient applications at Ghostbyte."
+        "description": "Ghostbyte ist ein kleines, aber engagiertes Team von Entwicklern, die leidenschaftlich daran arbeiten, innovative und hochwertige digitale Produkte zu schaffen.",
+        "daniel_job": "CEO & Creative Director",
+        "daniel_description": "Daniel ist ein Entwickler, der leidenschaftlich daran arbeitet, innovative und benutzerfreundliche Softwarelösungen zu schaffen.",
+        "emanuel_job": "CTO & Lead Developer",
+        "emanuel_description": "Emanuel bringt Fachkenntnisse in der Entwicklung und Problemlösung mit und sorgt dafür, dass bei Ghostbyte qualitativ hochwertige und effiziente Anwendungen entstehen."
     },
     "Contact": {
         "title": "Kontakt",
