@@ -21,9 +21,12 @@
   "Projects": {
     "features_projects": "Featured Projects",
     "description": "From mobile apps to web platforms — see what we've been building.",
-    "mobile_application": "Mobile Application",
+    "mobile_application": "Mobile App",
     "web_app": "Web App",
-    "pixelix_description": "A feature-rich mobile application with advanced image editing capabilities and social sharing features."
+    "resource_hub": "Resource Hub",
+    "pixelix_description": "A feature-rich mobile application with many cool features.",
+    "socialfolio_description": "A simple, open-source way to share your socials in one place.",
+    "library_description": "A collection of many useful websites and tools. They are sorted by category and include some tags to quickly find the right one for your needs."
   },
   "Team": {
     "title": "Who We Are",
