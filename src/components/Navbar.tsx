@@ -4,6 +4,7 @@ import { X, Menu, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
@@ -15,9 +16,10 @@ export default function Navbar() {
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/">
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
-                Ghostbyte
-              </span>
+              <img
+               src={"/img/logo_primary_text_right.svg"}
+               className="h-8 hover:h-9 duration-150"
+               />
             </Link>
           </div>
 
