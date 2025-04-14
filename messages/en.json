@@ -21,16 +21,19 @@
   "Projects": {
     "features_projects": "Featured Projects",
     "description": "From mobile apps to web platforms — see what we've been building.",
-    "mobile_application": "Mobile Application",
+    "mobile_application": "Mobile App",
     "web_app": "Web App",
-    "pixelix_description": "A feature-rich mobile application with advanced image editing capabilities and social sharing features."
+    "resource_hub": "Resource Hub",
+    "pixelix_description": "A feature-rich mobile application with many cool features.",
+    "socialfolio_description": "A simple, open-source way to share your socials in one place.",
+    "library_description": "A collection of many useful websites and tools. They are sorted by category and include some tags to quickly find the right one for your needs."
   },
   "Team": {
     "title": "Who We Are",
     "description": "Ghostbyte is a small but dedicated team of developers passionate about creating innovative and high-quality digital experiences.",
-    "daniel_job": "Creative Director",
+    "daniel_job": "CEO & Creative Director",
     "daniel_description": "Daniel is a developer passionate about crafting innovative and user-friendly software solutions.",
-    "emanuel_job": "Lead Developer",
+    "emanuel_job": "CTO & Lead Developer",
     "emanuel_description": "Emanuel brings expertise in development and problem-solving, ensuring high-quality and efficient applications at Ghostbyte."
   },
   "Contact": {
@@ -60,5 +63,15 @@
     "ui_ux_design_description": "We create intuitive and visually appealing user interfaces that enhance user experience and engagement.",
     "maintainance_support": "Maintenance & Support",
     "maintainance_support_description": "We provide ongoing maintenance and support services to ensure your software continues to perform optimally."
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "austria": "Austria",
+    "shareholder": "Shareholder",
+    "contact_information": "Contact information",
+    "disclaimer_headline": "Disclaimer",
+    "disclaimer_content": "The information contained on this website is for general information purposes only. Ghostbyte GesbR does not guarantee the accuracy, completeness, or usefulness of any information on this site.",
+    "liability_headline": "Liability for Links",
+    "liability_content": "This website may contain links to external websites. Ghostbyte GesbR has no control over the content of external websites and is not responsible for them."
   }
 }

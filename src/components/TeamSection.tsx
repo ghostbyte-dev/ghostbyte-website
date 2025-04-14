@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Github, Globe, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -83,6 +83,16 @@ export default function TeamSection() {
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
                   </Link>
+
+                  <Link
+                    href="https://daniebeler.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                  >
+                    <Globe className="h-5 w-5" />
+                    <span className="sr-only">Website</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -133,6 +143,24 @@ export default function TeamSection() {
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/emanuelhiebeler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                    <span className="sr-only">LinkedIn</span>
+                  </Link>
+                  <Link
+                    href="https://emanuelhiebeler.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                  >
+                    <Globe className="h-5 w-5" />
+                    <span className="sr-only">Website</span>
                   </Link>
                 </div>
               </div>

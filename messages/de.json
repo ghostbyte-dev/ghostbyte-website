@@ -6,7 +6,7 @@
         "contact": "Kontakt",
         "privacy_policy": "Datenschutzrichtlinie",
         "imprint": "Impressum",
-        "get_in_touch": "Kontaktieren Sie uns",
+        "get_in_touch": "Kontakt",
         "turning_ideas_in_digital_reality": "Wir verwandeln Ideen in digitale Realität",
         "ghostbyte_all_rights_reserved": "Ghostbyte. Alle Rechte vorbehalten.",
         "navigation": "Navigation"
@@ -16,22 +16,25 @@
         "title_line_2": "in digitale Realität",
         "description": "Ghostbyte ist ein Softwareentwicklungsstudio, das sich auf die Erstellung herausragender digitaler Erlebnisse für Unternehmen und Marken spezialisiert hat.",
         "view_our_work": "Unsere Arbeit",
-        "contact_us": "Kontaktieren Sie uns"
+        "contact_us": "Kontakt"
     },
     "Projects": {
         "features_projects": "Unsere Projekte",
         "description": "Von mobilen Apps bis zu Web-Plattformen - sieh dir an, woran wir gearbeitet haben.",
         "mobile_application": "Mobile App",
         "web_app": "Webanwendung",
-        "pixelix_description": "Eine funktionsreiche mobile Anwendung mit erweiterten Bildbearbeitungsfunktionen und sozialen Sharing-Features."
+        "resource_hub": "Ressourcen Sammlung",
+        "pixelix_description": "Eine funktionsreiche mobile App mit vielen coolen Features.",
+        "socialfolio_description": "Eine einfache Möglichkeit, alle Social-Media-Profile an einem Ort zu teilen.",
+        "library_description": "Eine Sammlung vieler nützlicher Websites und Tools. Sie sind nach Kategorien sortiert und mit Tags versehen, um schnell das Richtige zu finden."
     },
     "Team": {
         "title": "Über uns",
-        "description": "Ghostbyte is a small but dedicated team of developers passionate about creating innovative and high-quality digital experiences.",
-        "daniel_job": "Creative Director",
-        "daniel_description": "Daniel is a developer passionate about crafting innovative and user-friendly software solutions.",
-        "emanuel_job": "Lead Developer",
-        "emanuel_description": "Emanuel brings expertise in development and problem-solving, ensuring high-quality and efficient applications at Ghostbyte."
+        "description": "Ghostbyte ist ein kleines, aber engagiertes Team von Entwicklern, die leidenschaftlich daran arbeiten, innovative und hochwertige digitale Produkte zu schaffen.",
+        "daniel_job": "CEO & Creative Director",
+        "daniel_description": "Daniel ist ein Entwickler, der leidenschaftlich daran arbeitet, innovative und benutzerfreundliche Softwarelösungen zu schaffen.",
+        "emanuel_job": "CTO & Lead Developer",
+        "emanuel_description": "Emanuel bringt Fachkenntnisse in der Entwicklung und Problemlösung mit und sorgt dafür, dass bei Ghostbyte qualitativ hochwertige und effiziente Anwendungen entstehen."
     },
     "Contact": {
         "title": "Kontakt",
@@ -60,5 +63,15 @@
         "ui_ux_design_description": "Wir gestalten intuitive und visuell ansprechende Benutzeroberflächen, die das Nutzererlebnis verbessern und die Interaktion fördern.",
         "maintainance_support": "Wartung & Support",
         "maintainance_support_description": "Wir bieten kontinuierliche Wartungs- und Supportleistungen, damit Ihre Software dauerhaft optimal funktioniert."
+    },
+    "Imprint": {
+        "title": "Impressum",
+        "austria": "Österreich",
+        "shareholder": "Gesellschafter",
+        "contact_information": "Kontakt Informationen",
+        "disclaimer_headline": "Haftungsausschluss",
+        "disclaimer_content": "Die auf dieser Website bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken. Ghostbyte GesbR übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder Nützlichkeit der auf dieser Seite enthaltenen Informationen.",
+        "liability_headline": "Haftung für Links",
+        "liability_content": "Diese Website kann Links zu externen Webseiten enthalten. Ghostbyte GesbR hat keinen Einfluss auf den Inhalt externer Webseiten und übernimmt keine Verantwortung für diese."
     }
 }

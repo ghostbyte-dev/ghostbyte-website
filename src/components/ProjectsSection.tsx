@@ -2,7 +2,7 @@ import Project from "./Project";
 import { useTranslations } from "next-intl";
 
 export default function ProjectsSection() {
-  const t = useTranslations("Projects")
+  const t = useTranslations("Projects");
   return (
     <section
       id="projects"
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 auto-rows-fr">
+        <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
           <Project
             name="Pixelix"
             image="/img/pixelix_screenshots.png"
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
             name="Socialfolio"
             image="/img/socialfolio.png"
             category={t("web_app")}
-            description=""
+            description={t("socialfolio_description")}
             link="https://socialfolio.me"
             gradientColor="from-cyan-500/30"
           />
@@ -44,8 +44,8 @@ export default function ProjectsSection() {
           <Project
             name="Ghostbyte Library"
             image="/img/library.png"
-            category={t("web_app")}
-            description=""
+            category={t("resource_hub")}
+            description={t("library_description")}
             link="https://library.ghostbyte.dev"
             gradientColor="from-blue-500/30"
           />
