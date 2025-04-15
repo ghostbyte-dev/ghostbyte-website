@@ -38,7 +38,7 @@ export default async function RootLayout({
   
   return (
     <html
-      className="text-white bg-[#030014] scroll-smooth"
+      className="text-white bg-[#030014] scroll-smooth selection:bg-blue-900 selection:text-white"
       lang={locale}
       suppressHydrationWarning
     >

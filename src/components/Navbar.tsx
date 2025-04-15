@@ -15,11 +15,12 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-[#030014]/60 backdrop-blur-xl flex justify-center">
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/">
+            <Link href="/" className="flex justify-center items-center">
               <img
-               src={"/img/logo_primary_text_right.svg"}
-               className="h-8 hover:h-9 duration-150"
-               />
+                src={"/img/ghostbyte_logo_white.svg"}
+                className="h-8"
+              />
+              <span className="font-bold text-2xl ml-2">Ghostbyte</span>
             </Link>
           </div>
 
