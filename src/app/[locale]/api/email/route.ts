@@ -2,13 +2,12 @@ import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 require('dotenv').config();
 
 export async function POST(request: NextRequest) {
   const { email, name, message } = await request.json();
 
-  const transport = nodemailer.createTransport({
+    const transport = nodemailer.createTransport({
     host: process.env.MY_EMAIL_HOST,
     port: 465,
     secure: true,
@@ -18,7 +17,7 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  const mailOptions: Mail.Options = {
+   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     subject: `Message from ${name} (${email})`,
