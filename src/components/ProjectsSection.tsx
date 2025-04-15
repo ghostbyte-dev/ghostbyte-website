@@ -8,7 +8,7 @@ export default function ProjectsSection() {
       id="projects"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

@@ -1,7 +1,6 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Link as LinkI18n } from "@/src/i18n/navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Footer() {
@@ -65,7 +64,7 @@ export default function Footer() {
                     href="#projects"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("projects")}
                   </Link>
                 </li>
@@ -74,7 +73,7 @@ export default function Footer() {
                     href="#services"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("services")}
                   </Link>
                 </li>
@@ -83,7 +82,7 @@ export default function Footer() {
                     href="#about"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("about")}
                   </Link>
                 </li>
@@ -92,7 +91,7 @@ export default function Footer() {
                     href="#contact"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("contact")}
                   </Link>
                 </li>

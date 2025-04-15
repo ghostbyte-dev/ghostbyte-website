@@ -19,6 +19,7 @@ export default function Navbar() {
               <img
                 src={"/img/ghostbyte_logo_white.svg"}
                 className="h-8"
+                alt="Ghostbyte logo"
               />
               <span className="font-bold text-2xl ml-2">Ghostbyte</span>
             </Link>
@@ -30,28 +31,28 @@ export default function Navbar() {
               className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
             >
               {t("projects")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#services"
               className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
             >
               {t("services")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#about"
               className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
             >
               {t("about")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#contact"
               className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
             >
               {t("contact")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
           </nav>
 
@@ -64,6 +65,7 @@ export default function Navbar() {
             </Link>
 
             <button
+              type="button"
               className="md:hidden relative z-20"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -90,7 +92,9 @@ export default function Navbar() {
           &times;
         </button>
         <div
-          className={`text-white flex w-full pl-10 basis-full flex-col justify-center gap-5 text-2xl font-bold`}
+          className={
+            "text-white flex w-full pl-10 basis-full flex-col justify-center gap-5 text-2xl font-bold"
+          }
         >
           <Link
             href="/#projekte"
@@ -148,79 +152,9 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="pl-10 pb-10 flex">
-          {/* <Link
-        href="https://www.linkedin.com/company/black-lemon-gesbr"
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`phosphoricon inline-block mr-3 cursor-pointer text-text duration-500 hover:scale-125 phosphoriconWebsite`}
-      >
-        <div className="hover:cursor-pointer">
-          <Linkedin
-            size={25}
-            className={`
-              duration-300 
-              ${isOpen ? 'delay-200' : ''}
-            `}
-            color={isOpen ? 'white' : 'transparent'}
-          />
-        </div>
-      </Link>
-
-      <Link
-        href="https://instagram.com/blacklemon_design"
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`phosphoricon inline-block mr-3 cursor-pointer duration-500 hover:scale-125 phosphoriconWebsite`}
-      >
-        <div className="hover:cursor-pointer">
-          <InstagramLogo
-            size={25}
-            className={`
-              duration-300 
-              ${isOpen ? 'delay-200' : ''}
-            `}
-            color={isOpen ? 'white' : 'transparent'}
-          />
-        </div>
-      </Link>
-
-      <Link
-        href="mailto:hey@blacklemon.design"
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`phosphoricon inline-block mr-3 cursor-pointer text-text duration-500 hover:scale-125 phosphoriconWebsite`}
-      >
-        <div className="hover:cursor-pointer">
-          <Envelope
-            size={25}
-            className={`
-              duration-300 
-              ${isOpen ? 'delay-200' : ''}
-            `}
-            color={isOpen ? 'white' : 'transparent'}
-          />
-        </div>
-      </Link>
-
-      <Link
-        href="tel:+4368184445010"
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`phosphoricon inline-block mr-3 cursor-pointer text-text duration-500 hover:scale-125 phosphoriconWebsite`}
-      >
-        <div className="hover:cursor-pointer">
-          <Phone
-            size={25}
-            className={`
-              duration-300 
-              ${isOpen ? 'delay-200' : ''}
-            `}
-            color={isOpen ? 'white' : 'transparent'}
-          />
-        </div>
-      </Link> */}
-        </div>
+        {/* <div className="pl-10 pb-10 flex">
+         
+        </div> */}
       </div>
     </>
   );

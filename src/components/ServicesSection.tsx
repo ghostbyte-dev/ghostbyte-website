@@ -1,10 +1,4 @@
-import {
-  Smartphone,
-  Globe,
-  Search,
-  Laptop,
-  ServerIcon,
-} from "lucide-react";
+import { Smartphone, Globe, Search, Laptop, ServerIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Service from "./Service";
 
@@ -15,7 +9,7 @@ export default function ServiceSection() {
       id="services"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent" />
 
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -32,7 +26,7 @@ export default function ServiceSection() {
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
           <Service
             icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
-            name={t('mobile_development')}
+            name={t("mobile_development")}
             description={t("mobile_development_description")}
           />
 

@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function TeamSection() {
-  const t = useTranslations("Team")
+  const t = useTranslations("Team");
   return (
     <section
       id="about"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col space-y-12">
@@ -29,11 +29,11 @@ export default function TeamSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Team Member 1 */}
             <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 transition-all duration-300 hover:border-fuchsia-500/30 hover:shadow-lg hover:shadow-fuchsia-500/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 <div className="relative">
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-70 blur-sm"></div>
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-70 blur-sm" />
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
                       src="/img/daniel.webp"
@@ -99,11 +99,11 @@ export default function TeamSection() {
 
             {/* Team Member 2 */}
             <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 <div className="relative">
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-600 opacity-70 blur-sm"></div>
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-600 opacity-70 blur-sm" />
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
                       src="/img/emanuel.webp"

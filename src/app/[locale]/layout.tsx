@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
@@ -28,14 +28,13 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
- 
-  const {locale} = await params;
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  setRequestLocale(locale)
-  
+  setRequestLocale(locale);
+
   return (
     <html
       className="text-white bg-[#030014] scroll-smooth selection:bg-blue-900 selection:text-white"
@@ -43,11 +42,11 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-      <NextIntlClientProvider>
-        {<Navbar/>}
-        {children}
+        <NextIntlClientProvider>
+          {<Navbar />}
+          {children}
 
-        <Footer/>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
