@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,7 +9,7 @@ import Navbar from "../../components/Navbar";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/src/i18n/routing";
-import { setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +37,11 @@ export default async function RootLayout({
 
   setRequestLocale(locale);
 
+  const messages = await getMessages({ locale });
+
+  console.log(locale);
+  console.log(messages);
+
   return (
     <html
       className="text-white bg-[#030014] scroll-smooth selection:bg-blue-900 selection:text-white"
@@ -42,7 +49,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {<Navbar />}
           {children}
 
