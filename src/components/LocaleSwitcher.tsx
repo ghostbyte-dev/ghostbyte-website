@@ -6,7 +6,9 @@ import Flag from "react-world-flags";
 const LocaleSwitcher = () => {
   const router = useRouter();
   const pathname = usePathname();
+
   const handleLocaleChange = (newLocale: string) => {
+    // `pathname` is localized, e.g., /en/about or /de/kontakt
     router.replace(pathname, { locale: newLocale, scroll: false });
   };
 
