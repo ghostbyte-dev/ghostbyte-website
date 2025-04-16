@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Project from "./Project";
-import { useTranslations } from "next-intl";
+import type { Locale } from "next-intl";
 
-export default function ProjectsSection() {
-  const t = useTranslations("Projects");
+export default async function ProjectsSection({ lang }: { lang: Locale }) {
+  const t = await getTranslations({ namespace: "Projects", locale: lang });
   return (
     <section
       id="projects"

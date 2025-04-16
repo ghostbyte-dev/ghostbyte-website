@@ -1,10 +1,11 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
-import { useTranslations } from "next-intl";
+import type { Locale } from "next-intl";
 import Link from "next/link";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { getTranslations } from "next-intl/server";
 
-export default function Footer() {
-  const t = useTranslations("Navigation");
+export default async function Footer({ lang }: { lang: Locale }) {
+  const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
     <footer className="text-white pt-20 pb-3">
       <div className="container mx-auto px-4">

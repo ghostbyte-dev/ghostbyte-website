@@ -1,9 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import type { Locale } from "next-intl";
 
-export default function HeroSection() {
-  const t = useTranslations("Hero");
+export default async function HeroSection({ lang }: { lang: Locale }) {
+  const t = await getTranslations({ namespace: "Hero", locale: lang });
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0">

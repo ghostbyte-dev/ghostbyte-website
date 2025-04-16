@@ -1,10 +1,11 @@
 import { Github, Globe, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import type { Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function TeamSection() {
-  const t = useTranslations("Team");
+export default async function TeamSection({ lang }: { lang: Locale }) {
+  const t = await getTranslations({ namespace: "Team", locale: lang });
   return (
     <section
       id="about"

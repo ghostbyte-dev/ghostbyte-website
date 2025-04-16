@@ -1,9 +1,10 @@
 import { Smartphone, Globe, Search, Laptop, ServerIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+import type { Locale } from "next-intl";
 import Service from "./Service";
+import { getTranslations } from "next-intl/server";
 
-export default function ServiceSection() {
-  const t = useTranslations("Services");
+export default async function ServiceSection({ lang }: { lang: Locale }) {
+  const t = await getTranslations({ namespace: "Services", locale: lang });
   return (
     <section
       id="services"

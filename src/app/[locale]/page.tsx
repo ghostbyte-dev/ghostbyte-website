@@ -5,9 +5,11 @@ import ServiceSection from "../../components/ServicesSection";
 import ContactSection from "../../components/ContactSection";
 import type { Locale } from "@/i18n-config";
 
-export default function LandingPage(props: {
+export default async function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await props.params;
+
   return (
     <div className="dark bg-[#030014] pt-16">
       <div className="absolute inset-0 z-0">
@@ -16,13 +18,13 @@ export default function LandingPage(props: {
       </div>
 
       <main className="flex-1 relative z-10">
-        <HeroSection />
+        <HeroSection lang={lang} />
 
-        <ProjectsSection />
+        <ProjectsSection lang={lang} />
 
-        <ServiceSection />
+        <ServiceSection lang={lang} />
 
-        <TeamSection />
+        <TeamSection lang={lang} />
 
         {/* <TestimonialsSection /> */}
 

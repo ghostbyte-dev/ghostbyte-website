@@ -1,10 +1,9 @@
 "use client";
 
-import { X, Menu, Linkedin } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
