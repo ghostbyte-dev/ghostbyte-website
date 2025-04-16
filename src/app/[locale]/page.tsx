@@ -13,7 +13,6 @@ export default function LandingPage(props: {
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-br from-fuchsia-600/30 via-transparent to-transparent blur-[120px] opacity-40" />
         <div className="absolute bottom-0 right-0 left-0 h-[500px] bg-gradient-to-tr from-cyan-500/30 via-transparent to-transparent blur-[120px] opacity-40" />
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat opacity-[0.02]" />
       </div>
 
       <main className="flex-1 relative z-10">

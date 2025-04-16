@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: "Ghostbyte - Software Development Studio",
   description:
     "We build software that matters - Mobile apps, web applications, and custom software solutions",
+  icons: [
+    { rel: "icon", url: "/favicon.ico" },
+    { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
+  ],
 };
 
 export function generateStaticParams() {
