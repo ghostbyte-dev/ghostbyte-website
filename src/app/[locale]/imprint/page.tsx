@@ -7,7 +7,8 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ namespace: "Meta", locale: params.locale });
+  const { locale } = await params;
+  const t = await getTranslations({ namespace: "Meta", locale: locale });
 
   return {
     title: t("titleImprint"),
@@ -18,7 +19,7 @@ export async function generateMetadata({
     ],
     alternates: {
       canonical: `https://ghostbyte.dev${
-        params.locale === "de" ? "/de/impressum" : "/imprint"
+        locale === "de" ? "/de/impressum" : "/imprint"
       }`,
     },
   };

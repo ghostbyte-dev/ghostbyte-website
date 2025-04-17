@@ -22,7 +22,8 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const t = await getTranslations({ namespace: "Meta", locale: params.locale });
+  const { locale } = await params;
+  const t = await getTranslations({ namespace: "Meta", locale: locale });
 
   return {
     title: t("title"),
@@ -32,7 +33,7 @@ export async function generateMetadata({
       { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
     ],
     alternates: {
-      canonical: `https://ghostbyte.dev${params.locale === "de" ? "/de" : ""}`,
+      canonical: `https://ghostbyte.dev${locale === "de" ? "/de" : ""}`,
     },
   };
 }
