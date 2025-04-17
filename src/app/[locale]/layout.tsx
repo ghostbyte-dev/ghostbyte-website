@@ -20,7 +20,7 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ namespace: "Meta", locale: locale });
