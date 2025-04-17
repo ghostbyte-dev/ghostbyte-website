@@ -76,5 +76,13 @@
   },
   "Privacy": {
     "title": "Datenschutzrichtlinie"
+  },
+  "Meta": {
+    "title": "Ghostbyte - Software Development Studio",
+    "description": "Wir erstellen Software, die wichtig ist - mobile Apps, Webanwendungen und benutzerdefinierte Softwarelösungen",
+    "descriptionImprint": "Impressum von Ghostbyte",
+    "descriptionPrivacy": "Datenschutzerklärung von Ghostbyte",
+    "titleImprint": "Ghostbyte - Impressum",
+    "titlePrivacy": "Ghostbyte - Datenschutzrichtlinie"
   }
 }

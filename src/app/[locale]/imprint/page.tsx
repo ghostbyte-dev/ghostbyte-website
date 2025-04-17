@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ namespace: "Meta", locale: params.locale });
+
+  return {
+    title: t("titleImprint"),
+    description: t("descriptionImprint"),
+    icons: [
+      { rel: "icon", url: "/favicon.ico" },
+      { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
+    ],
+    alternates: {
+      canonical: `https://ghostbyte.dev${
+        params.locale === "de" ? "/de/impressum" : "/imprint"
+      }`,
+    },
+  };
+}
 
 export default async function Imprint(props: {
   params: Promise<{ lang: Locale }>;

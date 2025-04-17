@@ -9,19 +9,33 @@ import Navbar from "../../components/Navbar";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/src/i18n/routing";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Ghostbyte - Software Development Studio",
-  description:
-    "We build software that matters - Mobile apps, web applications, and custom software solutions",
-  icons: [
-    { rel: "icon", url: "/favicon.ico" },
-    { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ namespace: "Meta", locale: params.locale });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    icons: [
+      { rel: "icon", url: "/favicon.ico" },
+      { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
+    ],
+    alternates: {
+      canonical: `https://ghostbyte.dev${params.locale === "de" ? "/de" : ""}`,
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -42,9 +56,6 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages({ locale });
-
-  console.log(locale);
-  console.log(messages);
 
   return (
     <html

@@ -76,5 +76,13 @@
   },
   "Privacy": {
     "title": "Privacy Policy"
+  },
+  "Meta": {
+    "title": "Ghostbyte - Software Development Studio",
+    "description": "We build software that matters - Mobile apps, web applications, and custom software solutions",
+    "descriptionImprint": "Imprint of Ghostbyte",
+    "titleImprint": "Ghostbyte - Imprint",
+    "titlePrivacy": "Ghostbyte - Privacy Policy",
+    "descriptionPrivacy": "Privacy Policy of Ghostbyte"
   }
 }
