@@ -3,6 +3,7 @@ import type { Locale } from "next-intl";
 import Link from "next/link";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { getTranslations } from "next-intl/server";
+import { Link as IntlLink } from "@/src/i18n/navigation";
 
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
@@ -62,7 +63,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="#projects"
+                    href="/#projects"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -71,7 +72,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 </li>
                 <li>
                   <Link
-                    href="#services"
+                    href="/#services"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -80,7 +81,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 </li>
                 <li>
                   <Link
-                    href="#about"
+                    href="/#about"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -89,7 +90,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 </li>
                 <li>
                   <Link
-                    href="#contact"
+                    href="/#contact"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -119,18 +120,18 @@ export default async function Footer({ lang }: { lang: Locale }) {
             {t("ghostbyte_all_rights_reserved")}
           </p>
           <div className="flex gap-6">
-            <Link
+            <IntlLink
               href="/privacy-policy"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
               {t("privacy_policy")}
-            </Link>
-            <Link
+            </IntlLink>
+            <IntlLink
               href="/imprint"
               className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
             >
               {t("imprint")}
-            </Link>
+            </IntlLink>
           </div>
         </div>
       </div>
