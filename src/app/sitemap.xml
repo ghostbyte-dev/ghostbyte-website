@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://ghostbyte.dev</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de" />
+  </url>
+
+  <url>
+    <loc>https://ghostbyte.dev/de</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de" />
+  </url>
+
+  <url>
+    <loc>https://ghostbyte.dev/imprint</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev/imprint" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de/impressum" />
+  </url>
+
+  <url>
+    <loc>https://ghostbyte.dev/de/impressum</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev/imprint" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de/impressum" />
+  </url>
+
+  <url>
+    <loc>https://ghostbyte.dev/privacy-policy</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de/datenschutz" />
+  </url>
+
+  <url>
+    <loc>https://ghostbyte.dev/de/datenschutz</loc>
+    <lastmod>2025-04-17T13:05:37.942Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ghostbyte.dev/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://ghostbyte.dev/de/datenschutz" />
+  </url>
+
+</urlset>

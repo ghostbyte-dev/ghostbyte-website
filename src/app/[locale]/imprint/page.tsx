@@ -1,7 +1,12 @@
-import { useTranslations } from "next-intl";
+import type { Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function Imprint() {
-  const t = useTranslations("Imprint");
+export default async function Imprint(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+
+  const t = await getTranslations({ namespace: "Imprint", locale: lang });
 
   return (
     <>
