@@ -30,7 +30,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             category={t("mobile_application")}
             description={t("pixelix_description")}
             link="https://app.pixelix.social"
-            gradientColor="from-fuchsia-600/30"
+            gradientColor="from-purple-600/30"
           />
 
           <Project

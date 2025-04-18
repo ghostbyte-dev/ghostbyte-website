@@ -18,7 +18,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 <img src="/logo_dark.svg" height={22} width={22} />
               </div> */}
               <h3 className="text-3xl font-bold">
-                <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-cyan-300">
+                <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
                   Ghostbyte
                 </span>
               </h3>
@@ -66,7 +66,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#projects"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("projects")}
                   </Link>
                 </li>
@@ -75,7 +75,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#services"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("services")}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#about"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("about")}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#contact"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("contact")}
                   </Link>
                 </li>
@@ -122,13 +122,13 @@ export default async function Footer({ lang }: { lang: Locale }) {
           <div className="flex gap-6">
             <IntlLink
               href="/privacy-policy"
-              className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
+              className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
             >
               {t("privacy_policy")}
             </IntlLink>
             <IntlLink
               href="/imprint"
-              className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors"
+              className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
             >
               {t("imprint")}
             </IntlLink>

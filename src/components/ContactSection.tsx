@@ -50,7 +50,7 @@ export default function ContactSection() {
                   </label>
                   <input
                     id="name"
-                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuchsia-500"
+                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
                     placeholder={t("name_placeholder")}
                     {...register("name", { required: true })}
                   />
@@ -65,7 +65,7 @@ export default function ContactSection() {
                   <input
                     id="email"
                     type="email"
-                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuchsia-500"
+                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
                     placeholder={t("email_placeholder")}
                     {...register("email", { required: true })}
                   />
@@ -81,7 +81,7 @@ export default function ContactSection() {
                 </label>
                 <input
                   id="subject"
-                  className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuchsia-500"
+                  className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
                   placeholder={t("subject_placeholder")}
                   {...register("subject", { required: true })}
                 />
@@ -96,7 +96,7 @@ export default function ContactSection() {
                 </label>
                 <textarea
                   id="message"
-                  className="flex min-h-[120px] w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fuchsia-500"
+                  className="flex min-h-[120px] w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
                   placeholder={t("message_placeholder")}
                   {...register("message", { required: true })}
                 />
@@ -114,7 +114,7 @@ export default function ContactSection() {
                   {t("mail_directly")}{" "}
                   <Link
                     href="mailto:hey@ghostbyte.com"
-                    className="text-fuchsia-400 hover:text-cyan-400 transition-colors"
+                    className="text-purple-400 hover:text-cyan-400 transition-colors"
                   >
                     hey@ghostbyte.com
                   </Link>

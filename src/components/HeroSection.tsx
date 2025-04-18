@@ -8,7 +8,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-fuchsia-500/40 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/40 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob" />
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/40 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob animation-delay-2000" />
         <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/40 rounded-full mix-blend-multiply filter blur-[128px] opacity-70 animate-blob animation-delay-4000" />
       </div>
@@ -18,11 +18,11 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-white to-cyan-300">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-white to-cyan-300">
                   {t("title_line_1")}
                 </span>
                 <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-br from-fuchsia-500 to-cyan-400">
+                <span className="bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-cyan-400">
                   {t("title_line_2")}
                 </span>
               </h1>
@@ -71,7 +71,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
                           i % 3 === 0 ? "animate-pulse" : ""
                         }`}
                       >
-                        <span className="text-fuchsia-500">{"{"}</span>
+                        <span className="text-purple-500">{"{"}</span>
                         <span className="text-cyan-400">function</span>
                         <span className="text-white">{`createDigitalExperience(${
                           i % 3 === 0
@@ -80,7 +80,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
                             ? "design"
                             : "code"
                         })`}</span>
-                        <span className="text-fuchsia-500">{"{"}</span>
+                        <span className="text-purple-500">{"{"}</span>
                       </div>
                     ))}
                   </div>
@@ -88,7 +88,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
 
                 {/* Floating elements */}
                 <div className="absolute inset-0">
-                  <div className="absolute top-1/4 left-1/4 h-20 w-20 rounded-lg border border-fuchsia-500/30 bg-fuchsia-500/10 backdrop-blur-sm rotate-12 animate-pulse" />
+                  <div className="absolute top-1/4 left-1/4 h-20 w-20 rounded-lg border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm rotate-12 animate-pulse" />
                   <div className="absolute top-1/2 right-1/4 h-16 w-16 rounded-lg border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm -rotate-12 animate-pulse animation-delay-2000" />
                   <div className="absolute bottom-1/4 left-1/3 h-24 w-24 rounded-lg border border-purple-500/30 bg-purple-500/10 backdrop-blur-sm rotate-45 animate-pulse animation-delay-4000" />
                 </div>

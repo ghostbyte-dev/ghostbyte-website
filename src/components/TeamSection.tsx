@@ -29,12 +29,12 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
           {/* Team Members - 2 people */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Team Member 1 */}
-            <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 transition-all duration-300 hover:border-fuchsia-500/30 hover:shadow-lg hover:shadow-fuchsia-500/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm p-6 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 <div className="relative">
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-70 blur-sm" />
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 opacity-70 blur-sm" />
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
                       src="/img/daniel.webp"
@@ -48,7 +48,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
 
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Daniel Hiebeler</h3>
-                  <p className="text-sm text-fuchsia-400 font-medium">
+                  <p className="text-sm text-purple-400 font-medium">
                     {t("daniel_job")}
                   </p>
                   <p className="text-sm text-gray-400">
@@ -61,7 +61,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://github.com/daniebeler"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
@@ -70,7 +70,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://www.instagram.com/daniebeler"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
@@ -79,7 +79,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://www.linkedin.com/in/danielhiebeler"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
@@ -89,7 +89,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://daniebeler.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Globe className="h-5 w-5" />
                     <span className="sr-only">Website</span>
@@ -104,7 +104,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 <div className="relative">
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-600 opacity-70 blur-sm" />
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 opacity-70 blur-sm" />
                   <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
                     <Image
                       src="/img/emanuel.webp"
@@ -149,7 +149,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://www.linkedin.com/in/emanuelhiebeler"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
@@ -158,7 +158,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
                     href="https://emanuelhiebeler.me"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-fuchsia-400 transition-colors"
+                    className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
                     <Globe className="h-5 w-5" />
                     <span className="sr-only">Website</span>

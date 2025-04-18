@@ -27,31 +27,31 @@ export default function Navbar() {
           <nav className="hidden md:flex gap-6">
             <Link
               href="/#projects"
-              className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
             >
               {t("projects")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#services"
-              className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
             >
               {t("services")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#about"
-              className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
             >
               {t("about")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
               href="/#contact"
-              className="text-sm font-medium text-white transition-colors hover:text-fuchsia-400 relative group"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
             >
               {t("contact")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
           </nav>
 
