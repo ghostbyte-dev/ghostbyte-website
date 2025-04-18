@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="relative overflow-hidden px-4 py-2 rounded-md group bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 hover:cursor-pointer"
+              className="relative overflow-hidden px-4 py-2 rounded-md group bg-gradient-to-r font-semibold from-purple-700 to-cyan-600 hover:from-purple-800 hover:to-cyan-700 text-white border-0 hover:cursor-pointer"
             >
               <span className="relative z-10"> {t("get_in_touch")} </span>
             </Link>

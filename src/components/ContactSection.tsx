@@ -105,7 +105,7 @@ export default function ContactSection() {
               <div className="flex flex-col space-y-4">
                 <button
                   type="button"
-                  className="w-full h-10 rounded-md bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0"
+                  className="w-full h-10 rounded-md bg-gradient-to-r font-semibold from-purple-700 to-cyan-600 hover:from-purple-800 hover:to-cyan-700 text-white border-0"
                 >
                   {t("send_message")}
                 </button>

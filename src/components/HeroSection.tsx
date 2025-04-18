@@ -33,7 +33,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
                 href="/#projects"
-                className="flex bg-gradient-to-r from-fuchsia-600 to-cyan-400 hover:from-fuchsia-500 hover:to-cyan-300 text-white border-0 h-12 px-6 rounded-md"
+                className="flex bg-gradient-to-r font-semibold from-purple-700 to-cyan-600 hover:from-purple-800 hover:to-cyan-700 text-white border-0 h-12 px-6 rounded-md"
               >
                 <span className="relative z-10 flex items-center">
                   {t("view_our_work")}
@@ -42,7 +42,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
               </Link>
               <Link
                 href="/#contact"
-                className="flex items-center bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md"
+                className="flex items-center bg-white/5 backdrop-blur-sm font-semibold hover:bg-white/10 text-white border border-white/10 h-12 px-6 rounded-md"
               >
                 {t("contact_us")}
               </Link>
