@@ -22,9 +22,11 @@
     "features_projects": "Unsere Projekte",
     "description": "Von mobilen Apps bis zu Web-Plattformen - sieh dir an, woran wir gearbeitet haben.",
     "mobile_application": "Mobile App",
+    "android_application": "Android App",
     "web_app": "Webanwendung",
     "resource_hub": "Ressourcen Sammlung",
     "pixelix_description": "Eine funktionsreiche mobile App mit vielen coolen Features.",
+    "daily_tasks_description": "Eine minimalistische App, mit der Aufgaben nach der Ivy-Lee-Methode priorisiert werden - für mehr Fokus und gesteigerte Produktivität.",
     "socialfolio_description": "Eine einfache Möglichkeit, alle Social-Media-Profile an einem Ort zu teilen.",
     "library_description": "Eine Sammlung vieler nützlicher Websites und Tools. Sie sind nach Kategorien sortiert und mit Tags versehen, um schnell das Richtige zu finden."
   },

@@ -44,11 +44,20 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
 
           <Project
             name="Ghostbyte Library"
-            image="/img/library.png"
+            image="/img/ghostbyte_library.png"
             category={t("resource_hub")}
             description={t("library_description")}
             link="https://library.ghostbyte.dev"
             gradientColor="from-blue-500/30"
+          />
+
+          <Project
+            name="Daily Tasks"
+            image="/img/dailytasks.png"
+            category={t("android_application")}
+            description={t("daily_tasks_description")}
+            link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
+            gradientColor="from-purple-600/30"
           />
         </div>
       </div>
