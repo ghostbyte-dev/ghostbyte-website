@@ -20,7 +20,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.55.0",
-    "react-world-flags": "^1.6.0"
+    "react-world-flags": "^1.6.0",
+    "schema-dts": "^1.1.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

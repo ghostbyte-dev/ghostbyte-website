@@ -14,8 +14,51 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
+import type { Organization, WithContext } from "schema-dts";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const jsonLd: WithContext<Organization> = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ghostbyte",
+  logo: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ghostbyte_Logo.png",
+  url: "https://ghostbyte.dev",
+  description: "Ghostbyte is a software development studio in Austria",
+  email: "hey@ghostbyte.dev",
+  sameAs: [
+    "https://github.com/ghostbyte-dev",
+    "https://www.instagram.com/ghostbyte.dev",
+    "https://www.linkedin.com/company/ghostbyte",
+  ],
+  founder: [
+    {
+      "@type": "Person",
+      name: "Daniel Hiebeler",
+    },
+    {
+      "@type": "Person",
+      name: "Emanuel Hiebeler",
+    },
+  ],
+  employee: [
+    {
+      "@type": "Person",
+      name: "Daniel Hiebeler",
+    },
+    {
+      "@type": "Person",
+      name: "Emanuel Hiebeler",
+    },
+  ],
+  location: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "AT",
+    },
+  },
+};
 
 export async function generateMetadata({
   params,
@@ -65,6 +108,12 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           {<Navbar />}
           {children}
