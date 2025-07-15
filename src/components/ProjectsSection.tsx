@@ -34,12 +34,21 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Github Release Stats"
+            image="/img/github_release_stats_screenshot.png"
+            category={t("web_app")}
+            description={t("github_release_stast_description")}
+            link="https://github-release-stats.ghostbyte.dev/"
+            gradientColor="from-cyan-500/30"
+          />
+
+          <Project
             name="Socialfolio"
             image="/img/socialfolio.png"
             category={t("web_app")}
             description={t("socialfolio_description")}
             link="https://socialfolio.me"
-            gradientColor="from-cyan-500/30"
+            gradientColor="from-blue-500/30"
           />
 
           <Project
@@ -48,7 +57,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             category={t("resource_hub")}
             description={t("library_description")}
             link="https://library.ghostbyte.dev"
-            gradientColor="from-blue-500/30"
+            gradientColor="from-purple-600/30"
           />
 
           <Project
@@ -57,7 +66,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             category={t("android_application")}
             description={t("daily_tasks_description")}
             link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
-            gradientColor="from-purple-600/30"
+            gradientColor="from-cyan-500/30"
           />
         </div>
       </div>

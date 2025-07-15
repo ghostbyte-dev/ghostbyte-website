@@ -26,6 +26,7 @@
     "web_app": "Web App",
     "resource_hub": "Resource Hub",
     "pixelix_description": "A feature-rich mobile application with many cool features.",
+    "github_release_stast_description": "Github Release Stats is a tool to check the stats of Github repositories. You can check the download history of releases and the star history of repositories.",
     "daily_tasks_description": "A minimalist app that helps you prioritize your tasks each day using the Ivy Lee Method for better focus and productivity.",
     "socialfolio_description": "A simple, open-source way to share your socials in one place.",
     "library_description": "A collection of many useful websites and tools. They are sorted by category and include some tags to quickly find the right one for your needs."
