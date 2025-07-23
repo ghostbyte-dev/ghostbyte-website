@@ -4,6 +4,7 @@ import Link from "next/link";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { getTranslations } from "next-intl/server";
 import { Link as IntlLink } from "@/src/i18n/navigation";
+import MastodonIcon from "./icons/MastodonIcon";
 
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
@@ -14,9 +15,11 @@ export default async function Footer({ lang }: { lang: Locale }) {
           {/* Brand column */}
           <div className="md:w-1/3">
             <div className="flex items-center gap-3 mb-8">
-              {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
+              {
+                /* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
                 <img src="/logo_dark.svg" height={22} width={22} />
-              </div> */}
+              </div> */
+              }
               <h3 className="text-3xl font-bold">
                 <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
                   Ghostbyte
@@ -47,6 +50,15 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-6 w-6" />
+              </Link>
+              <Link
+                href="https://mastodon.social/@ghostbyte"
+                target="_blank"
+                rel="noopener noreferrer me"
+              >
+                <div className="text-white w-6 h-6 relative">
+                  <MastodonIcon />
+                </div>
               </Link>
             </div>
             <div className="mt-8">
