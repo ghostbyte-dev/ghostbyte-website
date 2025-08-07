@@ -34,6 +34,15 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Veritate Website"
+            image="/img/veritate_website.png"
+            category="Website"
+            description={t("veritate_description")}
+            link="https://veritate.at"
+            gradientColor="from-purple-600/30"
+          />
+
+          <Project
             name="Github Release Stats"
             image="/img/github_release_stats_screenshot.png"
             category={t("web_app")}
