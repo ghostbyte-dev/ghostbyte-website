@@ -27,6 +27,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Pixelix"
             image="/img/pixelix_screenshots.png"
+            logo="/img/pixelix_logo.png"
             category={t("mobile_application")}
             description={t("pixelix_description")}
             link="https://app.pixelix.social"
@@ -36,6 +37,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Veritate Website"
             image="/img/veritate_website.png"
+            logo="/img/veritate_logo.png"
             category="Website"
             description={t("veritate_description")}
             link="https://veritate.at"
@@ -45,6 +47,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Github Release Stats"
             image="/img/github_release_stats_screenshot.png"
+            logo="/img/github_release_stats_logo.svg"
             category={t("web_app")}
             description={t("github_release_stast_description")}
             link="https://github-release-stats.ghostbyte.dev/"
@@ -54,6 +57,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Socialfolio"
             image="/img/socialfolio.png"
+            logo="/img/socialfolio_logo.svg"
             category={t("web_app")}
             description={t("socialfolio_description")}
             link="https://socialfolio.me"
@@ -63,6 +67,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Ghostbyte Library"
             image="/img/ghostbyte_library.png"
+            logo="/img/ghostbyte_library_logo.png"
             category={t("resource_hub")}
             description={t("library_description")}
             link="https://library.ghostbyte.dev"
@@ -72,6 +77,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Daily Tasks"
             image="/img/dailytasks.png"
+            logo="/img/daily_tasks_logo.webp"
             category={t("android_application")}
             description={t("daily_tasks_description")}
             link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"

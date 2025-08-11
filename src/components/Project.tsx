@@ -3,6 +3,7 @@ import Link from "next/link";
 
 interface ProjectProps {
   image: string;
+  logo: string;
   name: string;
   category: string;
   description: string;
@@ -12,6 +13,7 @@ interface ProjectProps {
 
 export default function Project({
   image,
+  logo,
   name,
   category,
   description,
@@ -39,21 +41,22 @@ export default function Project({
           />
         </div>
         <div className="p-6">
-          <h3 className="mt-2 text-xl font-bold">{name}</h3>
-          <p className="text-sm mb-2 text-white/80">{category}</p>
+          <div className="flex items-center space-x-3 mb-3">
+            <Image
+              src={logo}
+              width={40}
+              height={40}
+              className="w-12 h-12 rounded-xl"
+              alt=""
+            />
+            <div>
+              <h3 className="mt-2 text-xl font-bold">{name}</h3>
+              <p className="text-sm mb-2 text-white/80">{category}</p>
+            </div>
+          </div>
 
           <p className="text-sm">{description}</p>
-          <div className="mt-4 flex justify-end">
-            {
-              /* <Link
-            href={link}
-            className="bg-transparent hover:bg-white/5 text-white group/btn flex items-center"
-          >
-            <span>View Project</span>
-            <LinkrrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-          </Link> */
-            }
-          </div>
+          <div className="mt-4 flex justify-end"></div>
         </div>
       </div>
     </Link>
