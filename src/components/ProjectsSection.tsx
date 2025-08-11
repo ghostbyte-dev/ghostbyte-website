@@ -67,7 +67,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           <Project
             name="Ghostbyte Library"
             image="/img/ghostbyte_library.png"
-            logo="/img/ghostbyte_library_logo.png"
+            logo="/img/ghostbyte_library_logo.webp"
             category={t("resource_hub")}
             description={t("library_description")}
             link="https://library.ghostbyte.dev"
