@@ -1,6 +1,6 @@
 # Ghostbyte Website
 
-![Preview of App](https://github.com/ghostbyte-dev/ghostbyte-website/blob/a44933798169f7d17980b26511a02ee59ccdde03/assets/ghostbyte-website-screenshot.png)
+![Screenshot of ghostbyte.dev website](https://github.com/ghostbyte-dev/ghostbyte-website/blob/a44933798169f7d17980b26511a02ee59ccdde03/assets/ghostbyte-website-screenshot.png)
 
 The **Ghostbyte Website** is the official landing page for **Ghostbyte**, a web and app development studio based in Austria.  
 It showcases our projects, services, and our team, and provides ways to get in touch.
@@ -43,6 +43,8 @@ npm run dev
 <br>
 
 ## 👻 A Ghostbyte Production
+
+![Ghostbyte banner](https://github.com/ghostbyte-dev/ghostbyte-website/blob/53ed21675d8306f4c6885ae0653b2805ee5b2e06/assets/ghostbyte_banner.png)
 
 Have questions, feedback, or just want to say hi? Reach out to us and we’ll get back to you!
 
