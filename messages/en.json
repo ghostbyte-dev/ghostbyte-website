@@ -30,7 +30,8 @@
     "daily_tasks_description": "A minimalist app that helps you prioritize your tasks each day using the Ivy Lee Method for better focus and productivity.",
     "socialfolio_description": "A simple, open-source way to share your socials in one place.",
     "library_description": "A collection of many useful websites and tools. They are sorted by category and include some tags to quickly find the right one for your needs.",
-    "veritate_description": "Website for Veritate, a metal band from Vienna."
+    "veritate_description": "Website for Veritate, a metal band from Vienna.",
+    "together_description": "A tool for managing households and communities. Features are a shared shopping list, todos, calendar and more."
   },
   "Team": {
     "title": "Who We Are",

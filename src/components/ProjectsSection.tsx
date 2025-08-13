@@ -45,6 +45,16 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Together"
+            image="/img/together_screenshot.png"
+            logo="/img/together_logo.png"
+            category={t("web_app")}
+            description={t("together_description")}
+            link="https://together.ghostbyte.dev/"
+            gradientColor="from-cyan-500/30"
+          />
+
+          <Project
             name="Github Release Stats"
             image="/img/github_release_stats_screenshot.png"
             logo="/img/github_release_stats_logo.svg"
@@ -52,16 +62,6 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             description={t("github_release_stast_description")}
             link="https://github-release-stats.ghostbyte.dev/"
             gradientColor="from-cyan-500/30"
-          />
-
-          <Project
-            name="Socialfolio"
-            image="/img/socialfolio.png"
-            logo="/img/socialfolio_logo.svg"
-            category={t("web_app")}
-            description={t("socialfolio_description")}
-            link="https://socialfolio.me"
-            gradientColor="from-blue-500/30"
           />
 
           <Project
@@ -82,6 +82,16 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             description={t("daily_tasks_description")}
             link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
             gradientColor="from-cyan-500/30"
+          />
+
+          <Project
+            name="Socialfolio"
+            image="/img/socialfolio.png"
+            logo="/img/socialfolio_logo.svg"
+            category={t("web_app")}
+            description={t("socialfolio_description")}
+            link="https://socialfolio.me"
+            gradientColor="from-blue-500/30"
           />
         </div>
       </div>
