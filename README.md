@@ -18,6 +18,30 @@ Website: [ghostbyte.dev](https://ghostbyte.dev)
 
 <br>
 
+
+## Setup
+
+Clone the repository
+
+```
+git clone https://github.com/ghostbyte-dev/ghostbyte-website.git
+```
+
+Install the required packages
+
+```
+npm install
+```
+
+Run the app
+
+```
+npm run dev
+```
+
+
+<br>
+
 ## 👻 A Ghostbyte Production
 
 Have questions, feedback, or just want to say hi? Reach out to us and we’ll get back to you!
