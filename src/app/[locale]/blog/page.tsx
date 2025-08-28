@@ -1,4 +1,5 @@
 import { HeroPost } from "@/src/components/blog/hero-post";
+import { MoreStories } from "@/src/components/blog/more-stories";
 import { getAllPosts } from "@/src/utils/blogApi";
 
 export default function BlogOverviewPage() {
@@ -19,8 +20,7 @@ export default function BlogOverviewPage() {
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
         />
-        {/*         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-         */}{" "}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </div>
     </main>
   );
