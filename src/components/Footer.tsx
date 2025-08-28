@@ -15,11 +15,9 @@ export default async function Footer({ lang }: { lang: Locale }) {
           {/* Brand column */}
           <div className="md:w-1/3">
             <div className="flex items-center gap-3 mb-8">
-              {
-                /* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
+              {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
                 <img src="/logo_dark.svg" height={22} width={22} />
-              </div> */
-              }
+              </div> */}
               <h3 className="text-3xl font-bold">
                 <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
                   Ghostbyte
@@ -78,7 +76,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#projects"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("projects")}
                   </Link>
                 </li>
@@ -87,7 +84,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#services"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("services")}
                   </Link>
                 </li>
@@ -96,7 +92,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#about"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("about")}
                   </Link>
                 </li>
@@ -105,8 +100,15 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     href="/#contact"
                     className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {t("contact")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    {t("blog")}
                   </Link>
                 </li>
               </ul>

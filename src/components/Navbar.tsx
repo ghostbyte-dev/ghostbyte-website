@@ -53,6 +53,13 @@ export default function Navbar() {
               {t("contact")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
+            >
+              {t("blog")}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+            </Link>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -147,6 +154,21 @@ export default function Navbar() {
           `}
             >
               {t("contact")}
+            </h3>
+          </Link>
+
+          <Link
+            href="/blog"
+            className="cursor-pointer font-bold"
+            onClick={() => setIsOpen(false)}
+          >
+            <h3
+              className={`
+            duration-300 
+            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+          `}
+            >
+              {t("blog")}
             </h3>
           </Link>
         </div>
