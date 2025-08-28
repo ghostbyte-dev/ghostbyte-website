@@ -47,6 +47,13 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
             <Link
+              href="/blog"
+              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
+            >
+              {t("blog")}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+            </Link>
+            <Link
               href="/#contact"
               className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
             >
