@@ -10,8 +10,8 @@ export default function BlogOverviewPage() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main>
-      <div className="container mx-auto px-5 mt-32">
+    <main className="pt-32">
+      <div className="container mx-auto px-5">
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}

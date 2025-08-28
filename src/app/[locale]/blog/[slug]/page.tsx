@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/src/utils/markdownToHtml";
 import { getAllPosts, getPostBySlug } from "@/src/utils/blogApi";
-import markdownStyles from "@/src/components/blog/markdown-styles.module.css";
 import { PostHeader } from "@/src/components/blog/post-header";
 import Link from "next/link";
 
@@ -18,14 +17,12 @@ export default async function Post(props: Params) {
 
   return (
     <main>
-      {/*       <Alert preview={post.preview} />
-       */}{" "}
       <div className="container mx-auto px-5 pt-32">
-        <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
+        <p className="text-xl md:text-2xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
           <Link href="/blog" className="hover:underline">
-            Blog
+            Back
           </Link>
-        </h2>
+        </p>
         <article className="mb-32">
           <PostHeader
             title={post.title}

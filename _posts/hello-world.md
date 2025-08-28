@@ -1,13 +1,13 @@
 ---
 title: "Hello World"
 excerpt: "Our very first blog post - a simple hello to the world."
-coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage: "/assets/blog/hello-world/cover.webp"
 date: "2025-08-28"
 author:
   name: Daniel Hiebeler
   picture: "/assets/blog/authors/daniel.webp"
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: "/assets/blog/hello-world/cover.webp"
 ---
 
 

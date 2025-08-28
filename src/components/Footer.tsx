@@ -103,6 +103,14 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     {t("contact")}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    {t("blog")}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
