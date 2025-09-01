@@ -15,17 +15,17 @@ We are Daniel and Emanuel, two brothers  with a shared passion for creating grea
 Earlier this year we decided that it would be cool to maintain our best projects together under a company name. An this company name is Ghostbyte.
 
 ## What is Ghostbyte
-Ghostbyte is more than just a studio name. For us, it’s about building products that feel great, exploring exciting new technologies and maintaining open source software. In addition to our projects we want to develop websites for local businesses to make the web a more beautiful place.
+Ghostbyte is more than just a studio name. For us, it’s about building products that feel great, exploring exciting new technologies and maintaining open source software. In addition to our projects we want to develop websites, webshops and similar for local businesses to make the web a more beautiful place.
 
 ## Our Projects
 So far our portfolio consists of the following projects:
-+ **Pixelix**: Mobile client for the photo sharing network Pixelfed.
-+ **Together**: Online platform to manage households.
-+ **Github Release Stats**: Web-app for seeing download numbers of Github releases.
-+ **Ghostbyte Library**: Collection of useful web resources especially for designers and developers.
-+ **Veritate Website**: Website for the Viennese Metal band Veritate.
-+ **Daily Tasks**: Android implementation of the Ivy Lee Method.
-+ **Socialfolio**: Platform for presenting all your social media accounts in one place.
++ [**Pixelix**](https://app.pixelix.social): Mobile client for the photo sharing network Pixelfed.
++ [**Together**](https://together.ghostbyte.dev): Online platform to manage households.
++ [**Github Release Stats**](https://github-release-stats.ghostbyte.dev): Web-app for seeing download numbers of Github releases.
++ [**Ghostbyte Library**](https://library.ghostbyte.dev): Collection of useful web resources especially for designers and developers.
++ [**Veritate Website**](https://veritate.at): Website for the Viennese Metal band Veritate.
++ [**Daily Tasks**](https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks): Android implementation of the Ivy Lee Method.
++ [**Socialfolio**](https://socialfolio.me): Platform for presenting all your social media accounts in one place.
 
 And of course the journey isn't over here, we are already working hard on the next projects.
 
