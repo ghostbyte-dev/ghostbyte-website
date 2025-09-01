@@ -1,13 +1,13 @@
 ---
 title: "Welcome to Ghostbyte"
 excerpt: "Ghostbyte is our software development studio. Here is a short introduction who we are and what to expect from Ghostbyte and from this blog."
-coverImage: "/assets/blog/welcome/cover.png"
+coverImage: "/assets/blog/welcome/cover.avif"
 date: "2025-09-01"
 author:
   name: Daniel Hiebeler
   picture: "/assets/blog/authors/daniel.webp"
 ogImage:
-  url: "/assets/blog/welcome/cover.png"
+  url: "/assets/blog/welcome/cover.avif"
 ---
 
 We are Daniel and Emanuel, two brothers  with a shared passion for creating great software. We are both from Vorarlberg, Austria and are currently studying Informatics at TU Wien in Vienna. We are always working on some cool projects. Most of them are open source and available on [Github](https://github.com/ghostbyte-dev).
