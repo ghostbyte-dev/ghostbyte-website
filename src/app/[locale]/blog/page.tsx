@@ -1,6 +1,14 @@
 import { HeroPost } from "@/src/components/blog/hero-post";
 import { MoreStories } from "@/src/components/blog/more-stories";
 import { getAllPosts } from "@/src/utils/blogApi";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Ghostbyte",
+  alternates: {
+    canonical: "https://ghostbyte.dev/blog",
+  },
+};
 
 export default function BlogOverviewPage() {
   const allPosts = getAllPosts();

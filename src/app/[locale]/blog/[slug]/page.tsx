@@ -65,6 +65,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       title,
       images: [post.ogImage.url],
     },
+    alternates: {
+      canonical: `https://ghostbyte.dev/blog/${post.slug}`,
+    },
   };
 }
 
