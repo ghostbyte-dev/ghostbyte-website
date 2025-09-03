@@ -23,8 +23,11 @@
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.60.0",
     "react-world-flags": "^1.6.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
     "schema-dts": "^1.1.5"
   },
   "devDependencies": {
