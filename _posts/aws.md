@@ -1,17 +1,17 @@
 ---
-title: "Hello World"
-excerpt: "Our very first blog post - a simple hello to the world."
+title: "NextJS image gallery using AWS S3"
+excerpt: "A straight forward tutorial on how to build a blazing fast image gallery using NextJS and AWS S3"
 coverImage: "/assets/blog/hello-world/cover.webp"
-date: "2025-08-28"
+date: "2025-09-06"
 author:
-  name: Daniel Hiebeler
-  picture: "/assets/blog/authors/daniel.webp"
+  name: Emanuel Hiebeler
+  picture: "/assets/blog/authors/emanuel.webp"
 ogImage:
-  url: "/assets/blog/hello-world/cover.webp"
+  url: "/assets/blog/aws-image-gallery/cover.webp"
 ---
 
 # How to make a big image gallery fast
-Big image galleries can be a nightmare to make, they use huge amounts of storage and load slowly. So the challenge was to find a relatively cheap way to store this big amounts of images somewhere, but of course the gallery should still have a very fast load time.
+Big image galleries can be a nightmare to make, they use huge amounts of storage and load slowly. So the challenge was to find a relatively cheap way to store this large amounts of images somewhere, but of course the gallery should still have a very fast load time.
 
 With these prerequesites we decided to give AWS a try. With AWS we would have the possibility for a big storage (S3) for our images, for serverless functions (lambda) to create our thumbnails on the image oupload and for a CDN (CloudFront) to have the images cached.
 
