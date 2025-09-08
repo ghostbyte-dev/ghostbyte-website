@@ -78,6 +78,10 @@
     @apply list-disc ml-5
   }
 
+  .markdown ol {
+    @apply list-decimal ml-5
+  }
+
   .markdown code {
     @apply text-sm my-3;
   }
