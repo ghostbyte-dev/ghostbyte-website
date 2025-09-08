@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Markdown"
-excerpt: "A short backstory and the basics to the markdown language."
+excerpt: "A short backstory and the basics of the markdown language."
 coverImage: "/assets/blog/introduction-to-markdown/cover.webp"
 
-date: "2025-09-07"
+date: "2025-09-08"
 author:
   name: Daniel Hiebeler
   picture: "/assets/blog/authors/daniel.webp"
@@ -11,12 +11,13 @@ ogImage:
   url: "/assets/blog/introduction-to-markdown/cover.webp"
 ---
 
-Markdown is a markup language which was developed with the goal that it should be easy to write and easy to read. The 
+Markdown is a markup language which was developed with the goal that it should be extremely easy to write and easy to read.
 It was created by John Gruber in collaboration with Aaron Schwartz and first published in December 2004 on the following website:
 
  [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/)
 
-
+The syntax is so straightforward and intuitive that a Markdown file can be easily read even when not formatted.
+That is also the philosophy of the Markdown developers:
 
 > Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 
@@ -44,7 +45,7 @@ There are 6 different headers, ranging from H1 (the largest) to H6 (the smallest
 
 ```markdown
 # This is a H1
-### This is a H3 **hallo**
+### This is a H3
 ###### This is a H6
 ```
 
@@ -112,10 +113,18 @@ Links consist of two parts. First the text which will be shown wrapped in square
 The second part is the URL which is wrapped in parentheses.
 
 ```markdown
-[Text which is shown](https://ghostbyte.dev/)
+[Example link](https://example.com/)
 ```
 
-[Text which is shown](https://ghostbyte.dev/)
+In HTML:
+
+```html
+<a href="http://example.com/">Example link</a>
+````
+
+And rendered it is a normal link:
+
+[Example link](https://example.com/)
 
 
 ## Images

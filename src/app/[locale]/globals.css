@@ -55,7 +55,7 @@
   .markdown ul,
   .markdown ol,
   .markdown blockquote {
-    @apply mb-6;
+    @apply my-6;
   }
 
   .markdown h2 {
@@ -64,6 +64,10 @@
 
   .markdown h3 {
     @apply text-2xl mt-8 mb-4 leading-snug;
+  }
+
+  .markdown h4 {
+    @apply text-xl mt-6 mb-4 leading-snug;
   }
 
   .markdown a {
@@ -75,7 +79,7 @@
   }
 
   .markdown code {
-    @apply text-sm;
+    @apply text-sm my-3;
   }
 }
 
