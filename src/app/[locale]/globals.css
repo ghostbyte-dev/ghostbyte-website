@@ -74,6 +74,10 @@
     @apply text-2xl mt-6 mb-4 leading-snug;
   }
 
+  .markdown hr {
+    @apply my-10;
+  }
+
   .markdown a {
     @apply underline text-[#c27aff]
   }

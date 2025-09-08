@@ -11,7 +11,7 @@ ogImage:
   url: "/assets/blog/introduction-to-markdown/cover.webp"
 ---
 
-Markdown is a markup language which was developed with the goal that it should be extremely easy to write and easy to read.
+Markdown is a markup language which was developed with the goal that it should be extremely easy to read and easy to write.
 It was created by John Gruber in collaboration with Aaron Schwartz and first published in December 2004 on his website:
 
  [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/)
@@ -21,19 +21,30 @@ That is also the philosophy of the Markdown developers:
 
 > Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 
-
-
 The language is used in many day-to-day applications. For example in blogs, documentation, note-taking, and similar. Reddit posts can be written in Markdown. Discord and Slack are using a simplified version of the Markdown syntax for bold, italics, code, etc.
 
+![Markdown in Discord](/assets/blog/introduction-to-markdown/markdown-in-discord.png)
 
-Even this blog post is written in Markdown.
+![Markdown in Reddit](/assets/blog/introduction-to-markdown/markdown-in-reddit.png)
+
+Even this blog post is written in Markdown. I think when you read through the syntax section it will make sense.
 
 Markdown files have the extension .md or .markdown. They are normal textfiles so they can be edited with any text editor.
 
 
 ## Syntax
 
-Here are the most important elements the language has to offer.
+The elements Markdown offers are mostly used for the structure of the document and not really for styling. For example there is no way to set fonts or text colors. This are the most important elements:
+
++ Paragraphs
++ Headers
++ Lists
++ Text styles
++ Links
++ Images
++ Blockqoutes
++ Horizontal rules
++ Code
 
 ### Paragraphs
 
@@ -116,6 +127,8 @@ And rendered it can look like that:
 + And this the third
 
 #### Ordered Lists
+
+The ordered list is a perfect example for the intuition of the Markdown syntax. It is written exactly how one would expect to write it.
 
 ```markdown
 1. This is the first element
@@ -271,3 +284,7 @@ function hello() {
 }
 hello();
 ```
+
+---
+
+And that's pretty much it. Nothing fancy, just plain text doing all the work.
