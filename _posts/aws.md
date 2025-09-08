@@ -1,13 +1,13 @@
 ---
 title: "NextJS image gallery using AWS S3"
 excerpt: "A straight forward tutorial on how to build a blazing fast image gallery using NextJS and AWS S3"
-coverImage: "/assets/blog/hello-world/cover.webp"
+coverImage: "/assets/blog/aws-image-gallery/cover.svg"
 date: "2025-09-06"
 author:
   name: Emanuel Hiebeler
   picture: "/assets/blog/authors/emanuel.webp"
 ogImage:
-  url: "/assets/blog/aws-image-gallery/cover.webp"
+  url: "/assets/blog/aws-image-gallery/cover.svg"
 ---
 
 # How to make a big image gallery fast
