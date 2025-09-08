@@ -11,9 +11,15 @@ ogImage:
 ---
 
 Markdown is a markup language which was developed with the goal that it should be easy to write and easy to read. The 
-It was created in 2004 by John Gruber in collaboration with Aaron Schwartz.
+It was created by John Gruber in collaboration with Aaron Schwartz and first published in December 2004 on the following website:
+
+ [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/)
+
+
 
 > Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+
+
 
 The language is used in many day-to-day applications. For example in blogs, documentation, note-taking, and similar. Reddit posts can be written in Markdown. Discord and Slack are using a simplified version of the Markdown syntax for bold, italics, code, etc.
 
@@ -55,7 +61,7 @@ There are unordered lists and ordered lists.
 
 #### Unordered Lists
 
-To create a list item the line is just started with a plus. Insted of the plus it is also possible to use an asterisk (*) or a hyphen (-).
+To create a list item the line is just started with a plus, an asterisk (*) or a hyphen (-). It does not matter which of the three elements are used, they all produce the same output.
 
 ```markdown
 + This is the first element
@@ -101,5 +107,26 @@ Here is an *emphasized* and here a **bold** word.
 
 ## Links
 
+Links consist of two parts. First the text which will be shown wrapped in square brackets. This text can be chosen freely and does not have to do anything with the URL itself.
+The second part is the URL which is wrapped in parentheses.
+
+```markdown
+[Text which is shown](https://ghostbyte.dev/)
+```
+
+[Text which is shown](https://ghostbyte.dev/)
+
+
 ## Images
 
+The syntax for images is very similar to the one for links, but with an exclamation mark in front.
+
+```markdown
+![alt text](/path/to/img.jpg)
+```
+
+In HTML this renders to the following:
+
+```html
+<img src="/path/to/img.jpg" alt="alt text" />
+```
