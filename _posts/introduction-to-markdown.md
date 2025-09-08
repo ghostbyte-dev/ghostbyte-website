@@ -12,7 +12,7 @@ ogImage:
 ---
 
 Markdown is a markup language which was developed with the goal that it should be extremely easy to write and easy to read.
-It was created by John Gruber in collaboration with Aaron Schwartz and first published in December 2004 on the following website:
+It was created by John Gruber in collaboration with Aaron Schwartz and first published in December 2004 on his website:
 
  [daringfireball.net/projects/markdown](https://daringfireball.net/projects/markdown/)
 
@@ -37,7 +37,29 @@ Here are the most important elements the language has to offer.
 
 ### Paragraphs
 
-Paragraphs are just one or more consecutive lines of text. One or more empty lines are ending the paragraph.
+Paragraphs are just multiple lines of text. One or more empty lines are ending the paragraph.
+
+```markdown
+This is the first paragraph which is followed by an empty line to mark its end.
+It can contain multiple lines.
+
+And this is the second one
+```
+
+Produced HTML:
+
+```html
+<p>This is the first paragraph which is followed by an empty line to mark its end.
+It can contain multiple lines.</p>
+<p>And this is the second one</p>
+```
+
+And rendered it can look like that:
+
+This is the first paragraph which is followed by an empty line to mark its end.
+It can contain multiple lines.
+
+And this is the second one
 
 ### Headers
 
@@ -49,13 +71,19 @@ There are 6 different headers, ranging from H1 (the largest) to H6 (the smallest
 ###### This is a H6
 ```
 
-This translates to the following html:
----
+Produced HTML:
+
 ```html
 <h1>This is a H1</h1>
 <h3>This is a H3</h3>
 <h6>This is a H6</h6>
 ```
+
+And rendered it can look like that:
+
+# This is a H1
+### This is a H3
+###### This is a H6
 
 ### Lists
 
@@ -71,7 +99,7 @@ To create a list item the line is just started with a plus, an asterisk (*) or a
 + And this the third
 ```
 
-As HTML:
+Produced HTML:
 
 ```markdown
 <ul>
@@ -81,6 +109,12 @@ As HTML:
 </ul>
 ```
 
+And rendered it can look like that:
+
++ This is the first element
++ This the second
++ And this the third
+
 #### Ordered Lists
 
 ```markdown
@@ -89,7 +123,7 @@ As HTML:
 3. And this the third
 ```
 
-As HTML:
+Produced HTML:
 
 ```markdown
 <ol>
@@ -99,11 +133,25 @@ As HTML:
 </ol>
 ```
 
+And rendered it can look like that:
+
+1. This is the first element
+2. This the second
+3. And this the third
+
 ## Text styles
 
 ```markdown
 Here is an *emphasized* and here a **bold** word.
 ```
+
+As HTML:
+
+```html
+Here is an <em>emphasized</em> and here a <strong>bold</strong> word.
+```
+
+And rendered it can look like that:
 
 Here is an *emphasized* and here a **bold** word.
 
@@ -120,9 +168,9 @@ In HTML:
 
 ```html
 <a href="http://example.com/">Example link</a>
-````
+```
 
-And rendered it is a normal link:
+And rendered it can look like that:
 
 [Example link](https://example.com/)
 
@@ -135,8 +183,91 @@ The syntax for images is very similar to the one for links, but with an exclamat
 ![alt text](/path/to/img.jpg)
 ```
 
-In HTML this renders to the following:
+Produced HTML:
 
 ```html
 <img src="/path/to/img.jpg" alt="alt text" />
+```
+
+## Blockquotes
+
+Blockqoutes are lines that start with the greater-than-sign.
+
+```markdown
+> Be yourself; everyone else is already taken.
+>
+> ― Oscar Wilde
+````
+
+Produced HTML:
+
+```html
+<blockquote>
+  <p>Be yourself; everyone else is already taken.</p>
+  <p>― Oscar Wilde</p>
+</blockquote>
+```
+
+And rendered it can look like that:
+
+> Be yourself; everyone else is already taken.
+>
+> ― Oscar Wilde
+
+## Horizontal Rules
+
+A horizontal divider/line is created with three or more hyphens or asterisks. This generates a HTML [hr tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr).
+
+```markdown
+---
+
+-------
+
+***
+
+*************
+```
+
+Produced HTML:
+
+```html
+<hr />
+```
+
+And rendered it can look like that:
+
+---
+
+## Code blocks
+
+Code blocks are opened with three backticks directly followed by the language name. This language is then passed to the HTML tag as class and can be used for different syntax highlighting depending on the language.
+The code block is also closed ith three backticks.
+
+````markdown
+```js
+function hello() {
+  console.log("Hello, world!");
+}
+hello();
+```
+````
+
+Produced HTML:
+
+```html
+<code class="language-js">
+function hello() {
+  console.log("Hello, world!");
+}
+hello();
+</code>
+```
+
+And rendered it can look like that:
+
+```js
+function hello() {
+  console.log("Hello, world!");
+}
+hello();
 ```

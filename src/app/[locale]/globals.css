@@ -58,6 +58,10 @@
     @apply my-6;
   }
 
+  .markdown h1 {
+    @apply text-4xl mt-6 leading-snug;
+  }
+
   .markdown h2 {
     @apply text-3xl mt-12 leading-snug;
   }
@@ -67,7 +71,7 @@
   }
 
   .markdown h4 {
-    @apply text-xl mt-6 mb-4 leading-snug;
+    @apply text-2xl mt-6 mb-4 leading-snug;
   }
 
   .markdown a {
