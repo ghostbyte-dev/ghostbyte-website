@@ -1,11 +1,11 @@
 ---
-title: "Hello World"
-excerpt: "Our very first blog post - a simple hello to the world."
+title: "AWS image gallery"
+excerpt: "How to create big and fast loading image gallery with AWS and nextjs"
 coverImage: "/assets/blog/hello-world/cover.webp"
 date: "2025-08-28"
 author:
-  name: Daniel Hiebeler
-  picture: "/assets/blog/authors/daniel.webp"
+  name: Emanuel Hiebeler
+  picture: "/assets/blog/authors/emanuel.webp"
 ogImage:
   url: "/assets/blog/hello-world/cover.webp"
 ---
@@ -15,10 +15,74 @@ Big image galleries can be a nightmare to make, they use huge amounts of storage
 
 With these prerequesites we decided to give AWS a try. With AWS we would have the possibility for a big storage (S3) for our images, for serverless functions (lambda) to create our thumbnails on the image oupload and for a CDN (CloudFront) to have the images cached.
 
+![AWS Architecture](/assets/blog/awsGallery/architecture.svg)
+
 ## AWS S3
-For the image storage we will use a simple AWS S3 storage, where we will create an folder for each image gallery.
+For the image storage we will use a simple AWS S3 storage, where we will create an folder for each image gallery. So to get started with S3 we will create a simple bucket for our galleries.
+
+- To create the bucket we will open the [AWS S3 console](https://console.aws.amazon.com/s3)
+- Check that General purpose bucket is selected and add a bucket name
+- The other option can be left.
+
+## Permission policy
+For our Lambda function to be able to access the images on the S3 bucket, we will need to create a permission policy for it.
+
+- Open the [AWS Policies page](https://console.aws.amazon.com/iam/home#/policies) and click **create policy**
+- Under policy editor select **json** and paste this in it.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:PutLogEvents",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::*/*"
+        }
+    ]
+}
+```
+- Select **next**
+- enter a name for our policy
+- Select **Create policy**
+
+This will allow our Lambda function to get objects from S3 and put new ones there too. It also allows it to write to CloudWatch Logs to be able to better debug the function.
+
+## Execution role
+Since we now have a permission policy, we will create a role for our function with this permission set we just created.
+
+- Open the [Role page](https://console.aws.amazon.com/iam/home#/roles) and click **create role**
+- For trusted entity type select **AWS service** and for use case select **Lambda**
+- For the Permission policy, search the permission we created in the previous step and select it.
+- Add a **name** for the Role
+- Create the Role 
+
 ## AWS Lambda
-To create the thumbnails for the images on upload to S3, we will use the server functions Lambda, which will be called everytime a image is uploaded to our bucket. There we will firstly need a function to read our newly uploaded file from our S3 storage.
+Since we now have everything set up we need for our server function we will create our function that creates our thumbnails from the images which are uploaded to the S3 bucket.
+
+- First open the [Function page](https://console.aws.amazon.com/lambda/home#/functions) and select **create**
+- Select **Author from scratch**
+- Enter a **name** for our function
+- Choose the runtime Node.js 22.x
+- Select the Architecture x86.64
+- Under change default execution role
+	- Select **use an existing role**
+	- For the existing role search for the previously create **execution role**
+- Select **Create function**
+
+Now that we have our function set up, lets go through the code step by step.
 
 ```javascript
 export const handler = async (event, context) => {
@@ -145,7 +209,172 @@ export const handler = async (event, context) => {
 		}
 	};
 ```
+Now that you hopefully understand how our code works, create a file index.mjs
+???
 
-Now with this lambda function created we will have to create a trigger, so the function is called everytime a object is created on our S3 bucket. With this trigger in place we are now able to upload our big images to our bucket and let the lambda function automatically create the thumbnails for it. So now we can take a look at how to implement our galleries in our frontend with nextjs.
+## S3 trigger
+Now that we have our Lambda function working, we have to make shure that the function gets called everytime we upload a image to our S3 bucket. For this we will add a trigger to our function
+
+- In our **Function overview** select **Add trigger**
+- Under source select **S3**
+- Select our bucket
+- Under event type select **All object create events**
+- Select the checkbox to accnowledge Recursive invocation
+- Choose **Add**
+
+With this set up, we can now try to upload a image to our S3 bucket and check if it automatically generated our compressed images.
 
 ## Frontend
+In the frontend we used NextJs, but any other framework will do the job just as fine. Since the images don't change to often in our galleries, in order to improve performance, we decided to fetch all image urls from S3 in to a json list on build. This will keep our fetches to AWS down. This will decrease the calls we have to make to AWS, which will bring our cost down and improve performance.
+
+To implement this we have to create a script which will run on build and save all the image keys in a json file.
+
+Firstly we will have to get all the folders in our S3 bucket.
+
+```typescript
+const command = new ListObjectsV2Command({
+	Bucket: process.env.AWS_BUCKET_NAME!,
+	Delimiter: "/", // returns "folders" in CommonPrefixes
+});
+
+const response = await s3.send(command);
+
+const folders = response.CommonPrefixes?.map((p) => p.Prefix?.replace(/\/$/, "")!) ?? [];
+```
+
+Now that we have all the folders, which will be our galleries, we have to get the image urls for our galleries.
+
+```typescript
+const command = new ListObjectsV2Command({
+	Bucket: process.env.AWS_BUCKET_NAME!,
+	Prefix: `${folder}/`,
+});
+
+const response = await s3.send(command);
+```
+With this command we will get all the file names of a folder.
+
+In the next step we will create a image object for each image, this object will include the url to the original image, the url to the medium sized image and to the thumbnail.
+
+```typescript
+response.Contents?.filter(
+	(item) =>
+		item.Key &&
+		!item.Key.endsWith("/") &&
+		!item.Key.includes("/thumbs/") &&
+		!item.Key.includes("/medium"),
+).map((item, index) => {
+	const fullKey = item.Key!;
+	const filename = fullKey.split("/").pop();
+	const thumbKey = `${folder}/thumbs/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
+	const mediumKey = `${folder}/medium/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
+	return {
+		url: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${fullKey}`,
+		thumbUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${thumbKey}`,
+		mediumUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${mediumKey}`,
+		key: filename!,
+		id: index,
+	};
+}) ?? []
+```
+
+Now that we have our image objects all that is left is to save them in to a json file.
+
+```typescript
+const outputPath = path.join(process.cwd(), "public", "galleries.json");
+fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
+```
+
+These were all the parts needed to create our build method to save our galleries in to a json file. Here is the hole code.
+
+```typescript
+import { S3, ListObjectsV2Command } from "@aws-sdk/client-s3";
+import "dotenv/config";
+import path from "path";
+import fs from "fs";
+
+const s3 = new S3({
+	credentials: {
+		accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+		secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+	},
+	region: process.env.AWS_REGION,
+});
+
+interface AwsImage {
+	thumbUrl: string;
+	mediumUrl: string;
+	url: string;
+	key: string;
+	id: number;
+}
+
+async function listImages(folder: string): Promise<AwsImage[]> {
+	const command = new ListObjectsV2Command({
+		Bucket: process.env.AWS_BUCKET_NAME!,
+		Prefix: `${folder}/`,
+	});
+
+	const response = await s3.send(command);
+
+	return (
+		response.Contents?.filter(
+			(item) =>
+				item.Key &&
+				!item.Key.endsWith("/") &&
+				!item.Key.includes("/thumbs/") &&
+				!item.Key.includes("/medium"),
+		).map((item, index) => {
+			const fullKey = item.Key!;
+			const filename = fullKey.split("/").pop();
+			const thumbKey = `${folder}/thumbs/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
+			const mediumKey = `${folder}/medium/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
+			return {
+				url: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${fullKey}`,
+				thumbUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${thumbKey}`,
+				mediumUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${mediumKey}`,
+				key: filename!,
+				id: index,
+			};
+		}) ?? []
+	);
+}
+
+async function listFolders(): Promise<string[]> {
+	const command = new ListObjectsV2Command({
+		Bucket: process.env.AWS_BUCKET_NAME!,
+		Delimiter: "/", // returns "folders" in CommonPrefixes
+	});
+
+	const response = await s3.send(command);
+	return (
+		response.CommonPrefixes?.map((p) => p.Prefix?.replace(/\/$/, "")!) ?? []
+	);
+}
+
+async function main() {
+	const folders = await listFolders();
+	const result: Record<string, AwsImage[]> = {};
+
+	for (const folder of folders) {
+		result[folder] = await listImages(folder);
+	}
+
+	const outputPath = path.join(process.cwd(), "public", "galleries.json");
+	fs.writeFileSync(outputPath, JSON.stringify(result, null, 2));
+}
+
+main().catch(console.error);
+
+```
+
+Now we will have to run this script on build, so we have to add a script to our package.json file.
+```json
+"scripts": {
+	"build": "npm run generate && next build",
+	"generate": "node --loader ts-node/esm lib/generateGalleryJson.ts"
+},
+```
+
+So now with this all in place everytime we build our project the json file will be created new.
+
