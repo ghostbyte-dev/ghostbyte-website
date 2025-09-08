@@ -55,7 +55,11 @@
   .markdown ul,
   .markdown ol,
   .markdown blockquote {
-    @apply mb-6;
+    @apply my-6;
+  }
+
+  .markdown h1 {
+    @apply text-4xl mt-6 leading-snug;
   }
 
   .markdown h2 {
@@ -66,16 +70,38 @@
     @apply text-2xl mt-8 mb-4 leading-snug;
   }
 
+  .markdown h4 {
+    @apply text-2xl mt-6 mb-4 leading-snug;
+  }
+
   .markdown a {
-    @apply underline
+    @apply underline text-[#c27aff]
   }
 
   .markdown ul {
     @apply list-disc ml-5
   }
 
+  .markdown ol {
+    @apply list-decimal ml-5
+  }
+
   .markdown code {
-    @apply text-sm;
+    @apply text-sm my-3;
+  }
+
+  .markdown blockquote {
+    position: relative;
+    background-color: #0d1117;
+    border-left: #c27aff 4px solid;
+    padding: 10px;
+    padding-left: 20px;
+    margin-block: 20px;
+    font-style: italic;
+  }
+
+  .markdown blockquote p {
+    margin: 0;
   }
 }
 

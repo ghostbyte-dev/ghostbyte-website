@@ -31,7 +31,7 @@ And of course the journey isn't over here, we are already working hard on the ne
 
 ## What's this Blog about?
 This blog should be the place for us to tell the stories we want to tell.
-To be honest we both never wrote some kind of blog ever before, so this one is very experimental. Please don't expect the posts to be perfect, because then you probably will be disappointed :(
+To be honest we both never wrote some kind of blog ever before, so this one is very experimental. So please be kind to us.
 
 Here we want to:
 + Give insights into our projects.
