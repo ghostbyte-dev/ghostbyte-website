@@ -77,6 +77,20 @@
   .markdown code {
     @apply text-sm;
   }
+
+  .markdown blockquote {
+    position: relative;
+    background-color: #0d1117;
+    border-left: #c27aff 4px solid;
+    padding: 10px;
+    padding-left: 20px;
+    margin-block: 20px;
+    font-style: italic;
+  }
+
+  .markdown blockquote p {
+    margin-bottom: 0;
+  }
 }
 
 @layer base {
