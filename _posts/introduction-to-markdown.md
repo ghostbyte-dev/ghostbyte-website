@@ -2,6 +2,7 @@
 title: "Introduction to Markdown"
 excerpt: "A short backstory and the basics to the markdown language."
 coverImage: "/assets/blog/introduction-to-markdown/cover.webp"
+
 date: "2025-09-07"
 author:
   name: Daniel Hiebeler
@@ -43,12 +44,12 @@ There are 6 different headers, ranging from H1 (the largest) to H6 (the smallest
 
 ```markdown
 # This is a H1
-### This is a H3
+### This is a H3 **hallo**
 ###### This is a H6
 ```
 
 This translates to the following html:
-
+---
 ```html
 <h1>This is a H1</h1>
 <h3>This is a H3</h3>
