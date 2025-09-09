@@ -2,7 +2,7 @@
 title: "NextJS image gallery using AWS S3"
 excerpt: "A straight forward tutorial on how to build a blazing fast image gallery using NextJS and AWS S3"
 coverImage: "/assets/blog/aws-image-gallery/cover.webp"
-date: "2025-09-06"
+date: "2025-09-09"
 author:
   name: Emanuel Hiebeler
   picture: "/assets/blog/authors/emanuel.webp"
@@ -19,6 +19,8 @@ With these prerequesites we decided to give AWS a try. With AWS we would have th
 
 ## AWS S3
 For the image storage we will use a simple AWS S3 storage, where we will create an folder for each image gallery. So to get started with S3 we will create a simple bucket for our galleries.
+
+**Be careful to use the same AWS region in all the next steps.**
 
 1. To create the bucket we will open the [AWS S3 console](https://console.aws.amazon.com/s3)
 2. Check that General purpose bucket is selected and add a bucket name
@@ -261,8 +263,6 @@ AWS_BUCKET_NAME=bucket_name
 Now that we have all prerequisites set up we can get started with our code to fetch all image keys from AWS. For this I again explained the code in small parts.
 
 Firstly we will have to get all the folders in our S3 bucket.
-
-> Have to create role for client
 
 ```typescript
 const command = new ListObjectsV2Command({
