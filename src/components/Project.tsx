@@ -55,7 +55,7 @@ export default function Project({
             </div>
           </div>
 
-          <p className="text-sm">{description}</p>
+          <p className="text-md">{description}</p>
           <div className="mt-4 flex justify-end"></div>
         </div>
       </div>

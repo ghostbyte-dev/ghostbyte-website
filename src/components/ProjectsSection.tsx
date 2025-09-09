@@ -11,7 +11,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
-      <div className="container px-4 md:px-6 relative">
+      <div className="container mx-auto px-5 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
@@ -23,7 +23,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
+        <div className="grid gap-10 py-12 lg:grid-cols-2">
           <Project
             name="Pixelix"
             image="/img/pixelix_screenshots.png"
