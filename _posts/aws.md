@@ -1,13 +1,13 @@
 ---
 title: "NextJS image gallery using AWS S3"
 excerpt: "A straight forward tutorial on how to build a blazing fast image gallery using NextJS and AWS S3"
-coverImage: "/assets/blog/aws-image-gallery/cover.svg"
+coverImage: "/assets/blog/aws-image-gallery/cover.webp"
 date: "2025-09-06"
 author:
   name: Emanuel Hiebeler
   picture: "/assets/blog/authors/emanuel.webp"
 ogImage:
-  url: "/assets/blog/aws-image-gallery/cover.svg"
+  url: "/assets/blog/aws-image-gallery/cover.webp"
 ---
 
 # How to make a big image gallery fast
@@ -15,20 +15,20 @@ Big image galleries can be a nightmare to make, they use huge amounts of storage
 
 With these prerequesites we decided to give AWS a try. With AWS we would have the possibility for a big storage (S3) for our images, for serverless functions (lambda) to create our thumbnails on the image oupload and for a CDN (CloudFront) to have the images cached.
 
-![AWS Architecture](/assets/blog/awsGallery/architecture.svg)
+![AWS Architecture](/assets/blog/awsGallery/architecture.webp)
 
 ## AWS S3
 For the image storage we will use a simple AWS S3 storage, where we will create an folder for each image gallery. So to get started with S3 we will create a simple bucket for our galleries.
 
-- To create the bucket we will open the [AWS S3 console](https://console.aws.amazon.com/s3)
-- Check that General purpose bucket is selected and add a bucket name
-- The other option can be left.
+1. To create the bucket we will open the [AWS S3 console](https://console.aws.amazon.com/s3)
+2. Check that General purpose bucket is selected and add a bucket name
+3. The other option can be left.
 
 ## Permission policy
 For our Lambda function to be able to access the images on the S3 bucket, we will need to create a permission policy for it.
 
-- Open the [AWS Policies page](https://console.aws.amazon.com/iam/home#/policies) and click **create policy**
-- Under policy editor select **json** and paste this in it.
+1. Open the [AWS Policies page](https://console.aws.amazon.com/iam/home#/policies) and click **create policy**
+2. Under policy editor select **json** and paste this in it.
 
 ```json
 {
@@ -54,33 +54,33 @@ For our Lambda function to be able to access the images on the S3 bucket, we wil
     ]
 }
 ```
-- Select **next**
-- enter a name for our policy
-- Select **Create policy**
+3. Select **next**
+4. enter a name for our policy
+5. Select **Create policy**
 
 This will allow our Lambda function to get objects from S3 and put new ones there too. It also allows it to write to CloudWatch Logs to be able to better debug the function.
 
 ## Execution role
 Since we now have a permission policy, we will create a role for our function with this permission set we just created.
 
-- Open the [Role page](https://console.aws.amazon.com/iam/home#/roles) and click **create role**
-- For trusted entity type select **AWS service** and for use case select **Lambda**
-- For the Permission policy, search the permission we created in the previous step and select it.
-- Add a **name** for the Role
-- Create the Role 
+1. Open the [Role page](https://console.aws.amazon.com/iam/home#/roles) and click **create role**
+2. For trusted entity type select **AWS service** and for use case select **Lambda**
+3. For the Permission policy, search the permission we created in the previous step and select it.
+4. Add a **name** for the Role
+5. Create the Role 
 
 ## AWS Lambda
 Since we now have everything set up we need for our server function we will create our function that creates our thumbnails from the images which are uploaded to the S3 bucket.
 
-- First open the [Function page](https://console.aws.amazon.com/lambda/home#/functions) and select **create**
-- Select **Author from scratch**
-- Enter a **name** for our function
-- Choose the runtime Node.js 22.x
-- Select the Architecture x86.64
-- Under change default execution role
+1. First open the [Function page](https://console.aws.amazon.com/lambda/home#/functions) and select **create**
+2. Select **Author from scratch**
+3. Enter a **name** for our function
+4. Choose the runtime Node.js 22.x
+5. Select the Architecture x86.64
+6. Under change default execution role
 	- Select **use an existing role**
 	- For the existing role search for the previously create **execution role**
-- Select **Create function**
+7. Select **Create function**
 
 Now that we have our function set up, lets go through the code step by step.
 
@@ -215,21 +215,54 @@ Now that you hopefully understand how our code works, create a file index.mjs
 ## S3 trigger
 Now that we have our Lambda function working, we have to make shure that the function gets called everytime we upload a image to our S3 bucket. For this we will add a trigger to our function
 
-- In our **Function overview** select **Add trigger**
-- Under source select **S3**
-- Select our bucket
-- Under event type select **All object create events**
-- Select the checkbox to accnowledge Recursive invocation
-- Choose **Add**
+1. In our **Function overview** select **Add trigger**
+2. Under source select **S3**
+3. Select our bucket
+4. Under event type select **All object create events**
+5. Select the checkbox to accnowledge Recursive invocation
+6. Choose **Add**
 
 With this set up, we can now try to upload a image to our S3 bucket and check if it automatically generated our compressed images.
 
 ## Frontend
-In the frontend we used NextJs, but any other framework will do the job just as fine. Since the images don't change to often in our galleries, in order to improve performance, we decided to fetch all image urls from S3 in to a json list on build. This will keep our fetches to AWS down. This will decrease the calls we have to make to AWS, which will bring our cost down and improve performance.
+In the frontend we used NextJs, but any other framework will do the job just as fine. Since the images don't change to often in our galleries, in order to improve performance, we decided to fetch all image urls from S3 in to a json list on build. This will keep our fetches to AWS down. This also will decrease the calls we have to make to AWS, which will bring our cost down and improve performance.
 
 To implement this we have to create a script which will run on build and save all the image keys in a json file.
 
+But for this to work, we will need to create a user that has the permission to fetch data from our S3 bucket.
+
+1. To create this user we will firstly navigate to the [Identity and Access Management](https://console.aws.amazon.com/iam/home#/users)
+2. Click **Create user**
+3. Enter a name for our user
+4. Select **next**
+5. For permission options select **Attach policies directly**
+6. Attach the policy **AmazonS3ReadOnlyAccess**
+7. Select **next**
+8. Select **Create user**
+
+Now we have created a user with which we can read data from our S3 bucket on our client. But for this to work we will need to create a access key for this user.
+
+1. Click on the newly created user
+2. Select **Security credentials**
+3. Click **Create access key**
+4. Select **Application running outside AWS**
+5. Select **Next**
+6. Optionally add a description and click **Create access key**
+
+Now that we have our access key, we will have to creat a .env file and add our **Access key** and our **Secret access key**. We can also add our **S3 bucket name** to the env file and our **AWS region** where we created our bucket.
+
+```env
+AWS_ACCESS_KEY_ID=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+AWS_SECRET_ACCESS_KEY=*********************************
+AWS_REGION=eu-central-1
+AWS_BUCKET_NAME=bucket_name
+```
+
+Now that we have all prerequisites set up we can get started with our code to fetch all image keys from AWS. For this I again explained the code in small parts.
+
 Firstly we will have to get all the folders in our S3 bucket.
+
+> Have to create role for client
 
 ```typescript
 const command = new ListObjectsV2Command({
