@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/src/utils/markdownToHtml";
 import { getAllPosts, getPostBySlug } from "@/src/utils/blogApi";
@@ -34,6 +34,7 @@ export default async function Post(props: Params) {
           <div className="max-w-2xl mx-auto">
             <div
               className="markdown"
+              // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
