@@ -20,10 +20,10 @@ export default function BlogOverviewPage() {
   return (
     <main className="pt-32">
       <div className="container mx-auto px-5">
-        <h1 className="font-bold text-center text-3xl lg:text-5xl my-16">
+        <h1 className="font-bold text-center text-3xl lg:text-5xl mt-16">
           Welcome to the Ghostbyte Blog
         </h1>
-        <p className="my-10 text-center text-xl">
+        <p className="mt-6 mb-12 text-center text-xl">
           At Ghostbyte, we love building thoughtful software and sharing what we
           learn along the way. Here you’ll find deep dives into web and app
           development, behind-the-scenes looks at our projects, and practical
