@@ -1,7 +1,6 @@
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
-import { Author } from "@/src/types/author";
-import CoverImage from "./cover_image";
+import type { Author } from "@/src/types/author";
 import Avatar from "./avatar";
 import Image from "next/image";
 

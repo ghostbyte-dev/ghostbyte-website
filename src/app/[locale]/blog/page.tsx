@@ -1,7 +1,7 @@
 import { HeroPost } from "@/src/components/blog/hero-post";
 import { MoreStories } from "@/src/components/blog/more-stories";
 import { getAllPosts } from "@/src/utils/blogApi";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | Ghostbyte",

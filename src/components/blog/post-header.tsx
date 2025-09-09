@@ -1,4 +1,4 @@
-import { Author } from "@/src/types/author";
+import type { Author } from "@/src/types/author";
 import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
 import Image from "next/image";
