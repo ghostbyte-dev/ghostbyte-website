@@ -90,5 +90,8 @@
     "titleImprint": "Ghostbyte - Imprint",
     "titlePrivacy": "Ghostbyte - Privacy Policy",
     "descriptionPrivacy": "Privacy Policy of Ghostbyte"
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions"
   }
 }

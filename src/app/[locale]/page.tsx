@@ -4,6 +4,7 @@ import TeamSection from "../../components/TeamSection";
 import ServiceSection from "../../components/ServicesSection";
 import ContactSection from "../../components/ContactSection";
 import type { Locale } from "@/i18n-config";
+import FaqSection from "@/src/components/FaqSection";
 
 export default async function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
@@ -26,9 +27,9 @@ export default async function LandingPage(props: {
 
         <TeamSection lang={lang} />
 
-        {/* <TestimonialsSection /> */}
-
         <ContactSection />
+
+        <FaqSection lang={lang} />
       </main>
     </div>
   );

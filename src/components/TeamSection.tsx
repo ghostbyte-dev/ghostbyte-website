@@ -1,6 +1,3 @@
-import { Github, Globe, Instagram, Linkedin } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import TeamMemberCard from "./TeamMemberCard";

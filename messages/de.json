@@ -90,5 +90,8 @@
     "descriptionPrivacy": "Datenschutzerklärung von Ghostbyte",
     "titleImprint": "Ghostbyte - Impressum",
     "titlePrivacy": "Ghostbyte - Datenschutzrichtlinie"
+  },
+  "Faq": {
+    "title": "Häufig gestellte Fragen"
   }
 }
