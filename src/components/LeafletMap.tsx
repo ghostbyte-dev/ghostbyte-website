@@ -1,13 +1,13 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 // Define custom icon
 const customIcon = L.icon({
-  iconUrl: "/file.svg", // path from public folder
-  iconSize: [40, 40], // width, height in pixels
+  iconUrl: "/img/marker.svg", // path from public folder
+  iconSize: [60, 60], // width, height in pixels
   iconAnchor: [20, 40], // point of the icon which corresponds to marker's location
   popupAnchor: [0, -40], // point from which the popup should open relative to iconAnchor
 });
