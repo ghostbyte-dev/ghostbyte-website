@@ -17,16 +17,16 @@ export default function LeafletMap() {
     <MapContainer
       center={[47.8095, 13.055]}
       zoom={6}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       className="h-full"
     >
       <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png" />
       <Marker icon={customIcon} position={[47.423395, 9.656736]}>
-        <Popup>Ghostbyte office in Lustenau</Popup>
+        <Popup>Our office in Lustenau</Popup>
       </Marker>
 
       <Marker icon={customIcon} position={[48.231051, 16.376282]}>
-        <Popup>Ghostbyte office in Vienna</Popup>
+        <Popup>Our office in Vienna</Popup>
       </Marker>
     </MapContainer>
   );
