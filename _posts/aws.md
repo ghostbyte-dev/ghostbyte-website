@@ -84,10 +84,25 @@ Since we now have everything set up we need for our server function we will crea
 	- For the existing role search for the previously create **execution role**
 7. Select **Create function**
 
-Now that we have our function set up, lets go through the code step by step.
+Now that we have our function set up, we will create our function locally first and in the end upload it in the end. So since we will use node for our function, lets initialize node.
+
+```bash
+npm init -y
+```
+
+To process our images and reupload them to the S3 storage, we will need to install 2 packages, **sharp** to process our images and **s3-client** to reupload it to S3.
+
+```bash
+npm install sharp
+npm install @aws-sdk/client-s3
+```
+
+For our function we will create a **index.mjs** file. We use **.mjs** since we use ES modules. That's all the prerequisets done, now lets go through the code step by step.
+
+First we will use the handler function, which gets called everytime lambda is invoked. 
 
 ```javascript
-export const handler = async (event, context) => {
+export const handler = async (event) => {
 	await Promise.all(
 		event.Records.map(async (record) => {
 			const bucket = record.s3.bucket.name;
@@ -211,8 +226,14 @@ export const handler = async (event, context) => {
 		}
 	};
 ```
-Now that you hopefully understand how our code works, create a file index.mjs
-???
+
+Now that our function is finished locally, all that is left to do is upload it to lambda. To upload it to AWS, we will have to make a zip file of it, with our content of our folder at the root. To do this we will run this command inside our project folder.
+
+```bash
+zip -r lambda-function.zip .
+```
+
+Now in AWS go back to our Lambda function and in the tab **Code**, select **Upload from** and select **.zip file**. Now with this uploaded our lambda function is finished.
 
 ## S3 trigger
 Now that we have our Lambda function working, we have to make shure that the function gets called everytime we upload a image to our S3 bucket. For this we will add a trigger to our function
