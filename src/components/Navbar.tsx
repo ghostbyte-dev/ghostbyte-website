@@ -4,6 +4,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
@@ -15,12 +16,14 @@ export default function Navbar() {
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">
-              <img
+              <Image
                 src={"/img/ghostbyte_logo_white.svg"}
-                className="h-8"
+                className="h-[30px]"
+                width={38}
+                height={32}
                 alt="Ghostbyte logo"
               />
-              <span className="font-bold text-2xl ml-2">Ghostbyte</span>
+              <span className="font-bold text-xl ml-2">Ghostbyte</span>
             </Link>
           </div>
 

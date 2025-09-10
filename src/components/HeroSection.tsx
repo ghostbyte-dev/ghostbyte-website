@@ -30,7 +30,7 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
                 {t("description")}
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <div className="flex flex-col gap-2 flex-row">
               <Link
                 href="/#projects"
                 className="flex bg-gradient-to-r font-semibold from-purple-700 to-cyan-600 hover:from-purple-800 hover:to-cyan-700 text-white border-0 h-12 px-6 rounded-md"
