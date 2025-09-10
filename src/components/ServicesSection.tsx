@@ -12,7 +12,7 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent" />
 
-      <div className="container px-4 md:px-6 relative">
+      <div className="container mx-auto px-5 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
@@ -24,7 +24,7 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-3">
           <Service
             icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
             name={t("mobile_development")}
