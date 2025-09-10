@@ -4,19 +4,18 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Define custom icon
 const customIcon = L.icon({
-  iconUrl: "/img/marker.svg", // path from public folder
-  iconSize: [60, 60], // width, height in pixels
-  iconAnchor: [20, 40], // point of the icon which corresponds to marker's location
-  popupAnchor: [0, -40], // point from which the popup should open relative to iconAnchor
+  iconUrl: "/img/marker.svg",
+  iconSize: [60, 60],
+  iconAnchor: [30, 60],
+  popupAnchor: [0, -60],
 });
 
 export default function LeafletMap() {
   return (
     <MapContainer
       center={[47.8095, 13.055]}
-      zoom={6}
+      zoom={5.3}
       scrollWheelZoom={true}
       className="h-full"
     >
