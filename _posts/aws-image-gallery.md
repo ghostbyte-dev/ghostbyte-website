@@ -2,7 +2,7 @@
 title: "NextJS image gallery using AWS S3"
 excerpt: "A straight forward tutorial on how to build a blazing fast image gallery using NextJS and AWS S3"
 coverImage: "/assets/blog/aws-image-gallery/cover.webp"
-date: "2025-09-09"
+date: "2025-09-10"
 author:
   name: Emanuel Hiebeler
   picture: "/assets/blog/authors/emanuel.webp"
