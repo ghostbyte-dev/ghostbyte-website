@@ -263,6 +263,34 @@ With this set up, we can now try to upload an image to our S3 bucket and check i
 
 ![S3 image gallery](/assets/blog/aws-image-gallery/S3.png)
 
+### CloudFront (CDN)
+
+To further improve the speed of our gallery, a CDN can be added. With the CDN the images are cached on servers close to the clients. Since AWS does provide a CDN (CloudFront), we are using that one 
+
+1. Go to the [CloudFront](https://console.aws.amazon.com/cloudfront) page.
+2. Select **Create Distribution**.
+3. Enter a name.
+4. For distribution type select **Single website or app**.
+5. Click **next**.
+6. For origin type select **Amazon S3**
+7. In S3 origin select your **S3 Bucket**
+8. For Web Application Firewall (WAF) select **Do not enable security protections**
+9. Click **next**
+10. Click **Create distribution**
+
+Now in our Distribution we can see the Distribution domain name, which we will need later on.
+
+Now with this we are able to a access the images on S3 via the domain of the CloudFront distribution.
+
+Before the url to a S3 image looked something like this
+```link
+https://bucket-name.s3.region.amazonaws.com//gallery1/image.JPG
+```
+Now with the CDN it will look something like this.
+```link
+https://abcdefg.cloudfront.net/gallery1/DSC03417.JPG
+```
+
 ## Frontend
 
 In the frontend we used NextJS, but any other framework will do the job just as fine. Since the images don't change to often in our galleries, in order to improve performance, we decided to fetch all image URLs from S3 and store them in a json list on build. This keeps the number of fetches to AWS low (cheaper and better performance).
@@ -296,6 +324,7 @@ AWS_ACCESS_KEY_ID=ABCDEFGHIJKLMNOPQRSTUVWXYZ
 AWS_SECRET_ACCESS_KEY=*********************************
 AWS_REGION=eu-central-1
 AWS_BUCKET_NAME=bucket_name
+AWS_CLOUDFRONT_DOMAIN=abcdefghijklmnop.cloudfront.net
 ```
 
 ### Build script
@@ -343,9 +372,9 @@ response.Contents?.filter(
 	const thumbKey = `${folder}/thumbs/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
 	const mediumKey = `${folder}/medium/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
 	return {
-		url: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${fullKey}`,
-		thumbUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${thumbKey}`,
-		mediumUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${mediumKey}`,
+		url: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${fullKey}`,
+		thumbUrl: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${thumbKey}`,
+		mediumUrl: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${mediumKey}`,
 		key: filename!,
 		id: index,
 	};
@@ -404,9 +433,9 @@ async function listImages(folder: string): Promise<AwsImage[]> {
 			const thumbKey = `${folder}/thumbs/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
 			const mediumKey = `${folder}/medium/${filename?.replace(/\.[^/.]+$/, ".avif")}`;
 			return {
-				url: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${fullKey}`,
-				thumbUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${thumbKey}`,
-				mediumUrl: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${mediumKey}`,
+				url: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${fullKey}`,
+				thumbUrl: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${thumbKey}`,
+				mediumUrl: `https://${process.env.MY_AWS_CLOUDFRONT_DOMAIN}/${mediumKey}`,
 				key: filename!,
 				id: index,
 			};
