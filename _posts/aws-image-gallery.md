@@ -10,7 +10,6 @@ ogImage:
   url: "/assets/blog/aws-image-gallery/cover.webp"
 ---
 
-# How to make a big image gallery fast
 Big image galleries can be a nightmare to make, they use huge amounts of storage and load slowly. So the challenge was to find a relatively cheap way to store this large amounts of images somewhere, but of course the gallery should still have a very fast load time.
 
 With these prerequesites we decided to give AWS a try. With AWS we would have the possibility for a big storage (S3) for our images, for serverless functions (lambda) to create our thumbnails on the image oupload and for a CDN (CloudFront) to have the images cached.
@@ -262,7 +261,7 @@ Now that we have our Lambda function working, we have to make sure that the func
 
 With this set up, we can now try to upload an image to our S3 bucket and check if it automatically generated the compressed images.
 
-> upload image to s3 to test it!!!!!!!!!!!! 
+![S3 image gallery](/assets/blog/aws-image-gallery/S3.png)
 
 ## Frontend
 
@@ -298,6 +297,8 @@ AWS_SECRET_ACCESS_KEY=*********************************
 AWS_REGION=eu-central-1
 AWS_BUCKET_NAME=bucket_name
 ```
+
+### Build script
 
 Now that we have all prerequisites set up we can get started with our code to fetch all image keys from AWS. For this I again explain the code in small parts.
 
@@ -449,4 +450,57 @@ Now we have to run this script on build, so we have to add a the following scrip
 },
 ```
 
-So now with this all in place everytime we build our project the JSON file will be created new.
+So now with this all in place, everytime the project is built, a new JSON file will be created.
+
+### Displaying the images
+
+To display the images in our nextjs project, we will have to create a function which gets all the image objects from a gallery.
+
+```tsx
+"use server";
+
+import galleries from "@/public/galleries.json";
+
+export interface AwsImage {
+	thumbUrl: string;
+	mediumUrl: string;
+	url: string;
+	key: string;
+	id: number;
+}
+
+export async function listImages(gallery: string): Promise<AwsImage[]> {
+	return galleries[gallery];
+}
+
+```
+
+Here we first import the previously created galleries.json file. Then we are defining a interface for a image object. In the listImages function we will then return all images in a specific gallery.
+
+Now to display here is a simple example on how do display those images.
+
+```tsx
+"use server";
+
+import { AwsImage, listImages } from "@/lib/images";
+import Image from "next/image";
+
+export default async function Gallery() {
+    const images = await listImages("gallery1");
+    return (
+        <div>
+            {images.map((image: AwsImage) => (
+                <Image
+                    key={image.id}
+                    height={100}
+                    width={100}
+                    src={image.thumbUrl}
+                    alt="image"
+                />
+            ))}
+        </div>
+    );
+}
+```
+
+Since we use a server component here, we can just call the listImages function and get all the image objects. Then we just map through those images and show the thumbUrl.
