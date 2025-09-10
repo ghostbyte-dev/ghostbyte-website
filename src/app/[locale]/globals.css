@@ -91,7 +91,11 @@
   }
 
   .markdown code {
-    @apply text-sm my-3;
+    @apply text-sm my-3 rounded-xl;
+  }
+
+  .markdown img {
+    @apply my-3 rounded-xl;
   }
 
   .markdown blockquote {
