@@ -17,12 +17,7 @@ export default async function Post(props: Params) {
 
   return (
     <main>
-      <div className="container mx-auto px-5 pt-32">
-        <p className="text-xl md:text-2xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
-          <Link href="/blog" className="hover:underline">
-            Back
-          </Link>
-        </p>
+      <div className="container mx-auto px-5 pt-32 md:pt-48">
         <article className="mb-32">
           <PostHeader
             title={post.title}

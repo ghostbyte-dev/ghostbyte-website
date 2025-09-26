@@ -72,42 +72,27 @@ export default async function Footer({ lang }: { lang: Locale }) {
               </h3>
               <ul className="space-y-4">
                 <li>
-                  <Link
-                    href="/#projects"
-                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
-                  >
+                  <Link href="/#projects" className="link-text">
                     {t("projects")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/#services"
-                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
-                  >
+                  <Link href="/#services" className="link-text">
                     {t("services")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/#about"
-                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
-                  >
+                  <Link href="/#about" className="link-text">
                     {t("about")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/#contact"
-                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
-                  >
+                  <Link href="/#contact" className="link-text">
                     {t("contact")}
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/blog"
-                    className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
-                  >
+                  <Link href="/blog" className="link-text">
                     {t("blog")}
                   </Link>
                 </li>
@@ -118,11 +103,15 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 {t("get_in_touch")}
               </h3>
               <div className="mb-3">
-                <Link href="mailto:hey@ghostbyte.dev">hey@ghostbyte.dev</Link>
+                <Link className="link-text" href="mailto:hey@ghostbyte.dev">
+                  hey@ghostbyte.dev
+                </Link>
               </div>
 
               <div>
-                <Link href="tel:+4367761332011">+43 677 61332011</Link>
+                <Link className="link-text" href="tel:+4367761332011">
+                  +43 677 61332011
+                </Link>
               </div>
             </div>
           </div>

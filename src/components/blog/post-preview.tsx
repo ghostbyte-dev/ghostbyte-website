@@ -40,11 +40,9 @@ export function PostPreview({
       </div>
       <div className="p-5">
         <h3 className="text-3xl font-bold">{title}</h3>
-        <div className="mb-4 text-zinc-400">
-          <DateFormatter dateString={date} />
-        </div>
-        <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} />
+
+        <p className="text-lg leading-relaxed mb-6 mt-2">{excerpt}</p>
+        <Avatar name={author.name} picture={author.picture} date={date} />
       </div>
     </Link>
   );
