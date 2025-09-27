@@ -60,16 +60,10 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
 
             <div className="rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm md:col-span-2 grid grid-cols-1 md:grid-cols-3">
               <div className="p-6">
-                <h3 className="text-3xl font-bold mb-4">Where we are</h3>
-                <p className="mb-2">
-                  From the vibrant pulse of Vienna to the forward-thinking
-                  spirit of Vorarlberg, Ghostbyte unites two worlds of
-                  creativity and innovation.
-                </p>
-                <p>
-                  Our distributed setup helps us stay agile and close to our
-                  partners everywhere.
-                </p>
+                <h3 className="text-3xl font-bold mb-4">
+                  {t("locationsTitle")}
+                </h3>
+                <p className="mb-2">{t("locationsDescription")}</p>
               </div>
 
               <div className="md:col-span-2 h-100 rounded-b-xl md:rounded-r-xl md:rounded-l-none border border-white/10 bg-black/20 backdrop-blur-sm overflow-hidden">
