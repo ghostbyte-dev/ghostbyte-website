@@ -15,6 +15,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import type { Organization, WithContext } from "schema-dts";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ const jsonLd: WithContext<Organization> = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Ghostbyte",
-  logo: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ghostbyte_Logo.png",
+  logo:
+    "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ghostbyte_Logo.png",
   url: "https://ghostbyte.dev",
   description: "Ghostbyte is a software development studio in Austria",
   email: "hey@ghostbyte.dev",
@@ -107,6 +109,14 @@ export default async function RootLayout({
       lang={locale}
       suppressHydrationWarning
     >
+      <Head>
+        <script
+          defer
+          data-domain="ghostbyte.dev"
+          src="https://plausible.ghostbyte.dev/js/script.js"
+        >
+        </script>
+      </Head>
       <body className={inter.className}>
         <script
           type="application/ld+json"
