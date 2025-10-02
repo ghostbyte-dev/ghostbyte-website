@@ -121,6 +121,8 @@ export default async function RootLayout({
         <PlausibleProvider
           domain="ghostbyte.dev"
           selfHosted={true}
+          trackOutboundLinks={true}
+          hash={true}
           customDomain="https://plausible.ghostbyte.dev"
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
