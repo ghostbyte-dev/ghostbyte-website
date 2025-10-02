@@ -118,7 +118,11 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <PlausibleProvider domain="ghostbyte.dev" selfHosted={true}>
+        <PlausibleProvider
+          domain="ghostbyte.dev"
+          selfHosted={true}
+          customDomain="plausible.ghostbyte.dev"
+        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             {<Navbar />}
             {children}
