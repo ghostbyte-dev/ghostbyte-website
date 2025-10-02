@@ -16,6 +16,8 @@ import {
 } from "next-intl/server";
 import type { Organization, WithContext } from "schema-dts";
 import Head from "next/head";
+import Script from "next/script";
+import PlausibleProvider from "next-plausible";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -109,14 +111,6 @@ export default async function RootLayout({
       lang={locale}
       suppressHydrationWarning
     >
-      <Head>
-        <script
-          defer
-          data-domain="ghostbyte.dev"
-          src="https://plausible.ghostbyte.dev/js/script.js"
-        >
-        </script>
-      </Head>
       <body className={inter.className}>
         <script
           type="application/ld+json"
@@ -124,12 +118,14 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {<Navbar />}
-          {children}
+        <PlausibleProvider domain="ghostbyte.dev">
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {<Navbar />}
+            {children}
 
-          <Footer lang={locale} />
-        </NextIntlClientProvider>
+            <Footer lang={locale} />
+          </NextIntlClientProvider>
+        </PlausibleProvider>
       </body>
     </html>
   );
