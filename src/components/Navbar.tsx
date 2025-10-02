@@ -4,6 +4,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
@@ -15,50 +16,32 @@ export default function Navbar() {
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">
-              <img
+              <Image
                 src={"/img/ghostbyte_logo_white.svg"}
-                className="h-8"
+                className="h-[30px]"
+                width={38}
+                height={32}
                 alt="Ghostbyte logo"
               />
-              <span className="font-bold text-2xl ml-2">Ghostbyte</span>
+              <span className="font-bold text-xl ml-2">Ghostbyte</span>
             </Link>
           </div>
 
-          <nav className="hidden md:flex gap-6">
-            <Link
-              href="/#projects"
-              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
-            >
+          <nav className="hidden md:flex gap-6 text-sm">
+            <Link href="/#projects" className="link-text">
               {t("projects")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
-            <Link
-              href="/#services"
-              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
-            >
+            <Link href="/#services" className="link-text">
               {t("services")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
-            <Link
-              href="/#about"
-              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
-            >
+            <Link href="/#about" className="link-text">
               {t("about")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
-            <Link
-              href="/#contact"
-              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
-            >
+            <Link href="/#contact" className="link-text">
               {t("contact")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
-            <Link
-              href="/blog"
-              className="text-sm font-medium text-white transition-colors hover:text-purple-400 relative group"
-            >
+            <Link href="/blog" className="link-text">
               {t("blog")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </Link>
           </nav>
 
@@ -172,10 +155,6 @@ export default function Navbar() {
             </h3>
           </Link>
         </div>
-
-        {/* <div className="pl-10 pb-10 flex">
-         
-        </div> */}
       </div>
     </>
   );

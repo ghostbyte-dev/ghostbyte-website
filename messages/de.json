@@ -40,7 +40,9 @@
     "daniel_job": "CEO & Creative Director",
     "daniel_description": "Daniel ist ein Entwickler, der leidenschaftlich daran arbeitet, innovative und benutzerfreundliche Softwarelösungen zu schaffen.",
     "emanuel_job": "CTO & Lead Developer",
-    "emanuel_description": "Emanuel bringt Fachkenntnisse in der Entwicklung und Problemlösung mit und sorgt dafür, dass bei Ghostbyte qualitativ hochwertige und effiziente Anwendungen entstehen."
+    "emanuel_description": "Emanuel bringt Fachkenntnisse in der Entwicklung und Problemlösung mit und sorgt dafür, dass bei Ghostbyte qualitativ hochwertige und effiziente Anwendungen entstehen.",
+    "locationsTitle": "Unsere Standorte",
+    "locationsDescription": "Unsere Standorte sind Lustenau und Wien. Während wir in Wien studieren, arbeiten wir von beiden Orten aus an unseren Projekten. So bleiben wir sowohl in Vorarlberg als auch in der Hauptstadt präsent."
   },
   "Contact": {
     "title": "Kontakt",

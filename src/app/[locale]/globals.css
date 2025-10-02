@@ -34,6 +34,10 @@
 
     --radius: 0.5rem;
   }
+
+  button {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {
@@ -44,6 +48,25 @@
   .animation-delay-4000 {
     animation-delay: 4s;
   }
+
+  .link-text {
+    @apply relative font-medium text-white;
+  }
+
+  .link-text::after {
+    @apply content-[''] absolute left-0 -bottom-1 h-0.5 w-full bg-gray-600 transition-transform duration-200 scale-x-0 origin-left;
+  }
+
+  .link-text:hover::after {
+    @apply scale-x-100 origin-left ease-in;
+  }
+
+  .link-text:not(:hover)::after {
+    @apply origin-right ease-in;
+  }
+
+
+
 }
 
 @layer components {
@@ -59,15 +82,15 @@
   }
 
   .markdown h1 {
-    @apply text-4xl mt-6 leading-snug;
+    @apply text-4xl mt-6 leading-snug font-bold;
   }
 
   .markdown h2 {
-    @apply text-3xl mt-12 leading-snug;
+    @apply text-3xl mt-12 leading-snug font-bold;
   }
 
   .markdown h3 {
-    @apply text-2xl mt-8 mb-4 leading-snug;
+    @apply text-2xl mt-8 mb-4 leading-snug font-bold;
   }
 
   .markdown h4 {
@@ -110,12 +133,6 @@
 
   .markdown blockquote p {
     margin: 0;
-  }
-}
-
-@layer base {
-  button {
-    cursor: pointer;
   }
 }
 
