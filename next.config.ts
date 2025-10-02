@@ -9,4 +9,4 @@ const nextConfig: NextConfig = {
 };
 
 const withNextIntl = createNextIntlPlugin();
-export default withPlausibleProxy(withNextIntl(nextConfig));
+export default withNextIntl(nextConfig);
