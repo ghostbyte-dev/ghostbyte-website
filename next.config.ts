@@ -9,4 +9,7 @@ const nextConfig: NextConfig = {
 };
 
 const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(withPlausibleProxy(nextConfig));
+export default withNextIntl(withPlausibleProxy({
+  customDomain: "https://plausible.ghostbyte.dev",
+  scriptName: "script.hash.outbound-links",
+})(nextConfig));
