@@ -111,16 +111,15 @@ export default async function RootLayout({
       <body className={inter.className}>
         <script
           type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <>
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
         <PlausibleProvider
           domain="ghostbyte.dev"
-          selfHosted={true}
-          trackOutboundLinks={true}
-          hash={true}
-          customDomain="https://plausible.ghostbyte.dev"
+          selfHosted
+          trackOutboundLinks
+          hash
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
             {<Navbar />}
