@@ -16,6 +16,7 @@ import {
 } from "next-intl/server";
 import type { Organization, WithContext } from "schema-dts";
 import PlausibleProvider from "next-plausible";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -108,26 +109,26 @@ export default async function RootLayout({
       lang={locale}
       suppressHydrationWarning
     >
+      <head>
+        <Script
+          strategy="afterInteractive"
+          data-domain="ghostbyte.dev"
+          src="/js/script.hash.outbound-links.js"
+        />
+      </head>
+
       <body className={inter.className}>
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: <>
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {<Navbar />}
+          {children}
 
-        <PlausibleProvider
-          domain="ghostbyte.dev"
-          selfHosted
-          trackOutboundLinks
-          hash
-        >
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            {<Navbar />}
-            {children}
-
-            <Footer lang={locale} />
-          </NextIntlClientProvider>
-        </PlausibleProvider>
+          <Footer lang={locale} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

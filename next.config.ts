@@ -1,18 +1,24 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import { withPlausibleProxy } from "next-plausible";
 
 const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/js/script.hash.outbound-links.js",
+        destination:
+          "https://plausible.ghostbyte.dev/js/script.hash.outbound-links.js",
+      },
+      {
+        source: "/api/event",
+        destination: "https://plausible.ghostbyte.dev/api/event",
+      },
+    ];
+  },
 };
 
-const configWithPlausible = withPlausibleProxy({
-  customDomain: "https://plausible.ghostbyte.dev",
-  scriptName: "script.hash.outbound-links",
-})(nextConfig);
-
 const withNextIntl = createNextIntlPlugin();
-
-export default withNextIntl(configWithPlausible);
+export default withNextIntl(nextConfig);
