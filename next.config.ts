@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-const { withPlausibleProxy } = require('next-plausible');
+import { withPlausibleProxy } from "next-plausible";
 
 const nextConfig: NextConfig = {
   eslint: {
