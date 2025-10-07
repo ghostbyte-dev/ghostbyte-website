@@ -2,7 +2,7 @@
 title: "Rethinking how we measure a Day"
 excerpt: "fief"
 coverImage: "/assets/blog/hello-world/cover.webp"
-date: "2025-10-04"
+date: "2025-10-14"
 author:
   name: Daniel Hiebeler
   picture: "/assets/blog/authors/daniel.webp"
