@@ -17,6 +17,7 @@ import {
 import type { Organization, WithContext } from "schema-dts";
 import PlausibleProvider from "next-plausible";
 import Script from "next/script";
+import ConsoleGhost from "@/src/components/ConsoleGhost";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -118,6 +119,7 @@ export default async function RootLayout({
       </head>
 
       <body className={inter.className}>
+        <ConsoleGhost />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: <>
