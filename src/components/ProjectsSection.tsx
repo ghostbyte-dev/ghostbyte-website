@@ -26,8 +26,8 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
         <div className="grid gap-10 py-12 lg:grid-cols-2">
           <Project
             name="Pixelix"
-            image="/img/pixelix_screenshots.png"
-            logo="/img/pixelix_logo.png"
+            image="/img/projects/pixelix_screenshot.webp"
+            logo="/img/projects/pixelix_logo.webp"
             category={t("mobile_application")}
             description={t("pixelix_description")}
             link="https://app.pixelix.social"
@@ -36,8 +36,8 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
 
           <Project
             name="Veritate Website"
-            image="/img/veritate_website.png"
-            logo="/img/veritate_logo.png"
+            image="/img/projects/veritate_screenshot.webp"
+            logo="/img/projects/veritate_logo.webp"
             category="Website"
             description={t("veritate_description")}
             link="https://veritate.at"
@@ -45,9 +45,29 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Socialfolio"
+            image="/img/projects/socialfolio_screenshot.webp"
+            logo="/img/projects/socialfolio_logo.svg"
+            category={t("web_app")}
+            description={t("socialfolio_description")}
+            link="https://socialfolio.me"
+            gradientColor="from-blue-500/30"
+          />
+
+          <Project
+            name="Daily Tasks"
+            image="/img/projects/dailytasks_screenshot.webp"
+            logo="/img/projects/dailytasks_logo.webp"
+            category={t("android_application")}
+            description={t("daily_tasks_description")}
+            link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
+            gradientColor="from-cyan-500/30"
+          />
+
+          <Project
             name="Together"
-            image="/img/together_screenshot.png"
-            logo="/img/together_logo.png"
+            image="/img/projects/together_screenshot.webp"
+            logo="/img/projects/together_logo.webp"
             category={t("web_app")}
             description={t("together_description")}
             link="https://together.ghostbyte.dev/"
@@ -56,8 +76,8 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
 
           <Project
             name="Github Release Stats"
-            image="/img/github_release_stats_screenshot.png"
-            logo="/img/github_release_stats_logo.svg"
+            image="/img/projects/github_release_stats_screenshot.webp"
+            logo="/img/projects/github_release_stats_logo.svg"
             category={t("web_app")}
             description={t("github_release_stast_description")}
             link="https://github-release-stats.ghostbyte.dev/"
@@ -66,32 +86,12 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
 
           <Project
             name="Ghostbyte Library"
-            image="/img/ghostbyte_library.png"
-            logo="/img/ghostbyte_library_logo.webp"
+            image="/img/projects/ghostbyte_library_screenshot.webp"
+            logo="/img/projects/ghostbyte_library_logo.webp"
             category={t("resource_hub")}
             description={t("library_description")}
             link="https://library.ghostbyte.dev"
             gradientColor="from-purple-600/30"
-          />
-
-          <Project
-            name="Daily Tasks"
-            image="/img/dailytasks.png"
-            logo="/img/daily_tasks_logo.webp"
-            category={t("android_application")}
-            description={t("daily_tasks_description")}
-            link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
-            gradientColor="from-cyan-500/30"
-          />
-
-          <Project
-            name="Socialfolio"
-            image="/img/socialfolio.png"
-            logo="/img/socialfolio_logo.svg"
-            category={t("web_app")}
-            description={t("socialfolio_description")}
-            link="https://socialfolio.me"
-            gradientColor="from-blue-500/30"
           />
         </div>
       </div>
