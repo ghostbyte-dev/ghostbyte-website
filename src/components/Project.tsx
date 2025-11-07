@@ -27,10 +27,7 @@ export default function Project({
       rel="noopener noreferrer"
       className="h-full"
     >
-      <div className="group flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10">
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${gradientColor} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-        />
+      <div className="group flex flex-col h-full overflow-hidden rounded-xl border border-white/20 transition-all duration-300 hover:border-indigo-500 hover:border-2">
         <div className="relative aspect-video overflow-hidden rounded-t-xl">
           <div className="absolute inset-0 z-10" />
           <Image

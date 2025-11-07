@@ -50,7 +50,7 @@
   }
 
   .link-text {
-    @apply relative font-medium text-white;
+    @apply relative font-medium;
   }
 
   .link-text::after {

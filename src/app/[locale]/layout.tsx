@@ -106,7 +106,7 @@ export default async function RootLayout({
 
   return (
     <html
-      className="text-white bg-[#030014] scroll-smooth selection:bg-blue-900 selection:text-white"
+      className="text-white bg-neutral-950 scroll-smooth selection:bg-indigo-500 selection:text-black"
       lang={locale}
       suppressHydrationWarning
     >

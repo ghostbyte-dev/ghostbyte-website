@@ -11,12 +11,7 @@ export default async function LandingPage(props: {
   const { lang } = await props.params;
 
   return (
-    <div className="dark bg-[#030014] pt-16">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-br from-purple-600/30 via-transparent to-transparent blur-[120px] opacity-40" />
-        <div className="absolute bottom-0 right-0 left-0 h-[500px] bg-gradient-to-tr from-cyan-500/30 via-transparent to-transparent blur-[120px] opacity-40" />
-      </div>
-
+    <div className="dark pt-16">
       <main className="flex-1 relative z-10">
         <HeroSection lang={lang} />
 
@@ -27,6 +22,10 @@ export default async function LandingPage(props: {
         <TeamSection lang={lang} />
 
         {/* <TestimonialsSection /> */}
+
+        <div className="bg-indigo-500 py-20 flex items-center justify-center text-center text-black">
+          <p>fief fuuf</p>
+        </div>
 
         <ContactSection />
       </main>
