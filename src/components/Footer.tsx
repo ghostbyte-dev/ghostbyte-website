@@ -1,10 +1,10 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
-import type { Locale } from "next-intl";
 import Link from "next/link";
-import LocaleSwitcher from "./LocaleSwitcher";
+import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link as IntlLink } from "@/src/i18n/navigation";
 import MastodonIcon from "./icons/MastodonIcon";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
