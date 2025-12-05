@@ -4,6 +4,7 @@ import TeamSection from "../../components/TeamSection";
 import ServiceSection from "../../components/ServicesSection";
 import ContactSection from "../../components/ContactSection";
 import type { Locale } from "@/i18n-config";
+import SocialMediaSection from "@/src/components/SocialMediaSection";
 
 export default async function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
@@ -16,6 +17,8 @@ export default async function LandingPage(props: {
         <HeroSection lang={lang} />
 
         <ProjectsSection lang={lang} />
+
+        <SocialMediaSection lang={lang} />
 
         <ServiceSection lang={lang} />
 

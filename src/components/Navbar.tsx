@@ -12,12 +12,12 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-[#030014]/60 backdrop-blur-xl flex justify-center">
+      <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-white/60 backdrop-blur-xl flex justify-center">
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">
               <Image
-                src={"/img/ghostbyte_logo_white.svg"}
+                src={"/img/ghostbyte_logo_black.svg"}
                 className="h-[30px]"
                 width={38}
                 height={32}
@@ -48,7 +48,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="relative overflow-hidden px-4 py-2 rounded-md group bg-indigo-500 font-semibold text-black border-0 hover:cursor-pointer"
+              className="relative overflow-hidden px-4 py-2 rounded-full group bg-indigo-500 font- text-black border-0 hover:cursor-pointer"
             >
               <span className="relative z-10"> {t("get_in_touch")} </span>
             </Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
               className="md:hidden relative z-20"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Menu className="h-6 w-6 text-white" />
+              <Menu className="h-6 w-6 text-black" />
             </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {/* Navbar toggle overlay */}
       <div
-        className="fixed right-0 z-50 flex h-full flex-col overflow-x-hidden bg-[#030014]/60 backdrop-blur-xl duration-500 "
+        className="fixed right-0 z-50 flex h-full flex-col overflow-x-hidden bg-white/60 backdrop-blur-xl duration-500 "
         style={{ width: isOpen ? "75vw" : "0vw" }}
       >
         <button
@@ -75,7 +75,7 @@ export default function Navbar() {
         ml-auto mr-7 text-[50px] duration-300
         ${isOpen ? "delay-200" : ""}
       `}
-          style={{ color: isOpen ? "white" : "transparent" }}
+          style={{ color: isOpen ? "black" : "transparent" }}
           onClick={() => setIsOpen(!isOpen)}
         >
           &times;
@@ -93,7 +93,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+            ${isOpen ? "delay-200 text-black" : "text-transparent"}
           `}
             >
               {t("projects")}
@@ -108,7 +108,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+            ${isOpen ? "delay-200 text-black" : "text-transparent"}
           `}
             >
               {t("services")}
@@ -119,7 +119,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+            ${isOpen ? "delay-200 text-black" : "text-transparent"}
           `}
             >
               {t("about")}
@@ -133,7 +133,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+            ${isOpen ? "delay-200 text-black" : "text-transparent"}
           `}
             >
               {t("contact")}
@@ -148,7 +148,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-white" : "text-transparent"}
+            ${isOpen ? "delay-200 text-black" : "text-transparent"}
           `}
             >
               {t("blog")}

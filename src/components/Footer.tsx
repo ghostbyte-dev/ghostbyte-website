@@ -9,7 +9,7 @@ import MastodonIcon from "./icons/MastodonIcon";
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
-    <footer className="text-black bg-indigo-500 pt-20 pb-3">
+    <footer className="text-white bg-neutral-900 pt-20 pb-3">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           {/* Brand column */}

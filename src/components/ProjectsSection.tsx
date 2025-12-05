@@ -12,12 +12,12 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
       <div className="container mx-auto px-5 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="max-w-lg space-y-4">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
+            <h2 className="text-3xl font-semibold tracking-tighter sm:text-6xl">
               {t("features_projects")}
             </h2>
-            <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[600px] text-neutral-800 font-light text-lg">
               {t("description")}
             </p>
           </div>

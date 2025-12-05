@@ -11,19 +11,19 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
         <div className="">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
-              <h1 className="text-4xl font-bold sm:text-5xl xl:text-7xl">
-                <span className="text-white">{t("title_line_1")}</span>
+              <h1 className="text-4xl space-y-3 font-bold sm:text-5xl xl:text-7xl">
+                <span>{t("title_line_1")}</span>
                 <br />
-                <span className="text-white">{t("title_line_2")}</span>
+                <span className="">{t("title_line_2")}</span>
               </h1>
-              <p className="max-w-[600px] text-zinc-300 mt-6 md:text-xl">
+              <p className="max-w-[600px] text-neutral-600 mt-6 md:text-xl">
                 {t("description")}
               </p>
             </div>
             <div className="flex flex-col gap-2 flex-row">
               <Link
                 href="/#projects"
-                className="flex bg-indigo-500 font-semibold text-black border-0 h-12 px-6 rounded-md"
+                className="flex bg-indigo-500 font-semibold text-black border-0 h-12 px-6 rounded-full"
               >
                 <span className="relative z-10 flex items-center">
                   {t("view_our_work")}
