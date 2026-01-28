@@ -1,10 +1,9 @@
-import HeroSection from "../../components/HeroSection";
-import ProjectsSection from "../../components/ProjectsSection";
-import TeamSection from "../../components/TeamSection";
-import ServiceSection from "../../components/ServicesSection";
-import ContactSection from "../../components/ContactSection";
 import type { Locale } from "@/i18n-config";
 import SocialMediaSection from "@/src/components/SocialMediaSection";
+import ContactSection from "../../components/ContactSection";
+import HeroSection from "../../components/HeroSection";
+import ProjectsSection from "../../components/ProjectsSection";
+import ServiceSection from "../../components/ServicesSection";
 
 export default async function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
