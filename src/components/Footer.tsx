@@ -10,7 +10,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
-    <footer className=" pb-3">
+    <footer className="">
       <div>
         <CurvedLoop
           marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
@@ -22,6 +22,12 @@ export default async function Footer({ lang }: { lang: Locale }) {
         />
       </div>
       <div className="container mx-auto px-4">
+        <div className="w-full flex items-center justify-center">
+          <h2 className="text-7xl uppercase ">
+            Let's start something
+            <br /> great together
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           {/* Brand column */}
           <div className="md:w-1/3">
@@ -147,6 +153,10 @@ export default async function Footer({ lang }: { lang: Locale }) {
             </p>
           </div>
         }
+      </div>
+
+      <div>
+        <img alt="" src="/img/ghostbyte_text.svg" className="w-full" />
       </div>
     </footer>
   );

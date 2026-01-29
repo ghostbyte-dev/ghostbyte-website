@@ -37,7 +37,15 @@
 
   html,
   body {
-    @apply text-neutral-600 font-light bg-neutral-50 } h1, h2, h3 { @apply text-neutral-800 font-extrabold } button { cursor: pointer;
+    @apply text-neutral-600 font-light bg-[#f2ede4]
+  }
+
+  h1, h2, h3 {
+    @apply text-neutral-800 font-extrabold
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 
@@ -104,7 +112,19 @@
   }
 
   .markdown a {
-    @apply underline text-[#c27aff] } .markdown ul { @apply list-disc ml-5 } .markdown ol { @apply list-decimal ml-5 } .markdown code { @apply text-sm my-3 rounded-xl;
+    @apply underline text-[#c27aff]
+  }
+
+  .markdown ul {
+    @apply list-disc ml-5
+  }
+
+  .markdown ol {
+    @apply list-decimal ml-5
+  }
+
+  .markdown code {
+    @apply text-sm my-3 rounded-xl;
   }
 
   .markdown img {

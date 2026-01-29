@@ -8,7 +8,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
   return (
     <section
       id="projects"
-      className="w-full py-12 md:py-24 lg:py-28 relative flex justify-center bg-neutral-100"
+      className="w-full py-12 md:py-24 lg:py-28 relative flex justify-center"
     >
       <div className="container mx-auto px-5 md:px-6 relative">
         <div className="max-w-3xl space-y-4">
