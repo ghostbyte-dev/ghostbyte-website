@@ -23,7 +23,7 @@ export default function GhostSwarm({ count = 12 }: { count?: number }) {
           // biome-ignore lint/suspicious/noArrayIndexKey: got nothing else
           key={i}
           className="absolute top-0 right-0 w-screen pointer-events-none"
-          initial={{ x: "110vw", y: `${ghost.startY}vh`, opacity: 0 }}
+          initial={{ x: "100vw", y: `${ghost.startY}vh`, opacity: 0 }}
           animate={{
             x: "40vw",
             opacity: [0.4, 0.2, 0],
@@ -32,7 +32,7 @@ export default function GhostSwarm({ count = 12 }: { count?: number }) {
           transition={{
             duration: ghost.duration,
             repeat: Infinity,
-            delay: i * 1,
+            delay: i * 2,
             ease: "linear",
           }}
         >
