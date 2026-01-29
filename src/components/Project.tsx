@@ -36,17 +36,17 @@ export default function Project({
           />
         </div>
         <div className="pt-4">
-          <div className="flex items-center space-x-3 mb-3">
-            <Image
+          <div className="flex items-center space-x-3 mb-1">
+            {/* <Image
               src={logo}
               width={40}
               height={40}
               className="w-12 h-12 rounded-xl"
               alt=""
-            />
+            /> */}
             <div>
-              <h3 className="mt-2 text-xl">{name}</h3>
-              <p className="text-sm mb-2 ">{category}</p>
+              <h3 className=" text-2xl">{name}</h3>
+              {/*  <p className="text-sm mb-2 ">{category}</p> */}
             </div>
           </div>
 

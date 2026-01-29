@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-40 flex justify-center">
+      <header className="absolute top-0 left-0 right-0 z-40 flex justify-center text-neutral-800">
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">

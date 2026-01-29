@@ -1,7 +1,7 @@
-import { Smartphone, Globe, Search, Laptop, ServerIcon } from "lucide-react";
+import { Globe, Laptop, Search, ServerIcon, Smartphone } from "lucide-react";
 import type { Locale } from "next-intl";
-import Service from "./Service";
 import { getTranslations } from "next-intl/server";
+import Service from "./Service";
 
 export default async function ServiceSection({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Services", locale: lang });
@@ -10,17 +10,13 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
       id="services"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent" />
-
       <div className="container mx-auto px-5 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
-              {t("title")}
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <h2 className="text-3xl uppercas sm:text-6xl">Services</h2>
+            {/*  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t("description")}
-            </p>
+            </p> */}
           </div>
         </div>
 

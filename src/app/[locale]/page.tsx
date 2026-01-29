@@ -18,17 +18,13 @@ export default async function LandingPage(props: {
 
         <ProjectsSection lang={lang} />
 
-        <SocialMediaSection lang={lang} />
+        {/* <SocialMediaSection lang={lang} /> */}
 
         <ServiceSection lang={lang} />
 
         <TeamSection lang={lang} />
 
         {/* <TestimonialsSection /> */}
-
-        <div className="bg-indigo-500 py-20 flex items-center justify-center text-center text-black">
-          <p>fief fuuf</p>
-        </div>
 
         <ContactSection />
       </main>
