@@ -1,23 +1,23 @@
 export const dynamic = "force-static";
 
-import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type React from "react";
 import "./globals.css";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { routing } from "@/src/i18n/routing";
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import type { Organization, WithContext } from "schema-dts";
 import PlausibleProvider from "next-plausible";
-import Script from "next/script";
+import type { Organization, WithContext } from "schema-dts";
 import ConsoleGhost from "@/src/components/ConsoleGhost";
+import { routing } from "@/src/i18n/routing";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -106,7 +106,7 @@ export default async function RootLayout({
 
   return (
     <html
-      className="bg-background scroll-smooth selection:bg-indigo-500 selection:text-black"
+      className="scroll-smooth selection:bg-indigo-500 selection:text-black"
       lang={locale}
       suppressHydrationWarning
     >

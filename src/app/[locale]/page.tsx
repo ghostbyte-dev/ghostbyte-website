@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n-config";
 import SocialMediaSection from "@/src/components/SocialMediaSection";
+import TeamSection from "@/src/components/TeamSection";
 import ContactSection from "../../components/ContactSection";
 import HeroSection from "../../components/HeroSection";
 import ProjectsSection from "../../components/ProjectsSection";

@@ -35,6 +35,17 @@
     --radius: 0.5rem;
   }
 
+  html,
+  body {
+    @apply text-neutral-600 font-light bg-neutral-50
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-neutral-800 font-extrabold
+  }
+
   button {
     cursor: pointer;
   }
@@ -64,10 +75,8 @@
   .link-text:not(:hover)::after {
     @apply origin-right ease-in;
   }
-
-
-
 }
+
 
 @layer components {
   .markdown {

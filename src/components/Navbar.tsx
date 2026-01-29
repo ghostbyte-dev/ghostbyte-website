@@ -1,10 +1,10 @@
 "use client";
 
 import { Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-white/60 backdrop-blur-xl flex justify-center">
+      <header className="absolute top-0 left-0 right-0 z-40 flex justify-center">
         <div className="container px-6 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">
@@ -27,12 +27,9 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex gap-6 text-sm">
-            <Link href="/#projects" className="link-text">
+          <nav className="hidden md:flex gap-6 text-">
+            <Link href="/work" className="link-text">
               {t("projects")}
-            </Link>
-            <Link href="/#services" className="link-text">
-              {t("services")}
             </Link>
             <Link href="/#about" className="link-text">
               {t("about")}
@@ -48,7 +45,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="relative overflow-hidden px-4 py-2 rounded-full group bg-indigo-500 font- text-black border-0 hover:cursor-pointer"
+              className="relative overflow-hidden px-4 py-2 rounded-full group bg-neutral-800 font- text-white border-0 hover:cursor-pointer"
             >
               <span className="relative z-10"> {t("get_in_touch")} </span>
             </Link>

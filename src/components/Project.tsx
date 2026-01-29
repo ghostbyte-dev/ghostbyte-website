@@ -8,7 +8,6 @@ interface ProjectProps {
   category: string;
   description: string;
   link: string;
-  gradientColor: string;
 }
 
 export default function Project({
@@ -18,7 +17,6 @@ export default function Project({
   category,
   description,
   link,
-  gradientColor,
 }: ProjectProps) {
   return (
     <Link
@@ -27,8 +25,8 @@ export default function Project({
       rel="noopener noreferrer"
       className="h-full"
     >
-      <div className="group flex flex-col h-full overflow-hidden rounded-xl border border-white/20 transition-all duration-300 hover:border-indigo-500 hover:border-2">
-        <div className="relative aspect-video overflow-hidden rounded-t-xl">
+      <div className="group flex flex-col h-full transition-all duration-300">
+        <div className="relative aspect-video overflow-hidden">
           <div className="absolute inset-0 z-10" />
           <Image
             src={image}
@@ -37,7 +35,7 @@ export default function Project({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
-        <div className="p-6">
+        <div className="pt-4">
           <div className="flex items-center space-x-3 mb-3">
             <Image
               src={logo}
@@ -47,8 +45,8 @@ export default function Project({
               alt=""
             />
             <div>
-              <h3 className="mt-2 text-xl font-bold">{name}</h3>
-              <p className="text-sm mb-2 text-white/80">{category}</p>
+              <h3 className="mt-2 text-xl">{name}</h3>
+              <p className="text-sm mb-2 ">{category}</p>
             </div>
           </div>
 
