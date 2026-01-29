@@ -10,7 +10,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
       id="projects"
       className="w-full py-12 md:py-24 lg:py-28 relative flex justify-center"
     >
-      <div className="container mx-auto px-5 md:px-6 relative">
+      <div className="container relative">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
             <h2 className="text-3xl uppercas sm:text-6xl">
@@ -87,9 +87,9 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
         <div className="w-full flex justify-center">
           <Link
             href="work"
-            className="relative overflow-hidden px-4 py-2 rounded-full group bg-neutral-800 font- text-white border-0 hover:cursor-pointer"
+            className="relative overflow-hidden px-6 text-sm py-3 rounded-xl group border-2 border-neutral-800 text-neutral-800 font-bold hover:cursor-pointer"
           >
-            View all
+            View All Projects
           </Link>
         </div>
       </div>

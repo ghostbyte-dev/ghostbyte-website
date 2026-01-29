@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <>
       <header className="absolute top-0 left-0 right-0 z-40 flex justify-center text-neutral-800">
-        <div className="container px-6 flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex justify-center items-center">
               <Image
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="relative overflow-hidden px-4 py-2 rounded-full group bg-neutral-800 font- text-white border-0 hover:cursor-pointer"
+              className="relative hidden md:block overflow-hidden px-4 py-2 rounded-full group bg-neutral-800 text-white border-0 hover:cursor-pointer"
             >
               <span className="relative z-10"> {t("get_in_touch")} </span>
             </Link>
@@ -63,8 +63,8 @@ export default function Navbar() {
 
       {/* Navbar toggle overlay */}
       <div
-        className="fixed right-0 z-50 flex h-full flex-col overflow-x-hidden bg-white/60 backdrop-blur-xl duration-500 "
-        style={{ width: isOpen ? "75vw" : "0vw" }}
+        className="fixed right-0 z-50 flex h-full w-full flex-col overflow-x-hidden bg-neutral-800 text-[#f2ede4] duration-500 "
+        style={{ height: isOpen ? "100vh" : "0vh" }}
       >
         <button
           type="button"
@@ -90,7 +90,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-black" : "text-transparent"}
+            ${isOpen ? "delay-200 text-light" : "text-transparent"}
           `}
             >
               {t("projects")}
@@ -105,7 +105,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-black" : "text-transparent"}
+            ${isOpen ? "delay-200 text-[#f2ede4]" : "text-transparent"}
           `}
             >
               {t("services")}
@@ -116,7 +116,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-black" : "text-transparent"}
+            ${isOpen ? "delay-200 text-light" : "text-transparent"}
           `}
             >
               {t("about")}
@@ -130,7 +130,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-black" : "text-transparent"}
+            ${isOpen ? "delay-200 text-light" : "text-transparent"}
           `}
             >
               {t("contact")}
@@ -145,7 +145,7 @@ export default function Navbar() {
             <h3
               className={`
             duration-300 
-            ${isOpen ? "delay-200 text-black" : "text-transparent"}
+            ${isOpen ? "delay-200 text-light" : "text-transparent"}
           `}
             >
               {t("blog")}

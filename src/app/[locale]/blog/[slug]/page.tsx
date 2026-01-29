@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import markdownToHtml from "@/src/utils/markdownToHtml";
-import { getAllPosts, getPostBySlug } from "@/src/utils/blogApi";
-import { PostHeader } from "@/src/components/blog/post-header";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { PostHeader } from "@/src/components/blog/post-header";
+import { getAllPosts, getPostBySlug } from "@/src/utils/blogApi";
+import markdownToHtml from "@/src/utils/markdownToHtml";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -17,7 +17,7 @@ export default async function Post(props: Params) {
 
   return (
     <main>
-      <div className="container mx-auto px-5 pt-32 md:pt-48">
+      <div className="container pt-32 md:pt-48">
         <article className="mb-32">
           <PostHeader
             title={post.title}

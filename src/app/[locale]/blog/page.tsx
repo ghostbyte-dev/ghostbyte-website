@@ -28,7 +28,7 @@ export default function BlogOverviewPage() {
             tips that you can apply to your own work."
       />
 
-      <div className="container mx-auto">
+      <div className="container">
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}

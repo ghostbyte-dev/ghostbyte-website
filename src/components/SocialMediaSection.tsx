@@ -1,8 +1,8 @@
-import { getTranslations } from "next-intl/server";
-import Project from "./Project";
-import type { Locale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import type { Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import Project from "./Project";
 
 type AccountItem = {
   link: string;
@@ -41,7 +41,7 @@ export default async function SocialMediaSection({ lang }: { lang: Locale }) {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
 
-      <div className="container mx-auto px-5 md:px-6 relative">
+      <div className="container relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-semibold tracking-tighter sm:text-6xl">

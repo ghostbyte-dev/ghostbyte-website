@@ -1,11 +1,17 @@
 @import "tailwindcss";
 @import "highlight.js/styles/github-dark.css";
 
+@theme {
+  --color-light: #f2ede4;
+}
+
 /* or any theme */
 @layer base {
   :root {
     --background: white;
     --foreground: 0 0% 98%;
+
+
 
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -46,6 +52,10 @@
 
   button {
     cursor: pointer;
+  }
+
+  .container {
+    @apply px-5 md:px-6 mx-auto
   }
 }
 

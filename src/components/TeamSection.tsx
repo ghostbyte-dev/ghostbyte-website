@@ -1,13 +1,12 @@
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
-import LeafletMapWrapper from "./LeafletMapWrapper";
 import TeamMemberCard from "./TeamMemberCard";
 
 export default async function TeamSection({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Team", locale: lang });
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 relative">
-      <div className="container mx-auto flex justify-between">
+      <div className="container flex justify-between">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
             <h2 className="text-3xl uppercas sm:text-6xl">Team</h2>

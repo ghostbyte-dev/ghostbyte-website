@@ -26,7 +26,7 @@ export default function Project({
       className="h-full"
     >
       <div className="group flex flex-col h-full transition-all duration-300">
-        <div className="relative aspect-video overflow-hidden">
+        <div className="relative aspect-[5/3] overflow-hidden rounded-xl">
           <div className="absolute inset-0 z-10" />
           <Image
             src={image}

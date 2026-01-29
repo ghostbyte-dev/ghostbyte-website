@@ -23,11 +23,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section
-      id="contact"
-      className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
-    >
-      <div className="container px-4 md:px-6 relative">
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative">
+      <div className="container relative">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
             <h2 className="text-3xl uppercas sm:text-6xl">Kontakt</h2>
