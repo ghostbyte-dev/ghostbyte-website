@@ -45,12 +45,6 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
           />
         </div>
       </div>
-
-      <div className="container mx-auto mt-32">
-        <div className="md:col-span-2 h-100 overflow-hidden">
-          <LeafletMapWrapper />
-        </div>
-      </div>
     </section>
   );
 }

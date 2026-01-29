@@ -1,9 +1,11 @@
 "use client";
 
+import { LocationEditIcon, MailIcon, PinIcon } from "lucide-react";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/sendEmail";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import LeafletMapWrapper from "./LeafletMapWrapper";
 
 export type FormData = {
   name: string;
@@ -25,51 +27,80 @@ export default function ContactSection() {
       id="contact"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
-
       <div className="container px-4 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
-            {t("title")}
-          </h2>
-          <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-            {t("description")}
-          </p>
+        <div className="max-w-3xl space-y-4">
+          <div className="space-y-2">
+            <h2 className="text-3xl uppercas sm:text-6xl">Kontakt</h2>
+          </div>
         </div>
-
-        <div className="mx-auto max-w-3xl">
-          <div className="rounded-xl border border-white/10 bg-black/30 backdrop-blur-md p-8 relative">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-medium text-white"
-                  >
-                    {t("name_label")}
-                  </label>
-                  <input
-                    id="name"
-                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
-                    placeholder={t("name_placeholder")}
-                    {...register("name", { required: true })}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium text-white"
-                  >
-                    {t("email_label")}
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
-                    placeholder={t("email_placeholder")}
-                    {...register("email", { required: true })}
-                  />
-                </div>
+        <div className="grid grid-cols-2 w-full gap-10 h-96 mt-10">
+          <div className="flex flex-col gap-4">
+            <div>
+              <h3 className="text-lg">Lustenau</h3>
+              <div className="flex flex-row items-center gap-2">
+                <LocationEditIcon />
+                <Link
+                  className="hover:text-neutral-800 hover:underline duration-300"
+                  href={"https://maps.app.goo.gl/ufFE52FR4iVxQhmU7"}
+                >
+                  Lustenau Sonnenstraße 11a
+                </Link>
+              </div>
+            </div>
+            <LeafletMapWrapper
+              center={[47.42339831023843, 9.656724735140145]}
+            />
+          </div>
+          <div className="flex flex-col gap-4">
+            <div>
+              <h3 className="text-lg">Wien</h3>
+              <div className="flex flex-row items-center gap-2">
+                <LocationEditIcon />
+                <Link
+                  className="hover:text-neutral-800 hover:underline duration-300"
+                  href={"https://maps.app.goo.gl/ZGsChgLi4jGyq8ra6"}
+                >
+                  Wien Wallensteinstraße 64
+                </Link>
+              </div>
+            </div>
+            <LeafletMapWrapper
+              center={[48.231090761843014, 16.37625516840938]}
+            />
+          </div>
+        </div>
+        <div className="max-w-3xl mt-10">
+          <h3>Get in touch</h3>
+          <div className="relative">
+            <form onSubmit={handleSubmit(onSubmit)} className="">
+              <div className="space-y-2">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium text-white"
+                >
+                  {t("name_label")}
+                </label>
+                <input
+                  id="name"
+                  className="input w-1/2"
+                  placeholder={t("name_placeholder")}
+                  {...register("name", { required: true })}
+                />
+              </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-white"
+                >
+                  {t("email_label")}
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="input w-1/2"
+                  placeholder={t("email_placeholder")}
+                  {...register("email", { required: true })}
+                />
               </div>
 
               <div className="space-y-2">
@@ -81,7 +112,7 @@ export default function ContactSection() {
                 </label>
                 <input
                   id="subject"
-                  className="flex h-10 w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
+                  className="input w-full"
                   placeholder={t("subject_placeholder")}
                   {...register("subject", { required: true })}
                 />
@@ -96,16 +127,16 @@ export default function ContactSection() {
                 </label>
                 <textarea
                   id="message"
-                  className="flex min-h-[120px] w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-white placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-500"
+                  className="flex min-h-[120px] input w-full"
                   placeholder={t("message_placeholder")}
                   {...register("message", { required: true })}
                 />
               </div>
 
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-4 mt-6">
                 <button
                   type="button"
-                  className="w-full h-10 rounded-md bg-gradient-to-r font-semibold from-purple-700 to-cyan-600 hover:from-purple-800 hover:to-cyan-700 text-white border-0"
+                  className="w-full h-10 rounded-md font-semibold bg-neutral-600 text-white"
                 >
                   {t("send_message")}
                 </button>
@@ -114,7 +145,7 @@ export default function ContactSection() {
                   {t("mail_directly")}{" "}
                   <Link
                     href="mailto:hey@ghostbyte.dev"
-                    className="text-purple-400 hover:text-cyan-400 transition-colors"
+                    className="font-bold hover:text-neutral-800 duration-300 transition-colors"
                   >
                     hey@ghostbyte.dev
                   </Link>

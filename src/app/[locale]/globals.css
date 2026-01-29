@@ -37,17 +37,7 @@
 
   html,
   body {
-    @apply text-neutral-600 font-light bg-neutral-50
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply text-neutral-800 font-extrabold
-  }
-
-  button {
-    cursor: pointer;
+    @apply text-neutral-600 font-light bg-neutral-50 } h1, h2, h3 { @apply text-neutral-800 font-extrabold } button { cursor: pointer;
   }
 }
 
@@ -75,8 +65,11 @@
   .link-text:not(:hover)::after {
     @apply origin-right ease-in;
   }
-}
 
+  .input {
+    @apply flex h-10 border border-neutral-600 px-3 py-2 text-neutral-600 placeholder:text-gray-500 focus-visible:outline-none focus-visible:border-2 duration-300;
+  }
+}
 
 @layer components {
   .markdown {
@@ -111,19 +104,7 @@
   }
 
   .markdown a {
-    @apply underline text-[#c27aff]
-  }
-
-  .markdown ul {
-    @apply list-disc ml-5
-  }
-
-  .markdown ol {
-    @apply list-decimal ml-5
-  }
-
-  .markdown code {
-    @apply text-sm my-3 rounded-xl;
+    @apply underline text-[#c27aff] } .markdown ul { @apply list-disc ml-5 } .markdown ol { @apply list-decimal ml-5 } .markdown code { @apply text-sm my-3 rounded-xl;
   }
 
   .markdown img {
