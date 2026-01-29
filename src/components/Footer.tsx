@@ -3,13 +3,24 @@ import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link as IntlLink } from "@/src/i18n/navigation";
+import CurvedLoop from "./CurvedLoop";
 import MastodonIcon from "./icons/MastodonIcon";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
-    <footer className="text-white bg-neutral-900 pt-20 pb-3">
+    <footer className=" pb-3">
+      <div>
+        <CurvedLoop
+          marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
+          speed={2}
+          curveAmount={300}
+          direction="left"
+          interactive
+          className=""
+        />
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           {/* Brand column */}

@@ -20,7 +20,7 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
           </div>
         </div>
 
-        <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 divide-neutral-300 divide-y">
           <Service
             icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
             name={t("mobile_development")}
