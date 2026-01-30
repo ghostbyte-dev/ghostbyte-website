@@ -24,7 +24,9 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
           </div>
         </div>
       </div>
-      <GhostSwarm />
+      <div className="hidden lg:block">
+        <GhostSwarm />
+      </div>
     </section>
   );
 }
