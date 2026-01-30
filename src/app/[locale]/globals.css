@@ -1,42 +1,29 @@
 @import "tailwindcss";
 @import "highlight.js/styles/github-dark.css";
 
+@theme {
+  --color-light: #f2ede4;
+  --color-light-secondary: #ada79c;
+}
+
 /* or any theme */
 @layer base {
-  :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+  html,
+  body {
+    @apply text-neutral-600 font-light bg-[#f2ede4]
+  }
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 252 87% 67%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-
-    --radius: 0.5rem;
+  h1, h2, h3 {
+    @apply text-neutral-800 font-extrabold
   }
 
   button {
     cursor: pointer;
+  }
+
+  .container {
+    @apply px-5 md:px-6 mx-auto
   }
 }
 
@@ -50,7 +37,7 @@
   }
 
   .link-text {
-    @apply relative font-medium text-white;
+    @apply relative font-medium;
   }
 
   .link-text::after {
@@ -65,8 +52,9 @@
     @apply origin-right ease-in;
   }
 
-
-
+  .input {
+    @apply flex h-10 border border-neutral-600 px-3 py-2 text-neutral-600 placeholder:text-gray-500 focus-visible:outline-none focus-visible:border-2 duration-300;
+  }
 }
 
 @layer components {
@@ -174,4 +162,31 @@
 
 .animate-glow {
   animation: glow 3s infinite;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Customizing the buttons */
+.leaflet-bar a {
+  background-color: var(--color-neutral-800) !important;
+  color: #ada79c !important;
+  border-bottom: none !important;
+}
+
+/* Hover state */
+.leaflet-bar a:hover {
+  background-color: #262626 !important;
+  /* Neutral-800 */
+  color: #f2ede4 !important;
+  /* Amber-500 */
+}
+
+.leaflet-control-attribution {
+  background-color: var(--color-neutral-800) !important;
+  opacity: 0.8 !important;
+  color: var(--color-light) !important;
 }

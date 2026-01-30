@@ -1,9 +1,10 @@
 import type { Locale } from "@/i18n-config";
+import SocialMediaSection from "@/src/components/SocialMediaSection";
+import TeamSection from "@/src/components/TeamSection";
 import ContactSection from "../../components/ContactSection";
 import HeroSection from "../../components/HeroSection";
 import ProjectsSection from "../../components/ProjectsSection";
 import ServiceSection from "../../components/ServicesSection";
-import TeamSection from "../../components/TeamSection";
 
 export default async function LandingPage(props: {
   params: Promise<{ lang: Locale }>;
@@ -11,16 +12,20 @@ export default async function LandingPage(props: {
   const { lang } = await props.params;
 
   return (
-    <div className="dark bg-[#030014] pt-16">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-br from-purple-600/30 via-transparent to-transparent blur-[120px] opacity-40" />
-        <div className="absolute bottom-0 right-0 left-0 h-[500px] bg-gradient-to-tr from-cyan-500/30 via-transparent to-transparent blur-[120px] opacity-40" />
-      </div>
-
+    <div className="dark pt-16">
+      {/* <div className="fixed top-0 bottom-0 right-0 left-0 flex items-center justify-center">
+        <img
+          src="/img/ghostbyte_logo_black.svg"
+          alt=""
+          className="h-96 opacity-5"
+        />
+      </div> */}
       <main className="flex-1 relative z-10">
         <HeroSection lang={lang} />
 
         <ProjectsSection lang={lang} />
+
+        {/* <SocialMediaSection lang={lang} /> */}
 
         <ServiceSection lang={lang} />
 

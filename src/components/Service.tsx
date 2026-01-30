@@ -1,22 +1,25 @@
-import type { ReactElement } from "react";
+import type { LucideIcon } from "lucide-react";
 
 interface ServiceProps {
-  icon: ReactElement;
+  icon: LucideIcon;
   name: string;
   description: string;
 }
 
-export default function Service({ icon, name, description }: ServiceProps) {
+export default function Service({
+  icon: Icon,
+  name,
+  description,
+}: ServiceProps) {
   return (
-    <div className="group flex flex-col items-center space-y-4 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm py-12 px-6 text-center transition-all duration-300 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5">
-      <div className="relative">
-        <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-80" />
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm">
-          {icon}
-        </div>
+    <div className="grid grid-cols-5 py-12 gap-y-5">
+      <div className="hidden md:col-span-1 text-neutral-800 md:flex items-center justify-cente">
+        <Icon className="h-12 md:h-14 w-12 md:w-14" />
       </div>
-      <h3 className="text-xl font-bold">{name}</h3>
-      <p>{description}</p>
+      <div className="group flex flex-col space-y-4 col-span-5 md:col-span-4">
+        <h3 className="text-3xl mb-4 font-extrabold">{name}</h3>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }

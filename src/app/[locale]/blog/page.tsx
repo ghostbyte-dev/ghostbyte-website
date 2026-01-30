@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import { HeroPost } from "@/src/components/blog/hero-post";
 import { MoreStories } from "@/src/components/blog/more-stories";
+import { Hero } from "@/src/components/Hero";
 import { getAllPosts } from "@/src/utils/blogApi";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | Ghostbyte",
@@ -18,18 +19,16 @@ export default function BlogOverviewPage() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main className="pt-32">
-      <div className="container mx-auto px-5">
-        <h1 className="font-bold text-center text-3xl lg:text-5xl mt-16">
-          Welcome to the Ghostbyte Blog
-        </h1>
-        <p className="mt-6 mb-12 text-center text-xl">
-          At Ghostbyte, we love building thoughtful software and sharing what we
-          learn along the way. Here you’ll find deep dives into web and app
-          development, behind-the-scenes looks at our projects, and practical
-          tips that you can apply to your own work.
-        </p>
+    <div>
+      <Hero
+        title="Our Blog"
+        description="At Ghostbyte, we love building thoughtful software and sharing what
+            we learn along the way. Here you'll find deep dives into web and app
+            development, behind-the-scenes looks at our projects, and practical
+            tips that you can apply to your own work."
+      />
 
+      <div className="container">
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
@@ -40,6 +39,6 @@ export default function BlogOverviewPage() {
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </div>
-    </main>
+    </div>
   );
 }

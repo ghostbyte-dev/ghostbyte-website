@@ -1,7 +1,13 @@
-import { Smartphone, Globe, Search, Laptop, ServerIcon } from "lucide-react";
+import {
+  GlobeIcon,
+  LaptopIcon,
+  SearchIcon,
+  ServerIcon,
+  SmartphoneIcon,
+} from "lucide-react";
 import type { Locale } from "next-intl";
-import Service from "./Service";
 import { getTranslations } from "next-intl/server";
+import Service from "./Service";
 
 export default async function ServiceSection({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Services", locale: lang });
@@ -10,47 +16,43 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
       id="services"
       className="w-full py-12 md:py-24 lg:py-32 relative flex justify-center"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/5 to-transparent" />
-
-      <div className="container mx-auto px-5 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+      <div className="container relative">
+        <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-300">
-              {t("title")}
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <h2 className="text-4xl sm:text-6xl">{t("title")}</h2>
+            {/*  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t("description")}
-            </p>
+            </p> */}
           </div>
         </div>
 
-        <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 divide-neutral-300 divide-y">
           <Service
-            icon={<Smartphone className="h-8 w-8 text-cyan-300" />}
+            icon={SmartphoneIcon}
             name={t("mobile_development")}
             description={t("mobile_development_description")}
           />
 
           <Service
-            icon={<Globe className="h-8 w-8 text-cyan-300" />}
+            icon={GlobeIcon}
             name={t("web_development")}
             description={t("web_development_description")}
           />
 
           <Service
-            icon={<Search className="h-8 w-8 text-cyan-300" />}
+            icon={SearchIcon}
             name={t("seo")}
             description={t("seo_description")}
           />
 
           <Service
-            icon={<Laptop className="h-8 w-8 text-cyan-300" />}
+            icon={LaptopIcon}
             name={t("ui_ux_design")}
             description={t("ui_ux_design_description")}
           />
 
           <Service
-            icon={<ServerIcon className="h-8 w-8 text-cyan-300" />}
+            icon={ServerIcon}
             name={t("maintainance_support")}
             description={t("maintainance_support_description")}
           />

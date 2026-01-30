@@ -8,7 +8,6 @@ interface ProjectProps {
   category: string;
   description: string;
   link: string;
-  gradientColor: string;
 }
 
 export default function Project({
@@ -18,7 +17,6 @@ export default function Project({
   category,
   description,
   link,
-  gradientColor,
 }: ProjectProps) {
   return (
     <Link
@@ -27,11 +25,8 @@ export default function Project({
       rel="noopener noreferrer"
       className="h-full"
     >
-      <div className="group flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10">
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${gradientColor} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-        />
-        <div className="relative aspect-video overflow-hidden rounded-t-xl">
+      <div className="group flex flex-col h-full transition-all duration-300">
+        <div className="relative aspect-[5/3] overflow-hidden rounded-xl">
           <div className="absolute inset-0 z-10" />
           <Image
             src={image}
@@ -40,18 +35,18 @@ export default function Project({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
-        <div className="p-6">
-          <div className="flex items-center space-x-3 mb-3">
-            <Image
+        <div className="pt-4">
+          <div className="flex items-center space-x-3 mb-1">
+            {/* <Image
               src={logo}
               width={40}
               height={40}
               className="w-12 h-12 rounded-xl"
               alt=""
-            />
+            /> */}
             <div>
-              <h3 className="mt-2 text-xl font-bold">{name}</h3>
-              <p className="text-sm mb-2 text-white/80">{category}</p>
+              <h3 className=" text-2xl">{name}</h3>
+              {/*  <p className="text-sm mb-2 ">{category}</p> */}
             </div>
           </div>
 

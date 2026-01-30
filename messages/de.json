@@ -35,7 +35,7 @@
     "together_description": "Ein Tool zum Verwalten von Haushalten und Gemeinschaften. Inklusive gemeinsamer Einkaufsliste, Aufgaben, Kalender und mehr."
   },
   "Team": {
-    "title": "Über uns",
+    "title": "Unser Team",
     "description": "Ghostbyte ist ein kleines, aber engagiertes Team von Entwicklern, die leidenschaftlich daran arbeiten, innovative und hochwertige digitale Produkte zu schaffen.",
     "daniel_job": "CEO & Creative Director",
     "daniel_description": "Daniel ist ein Entwickler, der leidenschaftlich daran arbeitet, innovative und benutzerfreundliche Softwarelösungen zu schaffen.",
@@ -59,7 +59,7 @@
     "mail_directly": "Oder erreiche uns direkt unter"
   },
   "Services": {
-    "title": "Leistungen",
+    "title": "Unsere Leistungen",
     "description": "Wir bieten ein umfassendes Spektrum an Softwareentwicklungsdiensten, um Ihr Unternehmen zum Erfolg zu führen.",
     "mobile_development": "App-Entwicklung",
     "mobile_development_description": "Wir entwickeln native und plattformübergreifende Apps für iOS und Android, die herausragende Nutzererlebnisse bieten.",
