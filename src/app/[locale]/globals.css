@@ -3,15 +3,15 @@
 
 @theme {
   --color-light: #f2ede4;
+  --color-light-secondary: #ada79c;
 }
 
 /* or any theme */
 @layer base {
 
-
   html,
   body {
-    @apply text-neutral-600 font-light bg-light
+    @apply text-neutral-600 font-light bg-[#f2ede4]
   }
 
   h1, h2, h3 {
@@ -162,4 +162,31 @@
 
 .animate-glow {
   animation: glow 3s infinite;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Customizing the buttons */
+.leaflet-bar a {
+  background-color: var(--color-neutral-800) !important;
+  color: #ada79c !important;
+  border-bottom: none !important;
+}
+
+/* Hover state */
+.leaflet-bar a:hover {
+  background-color: #262626 !important;
+  /* Neutral-800 */
+  color: #f2ede4 !important;
+  /* Amber-500 */
+}
+
+.leaflet-control-attribution {
+  background-color: var(--color-neutral-800) !important;
+  opacity: 0.8 !important;
+  color: var(--color-light) !important;
 }
