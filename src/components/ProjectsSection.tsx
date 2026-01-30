@@ -7,18 +7,18 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
   return (
     <section
       id="projects"
-      className="w-full py-12 md:py-24 lg:py-28 relative flex justify-center"
+      className="w-full pb-12 md:pb-24 lg:pb-28 relative flex justify-center"
     >
       <div className="container relative">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-3xl uppercas sm:text-6xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               {t("features_projects")}
             </h2>
           </div>
         </div>
 
-        <div className="grid gap-x-10 gap-y-16 py-12 lg:grid-cols-2">
+        <div className="grid gap-x-10 gap-y-16 mt-6 lg:grid-cols-2">
           <Project
             name="Pixelix"
             image="/img/projects/pixelix_screenshot.webp"
