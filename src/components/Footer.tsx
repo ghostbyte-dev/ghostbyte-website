@@ -36,7 +36,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             <p className="mb-8 text-lg">
               {t("turning_ideas_in_digital_reality")}
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <Link
                 href="https://github.com/ghostbyte-dev"
                 target="_blank"
@@ -63,7 +63,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                 target="_blank"
                 rel="noopener noreferrer me"
               >
-                <div className="text-black w-6 h-6 relative">
+                <div className="w-6 h-6 relative">
                   <MastodonIcon />
                 </div>
               </Link>
