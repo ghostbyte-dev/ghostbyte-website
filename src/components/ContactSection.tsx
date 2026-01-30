@@ -23,21 +23,26 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 relative">
+    <section
+      id="contact"
+      className="w-full py-12 md:py-24 lg:py-32 relative bg-neutral-800 text-light-secondary"
+    >
       <div className="container relative">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-3xl uppercas sm:text-6xl">Kontakt</h2>
+            <h2 className="text-3xl uppercas sm:text-6xl text-light">
+              Kontakt
+            </h2>
           </div>
         </div>
         <div className="grid grid-cols-2 w-full gap-10 h-96 mt-10">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="text-lg">Lustenau</h3>
+              <h3 className="text-lg text-light">Lustenau</h3>
               <div className="flex flex-row items-center gap-2">
                 <LocationEditIcon />
                 <Link
-                  className="hover:text-neutral-800 hover:underline duration-300"
+                  className="hover:text-light hover:underline duration-300"
                   href={"https://maps.app.goo.gl/ufFE52FR4iVxQhmU7"}
                 >
                   Lustenau Sonnenstraße 11a
@@ -50,11 +55,11 @@ export default function ContactSection() {
           </div>
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="text-lg">Wien</h3>
+              <h3 className="text-lg text-light">Wien</h3>
               <div className="flex flex-row items-center gap-2">
                 <LocationEditIcon />
                 <Link
-                  className="hover:text-neutral-800 hover:underline duration-300"
+                  className="hover:text-light hover:underline duration-300"
                   href={"https://maps.app.goo.gl/ZGsChgLi4jGyq8ra6"}
                 >
                   Wien Wallensteinstraße 64
@@ -67,7 +72,7 @@ export default function ContactSection() {
           </div>
         </div>
         <div className="max-w-3xl mt-10">
-          <h3>Get in touch</h3>
+          <h3 className="text-light text-xl mb-2">Get in touch</h3>
           <div className="relative">
             <form onSubmit={handleSubmit(onSubmit)} className="">
               <div className="space-y-2">
@@ -138,11 +143,11 @@ export default function ContactSection() {
                   {t("send_message")}
                 </button>
 
-                <div className="text-center text-sm text-gray-400">
+                <div className="text-center text-sm text-light-secondary">
                   {t("mail_directly")}{" "}
                   <Link
                     href="mailto:hey@ghostbyte.dev"
-                    className="font-bold hover:text-neutral-800 duration-300 transition-colors"
+                    className="font-bold hover:text-light duration-300 transition-colors"
                   >
                     hey@ghostbyte.dev
                   </Link>

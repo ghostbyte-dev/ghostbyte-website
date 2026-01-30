@@ -10,7 +10,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
-    <footer className="">
+    <footer className="bg-neutral-800 text-light-secondary">
       <div>
         <CurvedLoop
           marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
@@ -29,7 +29,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
               {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
                 <img src="/logo_dark.svg" height={22} width={22} />
               </div> */}
-              <h3 className="text-3xl font-bold">
+              <h3 className="text-3xl font-bold text-light">
                 <span className="text-3xl font-bold">Ghostbyte</span>
               </h3>
             </div>
@@ -76,7 +76,9 @@ export default async function Footer({ lang }: { lang: Locale }) {
           {/* Links columns */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
             <div>
-              <h3 className="text-lg font-bold mb-4">{t("navigation")}</h3>
+              <h3 className="text-lg font-bold mb-4 text-light">
+                {t("navigation")}
+              </h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link href="/#projects" className="link-text">
@@ -106,7 +108,9 @@ export default async function Footer({ lang }: { lang: Locale }) {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">{t("get_in_touch")}</h3>
+              <h3 className="text-lg font-bold mb-4 text-light">
+                {t("get_in_touch")}
+              </h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link className="link-text" href="mailto:hey@ghostbyte.dev">
@@ -122,7 +126,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4">Legal</h3>
+              <h3 className="text-lg font-bold mb-4 text-light">Legal</h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <IntlLink href="/privacy-policy" className="link-text">
