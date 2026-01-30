@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Project from "./Project";
@@ -84,14 +83,14 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           /> */}
         </div>
 
-        <div className="w-full flex justify-center">
+        {/*  <div className="w-full flex justify-center">
           <Link
             href="work"
             className="relative overflow-hidden px-6 text-sm py-3 rounded-xl group border-2 border-neutral-800 text-neutral-800 font-bold hover:cursor-pointer"
           >
             View All Projects
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

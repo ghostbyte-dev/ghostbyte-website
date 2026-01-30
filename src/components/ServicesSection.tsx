@@ -1,12 +1,8 @@
 import {
-  Globe,
   GlobeIcon,
-  Laptop,
   LaptopIcon,
-  Search,
   SearchIcon,
   ServerIcon,
-  Smartphone,
   SmartphoneIcon,
 } from "lucide-react";
 import type { Locale } from "next-intl";
@@ -23,7 +19,7 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
       <div className="container relative">
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-4xl sm:text-6xl">Our Services</h2>
+            <h2 className="text-4xl sm:text-6xl">{t("title")}</h2>
             {/*  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t("description")}
             </p> */}

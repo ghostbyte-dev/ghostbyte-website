@@ -31,48 +31,58 @@ export default function ContactSection() {
         <div className="max-w-3xl space-y-4">
           <div className="space-y-2">
             <h2 className="text-3xl uppercas sm:text-6xl text-light">
-              Kontakt
+              {t("title")}
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-2 w-full gap-10 h-96 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 mt-10">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="text-lg text-light">Lustenau</h3>
-              <div className="flex flex-row items-center gap-2">
-                <LocationEditIcon />
+              <h3 className="text-lg text-light mb-3">Lustenau</h3>
+              <div>
                 <Link
-                  className="hover:text-light hover:underline duration-300"
+                  className="hover:text-light hover:underline duration-300 flex flex-col"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href={"https://maps.app.goo.gl/ufFE52FR4iVxQhmU7"}
                 >
-                  Lustenau Sonnenstraße 11a
+                  <span>Sonnenstraße 11a</span>
+                  <span>6890, Lustenau</span>
+                  <span>Austria</span>
                 </Link>
               </div>
             </div>
-            <LeafletMapWrapper
-              center={[47.42339831023843, 9.656724735140145]}
-            />
+            <div className="aspect-3/2">
+              <LeafletMapWrapper
+                center={[47.42339831023843, 9.656724735140145]}
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="text-lg text-light">Wien</h3>
-              <div className="flex flex-row items-center gap-2">
-                <LocationEditIcon />
+              <h3 className="text-lg text-light mb-3">Wien</h3>
+              <div>
                 <Link
-                  className="hover:text-light hover:underline duration-300"
+                  className="hover:text-light hover:underline duration-300 flex flex-col"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href={"https://maps.app.goo.gl/ZGsChgLi4jGyq8ra6"}
                 >
-                  Wien Wallensteinstraße 64
+                  <span>Wallensteinstraße 64/15</span>
+                  <span>1200 Wien</span>
+                  <span>Austria</span>
                 </Link>
               </div>
             </div>
-            <LeafletMapWrapper
-              center={[48.231090761843014, 16.37625516840938]}
-            />
+            <div className="aspect-3/2">
+              <LeafletMapWrapper
+                center={[48.231090761843014, 16.37625516840938]}
+              />
+            </div>
           </div>
         </div>
-        <div className="max-w-3xl mt-10">
-          <h3 className="text-light text-xl mb-2">Get in touch</h3>
+        <div className="max-w-3xl mt-36 mx-auto">
+          <h3 className="text-light text-3xl mb-2">{t("title")}</h3>
           <div className="relative">
             <form onSubmit={handleSubmit(onSubmit)} className="">
               <div className="space-y-2">

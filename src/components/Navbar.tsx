@@ -1,34 +1,70 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  Menu,
+  XIcon,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "use-intl";
+import MastodonIcon from "./icons/MastodonIcon";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  const Logo = ({ variant = "black" }) => (
+    <Link
+      href="/"
+      className="flex justify-center items-center"
+      onClick={() => setIsOpen(false)}
+    >
+      <Image
+        src={
+          variant === "white"
+            ? "/img/ghostbyte_logo_white.svg"
+            : "/img/ghostbyte_logo_black.svg"
+        }
+        className="h-[30px]"
+        width={38}
+        height={32}
+        alt="Ghostbyte logo"
+      />
+      <span
+        className={`font-bold text-xl ml-2 ${variant === "white" ? "text-light" : "text-neutral-800"}`}
+      >
+        Ghostbyte
+      </span>
+    </Link>
+  );
+
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-40 flex justify-center text-neutral-800">
-        <div className="container flex h-16 items-center justify-between">
+      {/* MAIN HEADER - Absolute as requested */}
+      <header className="absolute top-0 left-0 right-0 z-40 flex justify-center">
+        <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex justify-center items-center">
-              <Image
-                src={"/img/ghostbyte_logo_black.svg"}
-                className="h-[30px]"
-                width={38}
-                height={32}
-                alt="Ghostbyte logo"
-              />
-              <span className="font-bold text-xl ml-2">Ghostbyte</span>
-            </Link>
+            <Logo variant="black" />
           </div>
 
-          <nav className="hidden md:flex gap-6 text-">
-            <Link href="/work" className="link-text">
+          <nav className="hidden md:flex gap-6 text-neutral-800">
+            <Link href="/#work" className="link-text">
               {t("projects")}
             </Link>
             <Link href="/#about" className="link-text">
@@ -45,15 +81,14 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="relative hidden md:block overflow-hidden px-4 py-2 rounded-full group bg-neutral-800 text-white border-0 hover:cursor-pointer"
+              className="hidden md:block px-4 py-2 rounded-full bg-neutral-800 text-white"
             >
-              <span className="relative z-10"> {t("get_in_touch")} </span>
+              {t("get_in_touch")}
             </Link>
-
             <button
               type="button"
-              className="md:hidden relative z-20"
-              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2"
+              onClick={() => setIsOpen(true)}
             >
               <Menu className="h-6 w-6 text-black" />
             </button>
@@ -61,96 +96,79 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Navbar toggle overlay */}
+      {/* OVERLAY - Fixed to cover viewport */}
       <div
-        className="fixed right-0 z-50 flex h-full w-full flex-col overflow-x-hidden bg-neutral-800 text-[#f2ede4] duration-500 "
-        style={{ height: isOpen ? "100vh" : "0vh" }}
+        className="fixed inset-0 z-50 bg-neutral-800 transition-all duration-500 ease-in-out flex flex-col"
+        style={{
+          clipPath: isOpen ? "circle(150% at 90% 5%)" : "circle(0% at 90% 5%)",
+          pointerEvents: isOpen ? "all" : "none",
+        }}
       >
-        <button
-          type="button"
-          className={`
-        ml-auto mr-7 text-[50px] duration-300
-        ${isOpen ? "delay-200" : ""}
-      `}
-          style={{ color: isOpen ? "black" : "transparent" }}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          &times;
-        </button>
-        <div
-          className={
-            "text-white flex w-full pl-10 basis-full flex-col justify-center gap-5 text-2xl font-bold"
-          }
-        >
-          <Link
-            href="/#projekte"
-            className="cursor-pointer font-bold"
-            onClick={() => setIsOpen(false)}
-          >
-            <h3
-              className={`
-            duration-300 
-            ${isOpen ? "delay-200 text-light" : "text-transparent"}
-          `}
+        {/* DUPLICATE HEADER INSIDE OVERLAY */}
+        <div className="container flex h-20 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Logo variant="white" />
+          </div>
+          <div className="flex items-center">
+            <button
+              type="button"
+              className="p-2"
+              onClick={() => setIsOpen(false)}
             >
-              {t("projects")}
-            </h3>
-          </Link>
+              <XIcon className="h-6 w-6 text-light" />
+            </button>
+          </div>
+        </div>
 
-          <Link
-            href="/#services"
-            className="cursor-pointer font-bold"
-            onClick={() => setIsOpen(false)}
-          >
-            <h3
-              className={`
-            duration-300 
-            ${isOpen ? "delay-200 text-[#f2ede4]" : "text-transparent"}
-          `}
-            >
-              {t("services")}
-            </h3>
+        {/* MOBILE NAVIGATION LINKS */}
+        <div className="container flex flex-col flex-1 justify-center pl-10 gap-6 text-2xl font-bold text-light">
+          <Link href="/#work" onClick={() => setIsOpen(false)}>
+            {t("projects")}
           </Link>
-
           <Link href="/#about" onClick={() => setIsOpen(false)}>
-            <h3
-              className={`
-            duration-300 
-            ${isOpen ? "delay-200 text-light" : "text-transparent"}
-          `}
-            >
-              {t("about")}
-            </h3>
+            {t("about")}
           </Link>
-          <Link
-            href="/#contact"
-            className="cursor-pointer font-bold"
-            onClick={() => setIsOpen(false)}
-          >
-            <h3
-              className={`
-            duration-300 
-            ${isOpen ? "delay-200 text-light" : "text-transparent"}
-          `}
-            >
-              {t("contact")}
-            </h3>
+          <Link href="/#contact" onClick={() => setIsOpen(false)}>
+            {t("contact")}
           </Link>
+          <Link href="/blog" onClick={() => setIsOpen(false)}>
+            {t("blog")}
+          </Link>
+        </div>
 
-          <Link
-            href="/blog"
-            className="cursor-pointer font-bold"
-            onClick={() => setIsOpen(false)}
-          >
-            <h3
-              className={`
-            duration-300 
-            ${isOpen ? "delay-200 text-light" : "text-transparent"}
-          `}
+        <div className="w-full flex justify-center text-light mb-8">
+          <div className="flex gap-4 ">
+            <Link
+              href="https://github.com/ghostbyte-dev"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {t("blog")}
-            </h3>
-          </Link>
+              <GithubIcon className="h-6 w-6" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/ghostbyte/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedinIcon className="h-6 w-6" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/ghostbyte.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon className="h-6 w-6" />
+            </Link>
+            <Link
+              href="https://mastodon.social/@ghostbyte"
+              target="_blank"
+              rel="noopener noreferrer me"
+            >
+              <div className="w-6 h-6 relative">
+                <MastodonIcon />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>
