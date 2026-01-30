@@ -41,7 +41,15 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
   const [offset, setOffset] = useState(0);
   const uid = useId();
   const pathId = `curve-${uid}`;
-  const pathD = `M-100,40 Q500,${40 + curveAmount} 1540,40`;
+
+  // Define the span so it's easy to calculate the center
+  const startX = -200;
+  const endX = 1640;
+  const centerX = (startX + endX) / 2; // This will be 720
+
+  // The Y coordinate should match at start and end for a level curve
+  const baseY = 40;
+  const pathD = `M${startX},${baseY} Q${centerX},${baseY + curveAmount} ${endX},${baseY}`;
 
   const dragRef = useRef(false);
   const lastXRef = useRef(0);
@@ -129,47 +137,52 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
     : "auto";
 
   return (
-    <div
-      className="mb-16 sm:mb-28 md:mb-56 flex items-center justify-center w-full"
-      style={{ visibility: ready ? "visible" : "hidden", cursor: cursorStyle }}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerLeave={endDrag}
-    >
-      <svg
-        className="select-none w-full overflow-visible block aspect-[100/12] text-[6rem] font-bold uppercase leading-none"
-        viewBox="0 0 1440 120"
+    <div className={className}>
+      <div
+        className="flex items-center justify-center w-full"
+        style={{
+          visibility: ready ? "visible" : "hidden",
+          cursor: cursorStyle,
+        }}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerLeave={endDrag}
       >
-        <text
-          ref={measureRef}
-          xmlSpace="preserve"
-          style={{ visibility: "hidden", opacity: 0, pointerEvents: "none" }}
+        <svg
+          className="select-none w-full overflow-visible block aspect-[100/12] text-[6rem] font-bold uppercase leading-none"
+          viewBox="0 0 1440 120"
         >
-          {text}
-        </text>
-        <defs>
-          <path
-            ref={pathRef}
-            id={pathId}
-            d={pathD}
-            fill="none"
-            stroke="transparent"
-          />
-        </defs>
-        {ready && (
-          <text xmlSpace="preserve" className={`fill-light ${className ?? ""}`}>
-            <textPath
-              ref={textPathRef}
-              href={`#${pathId}`}
-              startOffset={offset + "px"}
-              xmlSpace="preserve"
-            >
-              {totalText}
-            </textPath>
+          <text
+            ref={measureRef}
+            xmlSpace="preserve"
+            style={{ visibility: "hidden", opacity: 0, pointerEvents: "none" }}
+          >
+            {text}
           </text>
-        )}
-      </svg>
+          <defs>
+            <path
+              ref={pathRef}
+              id={pathId}
+              d={pathD}
+              fill="none"
+              stroke="transparent"
+            />
+          </defs>
+          {ready && (
+            <text xmlSpace="preserve" className="fill-light">
+              <textPath
+                ref={textPathRef}
+                href={`#${pathId}`}
+                startOffset={offset + "px"}
+                xmlSpace="preserve"
+              >
+                {totalText}
+              </textPath>
+            </text>
+          )}
+        </svg>
+      </div>
     </div>
   );
 };

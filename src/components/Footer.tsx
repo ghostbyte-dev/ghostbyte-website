@@ -11,16 +11,14 @@ export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
     <footer className="bg-neutral-800 text-light-secondary">
-      <div>
-        <CurvedLoop
-          marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
-          speed={2}
-          curveAmount={300}
-          direction="left"
-          interactive
-          className=""
-        />
-      </div>
+      <CurvedLoop
+        marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
+        speed={2}
+        curveAmount={300}
+        direction="left"
+        interactive
+        className="mb-20 md:mb-28 lg:mb-40"
+      />
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
           {/* Brand column */}

@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslations } from "use-intl";
+import CurvedLoop from "./CurvedLoop";
 import MastodonIcon from "./icons/MastodonIcon";
 
 export default function Navbar() {
@@ -135,6 +136,15 @@ export default function Navbar() {
             {t("blog")}
           </Link>
         </div>
+
+        <CurvedLoop
+          marqueeText="A ✦ Ghostbyte ✦ Production ✦"
+          speed={2}
+          curveAmount={-400}
+          direction="left"
+          interactive
+          className="-mb-3 sm:-mb-20 md:-mb-20 lg:-mb-42"
+        />
 
         <div className="w-full flex justify-center text-light mb-8">
           <div className="flex gap-4 ">
