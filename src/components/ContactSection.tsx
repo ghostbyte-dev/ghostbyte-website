@@ -25,7 +25,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full py-12 md:py-24 lg:py-32 relative bg-neutral-800 text-light-secondary"
+      className="w-full py-12 md:py-24 lg:py-32 relative bg-neutral-800 text-light-secondary selection:bg-white selection:text-neutral-600"
     >
       <div className="container relative">
         <div className="max-w-3xl space-y-4">

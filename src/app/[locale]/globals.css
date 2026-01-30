@@ -190,6 +190,6 @@
 
 .leaflet-control-attribution {
   background-color: var(--color-neutral-800) !important;
-  opacity: 0.5 !important;
+  opacity: 0.8 !important;
   color: var(--color-light) !important;
 }
