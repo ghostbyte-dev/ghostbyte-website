@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import type { FormData } from "../components/ContactSection";
 
 export function sendEmail(data: FormData) {
@@ -9,9 +10,11 @@ export function sendEmail(data: FormData) {
   })
     .then((res) => res.json())
     .then((response) => {
-      alert(response.message);
+      console.error(response.message);
+      toast.error("Failed to send email")
     })
     .catch((err) => {
-      alert(err);
+      console.error(err);
+      toast.error("Failed to send email")
     });
 }

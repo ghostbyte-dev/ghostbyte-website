@@ -8,28 +8,13 @@
 
 /* or any theme */
 @layer base {
-
   html,
   body {
-    @apply text-neutral-600 font-light bg-[#f2ede4]
-  }
-
-  h1, h2, h3 {
-    @apply text-neutral-800 font-extrabold
-  }
-
-  button {
-    cursor: pointer;
+    @apply text-neutral-600 font-light bg-[#f2ede4] } h1, h2, h3 { @apply text-neutral-800 font-extrabold } button { cursor: pointer;
   }
 
   .container {
-    @apply px-5 md:px-6 mx-auto
-  }
-}
-
-@layer utilities {
-  .animation-delay-2000 {
-    animation-delay: 2s;
+    @apply px-5 md:px-6 mx-auto } } @layer utilities { .animation-delay-2000 { animation-delay: 2s;
   }
 
   .animation-delay-4000 {
@@ -53,7 +38,7 @@
   }
 
   .input {
-    @apply flex h-10 border border-neutral-600 px-3 py-2 text-neutral-600 placeholder:text-gray-500 focus-visible:outline-none focus-visible:border-2 duration-300;
+    @apply flex h-10 border border-neutral-600 px-3 py-2 text-light placeholder:text-light-secondary focus-visible:outline-none focus-visible:border-2 duration-300;
   }
 }
 
@@ -90,19 +75,7 @@
   }
 
   .markdown a {
-    @apply underline text-[#c27aff]
-  }
-
-  .markdown ul {
-    @apply list-disc ml-5
-  }
-
-  .markdown ol {
-    @apply list-decimal ml-5
-  }
-
-  .markdown code {
-    @apply text-sm my-3 rounded-xl;
+    @apply underline text-[#c27aff] } .markdown ul { @apply list-disc ml-5 } .markdown ol { @apply list-decimal ml-5 } .markdown code { @apply text-sm my-3 rounded-xl;
   }
 
   .markdown img {

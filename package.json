@@ -26,6 +26,7 @@
     "react-dom": "19.2.1",
     "react-hook-form": "^7.66.0",
     "react-leaflet": "^5.0.0",
+    "react-toastify": "^11.0.5",
     "react-world-flags": "^1.6.0",
     "rehype-highlight": "^7.0.2",
     "rehype-stringify": "^10.0.1",
