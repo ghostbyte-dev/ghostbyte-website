@@ -5,8 +5,9 @@ import type Mail from "nodemailer/lib/mailer";
 require("dotenv").config();
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json();
-
+  console.log("email sender")
+  const { email, name, message, subject } = await request.json();
+  console.log(email);
   const transport = nodemailer.createTransport({
     host: process.env.MY_EMAIL_HOST,
     port: 465,
@@ -20,7 +21,7 @@ export async function POST(request: NextRequest) {
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
-    subject: `Message from ${name} (${email})`,
+    subject: `Message from ${name} (${email}) Subject: ${subject}`,
     text: message,
   };
 

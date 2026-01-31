@@ -147,7 +147,7 @@ export default function ContactSection() {
 
               <div className="flex flex-col space-y-4 mt-6">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full h-10 rounded-md font-semibold bg-neutral-600 text-white"
                 >
                   {t("send_message")}
