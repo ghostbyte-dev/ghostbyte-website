@@ -43,6 +43,7 @@
     "@types/react": "19.2.5",
     "@types/react-dom": "19.2.3",
     "@types/react-world-flags": "^1.6.0",
+    "baseline-browser-mapping": "^2.9.19",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
