@@ -94,7 +94,7 @@ export default function ContactSection() {
                 </label>
                 <input
                   id="name"
-                  className="input w-full md:w-1/2"
+                  className="input w-full"
                   placeholder={t("name_placeholder")}
                   {...register("name", { required: true })}
                 />
