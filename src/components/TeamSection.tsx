@@ -9,7 +9,7 @@ export default async function TeamSection({ lang }: { lang: Locale }) {
       <div className="container flex justify-between flex-wrap lg:flex-nowrap">
         <div className="max-w-3xl mb-10">
           <div className="space-y-2">
-            <h2 className="text-3xl uppercas sm:text-6xl">{t("title")}</h2>
+            <h2 className="text-4xl uppercas sm:text-6xl">{t("title")}</h2>
             {/*  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               {t("description")}
             </p> */}

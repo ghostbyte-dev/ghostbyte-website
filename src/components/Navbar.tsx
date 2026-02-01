@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="hidden md:block px-4 py-2 rounded-full bg-neutral-800 text-white"
+              className="hidden md:block px-4 py-2 rounded-full bg-neutral-800 text-light"
             >
               {t("get_in_touch")}
             </Link>

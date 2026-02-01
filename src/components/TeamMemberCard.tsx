@@ -31,8 +31,13 @@ export default function TeamMemberCard({
     <div className="">
       <div className="flex flex-col space-y-4 relative z-10">
         {/* Avatar */}
-        <div className="relative w-full aspect-[6/7]">
-          <Image src={image} alt={name} fill className="object-cover" />
+        <div className="relative w-full aspect-6/7">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover rounded-2xl lg:rounded-none"
+          />
         </div>
 
         {/* Info */}
@@ -42,7 +47,7 @@ export default function TeamMemberCard({
         </div>
 
         {/* Links */}
-        <div className="flex gap-3 pt-2">
+        <div className="flex gap-3 pt-">
           {links?.github && (
             <Link
               href={links.github}
