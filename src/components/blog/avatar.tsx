@@ -14,14 +14,16 @@ const Avatar = ({ name, picture, date }: Props) => {
         src={picture}
         height={48}
         width={48}
-        className="w-12 h-12 rounded-full mr-4"
+        className="w-8 h-8 rounded-full mr-2"
         alt={name}
       />
       <div className="flex flex-col justify-center">
-        <div className="text-xl font-bold">{name}</div>
+        <div className="text-lg leading-tight font-semibold text-neutral-800">
+          {name}
+        </div>
 
         {date && (
-          <div className="text-sm text-gray-300">
+          <div className="text-sm">
             Published on <DateFormatter dateString={date} />
           </div>
         )}

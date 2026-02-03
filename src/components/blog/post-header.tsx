@@ -1,6 +1,6 @@
+import Image from "next/image";
 import type { Author } from "@/src/types/author";
 import Avatar from "./avatar";
-import Image from "next/image";
 
 type Props = {
   title: string;
@@ -28,7 +28,7 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="shadow-sm w-full rounded-xl"
+          className="w-full rounded-xl"
           width={1300}
           height={630}
         />
