@@ -1,4 +1,5 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -10,23 +11,19 @@ import LocaleSwitcher from "./LocaleSwitcher";
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
-    <footer className="bg-neutral-800 text-light-secondary">
-      <CurvedLoop
+    <footer className="bg-neutral-800 text-neutral-300 pt-20">
+      {/* <CurvedLoop
         marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
         speed={2}
         curveAmount={300}
         direction="left"
         interactive
         className="mb-20 md:mb-28 lg:mb-40"
-      />
+      /> */}
       <div className="container">
-        <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
-          {/* Brand column */}
-          <div className="md:w-1/3">
+        <div className="flex flex-col md:flex-row justify-center gap-12 mb-16 ">
+          {/* <div className="md:w-1/3">
             <div className="flex items-center gap-3 mb-3">
-              {/* <div className="w-12 h-12 bg-linear-to-br from-lime-400 to-lime-600 rounded-xl flex items-center justify-center text-black font-bold text-xl">
-                <img src="/logo_dark.svg" height={22} width={22} />
-              </div> */}
               <h3 className="text-3xl font-bold text-light">
                 <span className="text-3xl font-bold">Ghostbyte</span>
               </h3>
@@ -70,13 +67,20 @@ export default async function Footer({ lang }: { lang: Locale }) {
               <LocaleSwitcher />
             </div>
           </div>
-
+ */}
           {/* Links columns */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:w-2/3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full">
+            <div className="hidden md:block">
+              <Image
+                alt=""
+                src="/img/ghostbyte_logo_white.svg"
+                height={16}
+                width={16}
+                className="w-16 h-16 object-contain"
+              />
+            </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-light">
-                {t("navigation")}
-              </h3>
+              <h3 className="text-lg mb-4 text-light">{t("navigation")}</h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link href="/#projects" className="link-text">
@@ -115,9 +119,37 @@ export default async function Footer({ lang }: { lang: Locale }) {
                     hey@ghostbyte.dev
                   </Link>
                 </li>
+
                 <li>
-                  <Link className="link-text" href="tel:+4367761332011">
-                    +43 677 61332011
+                  <Link
+                    className="link-text"
+                    href="https://www.instagram.com/ghostbyte.dev/"
+                  >
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="link-text"
+                    href="https://github.com/ghostbyte-dev"
+                  >
+                    Github
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="link-text"
+                    href="https://mastodon.social/@ghostbyte"
+                  >
+                    Mastodon
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="link-text"
+                    href="https://www.linkedin.com/company/ghostbyte/"
+                  >
+                    LinkedIn
                   </Link>
                 </li>
               </ul>
@@ -140,15 +172,15 @@ export default async function Footer({ lang }: { lang: Locale }) {
             </div>
           </div>
         </div>
-
-        {
-          <div className=" pt-3 pb-3 flex flex-col justify-between items-center gap-4">
-            <p className="text-center text-sm">
-              &copy; {new Date().getFullYear()}{" "}
-              {t("ghostbyte_all_rights_reserved")}
-            </p>
-          </div>
-        }
+      </div>
+      <div className="p-3 md:p-14">
+        <Image
+          alt=""
+          src="/img/ghostbyte_text.svg"
+          height={200}
+          width={200}
+          className="w-full"
+        />
       </div>
     </footer>
   );

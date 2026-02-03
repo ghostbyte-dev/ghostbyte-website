@@ -30,11 +30,11 @@
 
 
   .link-text {
-    @apply relative font-medium;
+    @apply relative;
   }
 
   .link-text::after {
-    @apply content-[''] absolute left-0 -bottom-1 h-0.5 w-full bg-gray-600 transition-transform duration-200 scale-x-0 origin-left;
+    @apply content-[''] absolute left-0 -bottom-1 h-0.5 w-full bg-neutral-300 transition-transform duration-200 scale-x-0 origin-left;
   }
 
   .link-text:hover::after {

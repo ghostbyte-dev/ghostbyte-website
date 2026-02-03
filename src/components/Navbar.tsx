@@ -64,7 +64,7 @@ export default function Navbar() {
             <Logo variant="black" />
           </div>
 
-          <nav className="hidden md:flex gap-6 text-neutral-800">
+          <nav className="hidden md:flex gap-6 text-neutral-800 font-medium">
             <Link href="/#work" className="link-text">
               {t("projects")}
             </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/#contact"
-              className="hidden md:block px-4 py-2 rounded-full bg-neutral-800 text-light"
+              className="hidden md:block px-4 py-2.5 rounded-full bg-neutral-800 text-light text-sm font-semibold"
             >
               {t("get_in_touch")}
             </Link>
