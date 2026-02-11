@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Project from "./Project";
@@ -25,7 +26,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/pixelix_logo.webp"
             category={t("mobile_application")}
             description={t("pixelix_description")}
-            link="https://app.pixelix.social"
+            link="/work/pixelix"
           />
 
           <Project
@@ -34,7 +35,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/veritate_logo.webp"
             category="Website"
             description={t("veritate_description")}
-            link="https://veritate.at"
+            link="/work/veritate"
           />
 
           <Project
@@ -43,7 +44,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/socialfolio_logo.svg"
             category={t("web_app")}
             description={t("socialfolio_description")}
-            link="https://socialfolio.me"
+            link="/work/socialfolio"
           />
 
           <Project
@@ -72,25 +73,16 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             description={t("github_release_stast_description")}
             link="https://github-release-stats.ghostbyte.dev/"
           />
-
-          {/* <Project
-            name="Ghostbyte Library"
-            image="/img/projects/ghostbyte_library_screenshot.webp"
-            logo="/img/projects/ghostbyte_library_logo.webp"
-            category={t("resource_hub")}
-            description={t("library_description")}
-            link="https://library.ghostbyte.dev"
-          /> */}
         </div>
 
-        {/*  <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center">
           <Link
             href="work"
             className="relative overflow-hidden px-6 text-sm py-3 rounded-xl group border-2 border-neutral-800 text-neutral-800 font-bold hover:cursor-pointer"
           >
             View All Projects
           </Link>
-        </div> */}
+        </div>
       </div>
     </section>
   );

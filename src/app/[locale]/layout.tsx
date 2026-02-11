@@ -12,7 +12,6 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import PlausibleProvider from "next-plausible";
 import { ToastContainer } from "react-toastify";
 import type { Organization, WithContext } from "schema-dts";
 import ConsoleGhost from "@/src/components/ConsoleGhost";

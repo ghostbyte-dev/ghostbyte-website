@@ -65,7 +65,7 @@ export default function Navbar() {
           </div>
 
           <nav className="hidden md:flex gap-6 text-neutral-800 font-medium">
-            <Link href="/#work" className="link-text">
+            <Link href="/work" className="link-text">
               {t("projects")}
             </Link>
             <Link href="/#about" className="link-text">
@@ -123,7 +123,7 @@ export default function Navbar() {
 
         {/* MOBILE NAVIGATION LINKS */}
         <div className="container flex flex-col flex-1 justify-center pl-10 gap-6 text-2xl font-bold text-light">
-          <Link href="/#work" onClick={() => setIsOpen(false)}>
+          <Link href="/work" onClick={() => setIsOpen(false)}>
             {t("projects")}
           </Link>
           <Link href="/#about" onClick={() => setIsOpen(false)}>
