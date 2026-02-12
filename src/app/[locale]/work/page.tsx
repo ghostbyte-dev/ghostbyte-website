@@ -57,12 +57,21 @@ export default async function WorkOverviewPage({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Ferienhaus Lustenau Website"
+            image="/img/projects/ferienhaus_lustenau_screenshot.png"
+            logo="/img/projects/veritate_logo.webp"
+            category="Website"
+            description={t("ferienhaus_lustenau_description")}
+            link="/work/ferienhaus-lustenau"
+          />
+
+          <Project
             name="Together"
             image="/img/projects/together_screenshot.webp"
             logo="/img/projects/together_logo.webp"
             category={t("web_app")}
             description={t("together_description")}
-            link="https://together.ghostbyte.dev/"
+            link="/work/together"
           />
 
           <Project
@@ -71,17 +80,16 @@ export default async function WorkOverviewPage({ lang }: { lang: Locale }) {
             logo="/img/projects/github_release_stats_logo.svg"
             category={t("web_app")}
             description={t("github_release_stast_description")}
-            link="https://github-release-stats.ghostbyte.dev/"
+            link="/work/github-release-stats"
           />
 
           <Project
-            key="library"
             name="Ghostbyte Library"
             image="/img/projects/ghostbyte_library_screenshot.webp"
             logo="/img/projects/ghostbyte_library_logo.webp"
             category={t("resource_hub")}
             description={t("library_description")}
-            link="https://library.ghostbyte.dev"
+            link="/work/ghostbyte-library"
           />
         </div>
       </div>
