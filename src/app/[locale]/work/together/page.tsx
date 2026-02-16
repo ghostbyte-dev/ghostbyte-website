@@ -19,7 +19,24 @@ export default async function VeritatePage(props: {
 
   return (
     <div>
-      <ProjectHero title="Together" url="https://together.ghostbyte.dev" />
+      <ProjectHero
+        title="Together"
+        stats={[
+          {
+            label: "Link",
+            value: "together.ghostbyte.dev",
+            href: "https://together.ghostbyte.dev",
+          },
+          {
+            label: "Started",
+            value: "2024",
+          },
+          {
+            label: "Project Type",
+            value: "Web App",
+          },
+        ]}
+      />
       <div className="container mb-20">
         <Image
           src="/img/projects/veritate/hero.png"

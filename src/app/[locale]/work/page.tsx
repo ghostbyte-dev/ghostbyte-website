@@ -53,7 +53,7 @@ export default async function WorkOverviewPage({ lang }: { lang: Locale }) {
             logo="/img/projects/dailytasks_logo.webp"
             category={t("android_application")}
             description={t("daily_tasks_description")}
-            link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
+            link="/work/daily-tasks"
           />
 
           <Project

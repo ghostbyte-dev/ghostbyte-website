@@ -6,13 +6,13 @@ import MoreProjects from "@/src/components/projects/MoreProjects";
 import ProjectHero from "@/src/components/projects/ProjectHero";
 
 export const metadata: Metadata = {
-  title: "Daily Tasks by Ghostbyte",
+  title: "Ghostbyte Library by Ghostbyte",
   alternates: {
-    canonical: "https://ghostbyte.dev/work/daily-tasks",
+    canonical: "https://ghostbyte.dev/work/ghostbyte-library",
   },
 };
 
-export default async function VeritatePage(props: {
+export default async function GhostbyteLibraryPage(props: {
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await props.params;
@@ -20,24 +20,20 @@ export default async function VeritatePage(props: {
   return (
     <div>
       <ProjectHero
-        title="Daily Tasks"
+        title="Ghostbyte Library"
         stats={[
           {
             label: "Link",
-            value: "Play Store",
-            href: "https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks",
+            value: "library.ghostbyte.dev",
+            href: "https://library.ghostbyte.dev",
           },
           {
             label: "Started",
-            value: "2020",
+            value: "2025",
           },
           {
             label: "Project Type",
-            value: "App",
-          },
-          {
-            label: "Downloads",
-            value: "500+",
+            value: "Website",
           },
         ]}
       />

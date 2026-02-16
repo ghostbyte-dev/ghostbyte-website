@@ -21,7 +21,21 @@ export default async function VeritatePage(props: {
     <div>
       <ProjectHero
         title="Github Release Stats"
-        url="https://github-release-stats.ghostbyte.dev"
+        stats={[
+          {
+            label: "Link",
+            value: "github-release-stats.ghostbyte.dev",
+            href: "https://github-release-stats.ghostbyte.dev",
+          },
+          {
+            label: "Started",
+            value: "2025",
+          },
+          {
+            label: "Project Type",
+            value: "Website",
+          },
+        ]}
       />
       <div className="container mb-20">
         <Image

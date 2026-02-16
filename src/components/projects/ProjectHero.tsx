@@ -1,27 +1,45 @@
 import Link from "next/link";
 
-interface ProjectHeroProps {
-  title: string;
-  url: string;
-  urlLabel?: string;
+interface ProjectStat {
+  label: string;
+  value: string;
+  href?: string;
 }
 
-const ProjectHero = ({ title, url, urlLabel }: ProjectHeroProps) => {
+interface ProjectHeroProps {
+  title: string;
+  stats: ProjectStat[];
+}
+
+const ProjectHero = ({ title, stats }: ProjectHeroProps) => {
   return (
     <section className="w-full">
-      <div className="container">
-        <div className="mt-40 md:mt-52 mb-20 max-w-3xl">
-          <h1 className="font-extrabold text-neutral-800 text-3xl sm:text-4xl md:text-4xl lg:text-5xl mt-16 mb-3 leading-tight">
+      <div className="container mt-40 md:mt-52 mb-10">
+        <div className="w-full">
+          <h1 className="font-extrabold text-neutral-800 text-4xl sm:text-4xl md:text-4xl lg:text-5xl mt-16 mb-3 leading-tight">
             {title}
           </h1>
-          <Link
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline font-semibold hover:text-neutral-600 transition-colors"
-          >
-            {urlLabel || url.replace(/^https?:\/\//, "")}
-          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-6  w-full mt-10">
+          {stats.map((stat, index) => (
+            <div key={index}>
+              <h2 className="text-xl font-semibold">{stat.label}</h2>
+
+              {stat.href ? (
+                <Link
+                  href={stat.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-neutral-600 transition-colors"
+                >
+                  {stat.value}
+                </Link>
+              ) : (
+                <p>{stat.value}</p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

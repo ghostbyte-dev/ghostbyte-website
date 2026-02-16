@@ -19,10 +19,32 @@ export default async function VeritatePage(props: {
 
   return (
     <div>
-      <ProjectHero title="Pixelix" url="https://app.pixelix.social" />
+      <ProjectHero
+        title="Pixelix"
+        stats={[
+          {
+            label: "Link",
+            value: "app.pixelix.social",
+            href: "https://app.pixelix.social",
+          },
+          {
+            label: "Started",
+            value: "2024",
+          },
+          {
+            label: "Project Type",
+            value: "App",
+          },
+          {
+            label: "Downloads",
+            value: "3,600+",
+          },
+        ]}
+      />
+
       <div className="container mb-20">
         <Image
-          src="/img/projects/veritate/hero.png"
+          src="/img/projects/pixelix/hero.webp"
           alt="Veritate Hero"
           width={0}
           height={0}
