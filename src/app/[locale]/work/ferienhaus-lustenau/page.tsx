@@ -63,7 +63,7 @@ export default async function VeritatePage(props: {
 
         <div className="grid grid-cols-2 gap-4 w-full">
           <Image
-            src="/img/projects/veritate/about_new.png"
+            src="/img/projects/ferienhaus-lustenau/general-section.png"
             alt="Veritate Hero"
             width={0}
             height={0}
@@ -73,22 +73,22 @@ export default async function VeritatePage(props: {
           />
 
           <Image
-            src="/img/projects/veritate/songpage.png"
+            src="/img/projects/ferienhaus-lustenau/pictures-section.png"
             alt="Veritate Hero"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg col-span-2 lg:col-span-1"
             priority
           />
 
           <Image
-            src="/img/projects/veritate/events.png"
+            src="/img/projects/ferienhaus-lustenau/surrounding-section.png"
             alt="Veritate Hero"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg col-span-2 lg:col-span-1"
             priority
           />
         </div>

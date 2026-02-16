@@ -122,7 +122,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
   ];
 
   return (
-    <section className="w-full pb-12 md:pb-24 lg:pb-28 mt-32 relative flex justify-center">
+    <section className="w-full pb-12 md:pb-24 lg:pb-28 mt-32 lg:mt-48 relative flex justify-center">
       <div className="container relative">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6">
           More Projects
