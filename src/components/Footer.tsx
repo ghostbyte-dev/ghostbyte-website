@@ -1,74 +1,16 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link as IntlLink } from "@/src/i18n/navigation";
-import CurvedLoop from "./CurvedLoop";
-import MastodonIcon from "./icons/MastodonIcon";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 export default async function Footer({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Navigation", locale: lang });
   return (
     <footer className="bg-neutral-800 text-neutral-300 pt-20">
-      {/* <CurvedLoop
-        marqueeText="Developed ✦ With ✦ Love ✦ By ✦ Ghostbyte ✦"
-        speed={2}
-        curveAmount={300}
-        direction="left"
-        interactive
-        className="mb-20 md:mb-28 lg:mb-40"
-      /> */}
       <div className="container">
         <div className="flex flex-col md:flex-row justify-center gap-12 mb-16 ">
-          {/* <div className="md:w-1/3">
-            <div className="flex items-center gap-3 mb-3">
-              <h3 className="text-3xl font-bold text-light">
-                <span className="text-3xl font-bold">Ghostbyte</span>
-              </h3>
-            </div>
-            <p className="mb-8 text-lg">
-              {t("turning_ideas_in_digital_reality")}
-            </p>
-            <div className="flex gap-4 ">
-              <Link
-                href="https://github.com/ghostbyte-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/ghostbyte/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://www.instagram.com/ghostbyte.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="h-6 w-6" />
-              </Link>
-              <Link
-                href="https://mastodon.social/@ghostbyte"
-                target="_blank"
-                rel="noopener noreferrer me"
-              >
-                <div className="w-6 h-6 relative">
-                  <MastodonIcon />
-                </div>
-              </Link>
-            </div>
-            <div className="mt-8">
-              <LocaleSwitcher />
-            </div>
-          </div>
- */}
-          {/* Links columns */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full">
             <div className="hidden md:block">
               <Image
@@ -106,6 +48,9 @@ export default async function Footer({ lang }: { lang: Locale }) {
                   <Link href="/blog" className="link-text">
                     {t("blog")}
                   </Link>
+                </li>
+                <li>
+                  <LocaleSwitcher />
                 </li>
               </ul>
             </div>
