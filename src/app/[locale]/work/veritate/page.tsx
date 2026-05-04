@@ -51,15 +51,12 @@ export default async function VeritatePage(props: {
 
         <h2 className="text-3xl mt-10 mb-2">Overview</h2>
         <p className="mb-10">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          We designed and developed a website for the viennese metal band
+          Veritate. The goal of this project was to create a visually pleasing
+          landing page which has the most important infos like upcoming concerts
+          right at the front page. The main page Additonally to developing, we
+          are also maintaining the website by adding new content and keepping
+          dependencies up to date to prevent security issues.
         </p>
 
         <div className="grid grid-cols-2 gap-4 w-full">

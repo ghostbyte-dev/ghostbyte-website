@@ -50,15 +50,10 @@ export default async function VeritatePage(props: {
 
         <h2 className="text-3xl mt-10 mb-2">Overview</h2>
         <p className="mb-10">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          This is a one-pager website which aims to give a holiday home in
+          Lustenau a web appearance. It features important infos like contact
+          and pricing while having many images to give the customer a good
+          overview of what they are booking.
         </p>
 
         <div className="grid grid-cols-2 gap-4 w-full">

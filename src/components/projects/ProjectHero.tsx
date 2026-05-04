@@ -15,7 +15,7 @@ interface ProjectHeroProps {
 const ProjectHero = ({ title, stats }: ProjectHeroProps) => {
   return (
     <section className="w-full">
-      <div className="container mt-40 md:mt-52 mb-10">
+      <div className="container mt-40 md:pt-52 pb-10">
         <Link
           href="/work"
           className="flex items-center space-x-1.5 text-neutral-800"

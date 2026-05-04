@@ -39,8 +39,8 @@ export default async function VeritatePage(props: {
       />
       <div className="container mb-20">
         <Image
-          src="/img/projects/veritate/hero.png"
-          alt="Veritate Hero"
+          src="/img/projects/github-release-stats/hero.webp"
+          alt="Github Release Stats Hero"
           width={0}
           height={0}
           sizes="100vw"
@@ -50,48 +50,9 @@ export default async function VeritatePage(props: {
 
         <h2 className="text-3xl mt-10 mb-2">Overview</h2>
         <p className="mb-10">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          Github Release Stats consumes the GitHub API to get stats like
+          downloads about GitHub releases and displays them beautifully.
         </p>
-
-        <div className="grid grid-cols-2 gap-4 w-full">
-          <Image
-            src="/img/projects/veritate/about_new.png"
-            alt="Veritate Hero"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto col-span-2 rounded-lg"
-            priority
-          />
-
-          <Image
-            src="/img/projects/veritate/songpage.png"
-            alt="Veritate Hero"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto rounded-lg"
-            priority
-          />
-
-          <Image
-            src="/img/projects/veritate/events.png"
-            alt="Veritate Hero"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto rounded-lg"
-            priority
-          />
-        </div>
       </div>
 
       <div className="container"></div>
