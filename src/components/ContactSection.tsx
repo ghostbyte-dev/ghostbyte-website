@@ -1,11 +1,10 @@
 "use client";
 
-import { LocationEditIcon, MailIcon, PinIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/sendEmail";
-import LeafletMapWrapper from "./LeafletMapWrapper";
+import MapLibreMap from "./LeafletMap";
 
 export type FormData = {
   name: string;
@@ -52,10 +51,8 @@ export default function ContactSection() {
                 </Link>
               </div>
             </div>
-            <div className="aspect-3/2">
-              <LeafletMapWrapper
-                center={[47.42339831023843, 9.656724735140145]}
-              />
+            <div className="aspect-3/2 rounded-2xl overflow-hidden">
+              <MapLibreMap center={[9.656724735140145, 47.42339831023843]} />
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -74,10 +71,8 @@ export default function ContactSection() {
                 </Link>
               </div>
             </div>
-            <div className="aspect-3/2">
-              <LeafletMapWrapper
-                center={[48.231090761843014, 16.37625516840938]}
-              />
+            <div className="aspect-3/2 rounded-2xl overflow-hidden">
+              <MapLibreMap center={[16.37625516840938, 48.231090761843014]} />
             </div>
           </div>
         </div>

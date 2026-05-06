@@ -48,6 +48,34 @@
   .input {
     @apply flex h-10 border border-neutral-600 px-3 py-2 text-light placeholder:text-light-secondary focus-visible:outline-none focus-visible:border-2 duration-300;
   }
+
+  .maplibregl-popup.custom-popup .maplibregl-popup-content {
+    @apply !bg-[#171717] text-gray-100 !rounded-2xl px-4 py-3 shadow-2xl text-sm;
+  }
+
+  .maplibregl-popup.custom-popup.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+    border-top-color: #262626 !important;
+  }
+
+  .maplibregl-popup.custom-popup.maplibregl-popup-anchor-top .maplibregl-popup-tip {
+    border-bottom-color: #262626 !important;
+  }
+
+  .maplibregl-popup.custom-popup.maplibregl-popup-anchor-left .maplibregl-popup-tip {
+    border-right-color: #262626 !important;
+  }
+
+  .maplibregl-popup.custom-popup.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+    border-left-color: #262626 !important;
+  }
+
+  .maplibregl-popup.custom-popup .maplibregl-popup-close-button:hover {
+    @apply text-white;
+  }
+
+  .maplibregl-popup.custom-popup .popup-content strong {
+    @apply block font-semibold text-white;
+  }
 }
 
 @layer components {
@@ -108,33 +136,5 @@
 
   .markdown blockquote p {
     @apply m-0
-  }
-
-
-  .leaflet-control-zoom {
-    border: none !important;
-
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
-  }
-
-  /* Customizing the buttons */
-  .leaflet-bar a {
-    background-color: var(--color-neutral-800) !important;
-    color: #ada79c !important;
-    border-bottom: none !important;
-  }
-
-  /* Hover state */
-  .leaflet-bar a:hover {
-    background-color: #262626 !important;
-    /* Neutral-800 */
-    color: #f2ede4 !important;
-    /* Amber-500 */
-  }
-
-  .leaflet-control-attribution {
-    background-color: var(--color-neutral-800) !important;
-    opacity: 0.8 !important;
-    color: var(--color-light) !important;
   }
 }
