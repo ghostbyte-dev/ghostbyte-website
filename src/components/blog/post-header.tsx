@@ -16,7 +16,7 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
         <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-2">
           {title}
         </h1>{" "}
-        <p className="font-bold text-md md:text-xl text-gray-300 mb-10">
+        <p className="font-semibold text-md md:text-lg text-neutral-800 mb-10">
           A Ghostbyte Story
         </p>
         <div className="hidden md:block md:mb-12">
