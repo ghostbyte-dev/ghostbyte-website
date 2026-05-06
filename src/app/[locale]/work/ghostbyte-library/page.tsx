@@ -59,7 +59,7 @@ export default async function GhostbyteLibraryPage(props: {
 
       <MoreProjects
         lang={lang}
-        projectsToShow={["Veritate", "Github Release Stats"]}
+        projectsToShow={["Ferienhaus Lustenau", "Pixelix"]}
       />
     </div>
   );

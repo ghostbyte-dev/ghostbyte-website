@@ -64,7 +64,7 @@ export default async function VeritatePage(props: {
 
       <MoreProjects
         lang={lang}
-        projectsToShow={["Veritate", "Github Release Stats"]}
+        projectsToShow={["Pixelix", "Ferienhaus Lustenau"]}
       />
     </div>
   );

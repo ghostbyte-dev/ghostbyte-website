@@ -53,7 +53,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/dailytasks_logo.webp"
             category={t("android_application")}
             description={t("daily_tasks_description")}
-            link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
+            link="/work/daily-tasks"
           />
 
           <Project
@@ -62,7 +62,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/together_logo.webp"
             category={t("web_app")}
             description={t("together_description")}
-            link="https://together.ghostbyte.dev/"
+            link="/work/together"
           />
 
           <Project
@@ -71,7 +71,7 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             logo="/img/projects/github_release_stats_logo.svg"
             category={t("web_app")}
             description={t("github_release_stast_description")}
-            link="https://github-release-stats.ghostbyte.dev/"
+            link="/work/github-release-stats"
           />
         </div>
 

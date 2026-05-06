@@ -5,6 +5,7 @@ import Project from "../Project";
 
 export type ProjectName =
   | "Pixelix"
+  | "Ferienhaus Lustenau"
   | "Veritate"
   | "Socialfolio"
   | "Daily Tasks"
@@ -31,7 +32,21 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/pixelix_logo.webp"
           category={t("mobile_application")}
           description={t("pixelix_description")}
-          link="https://app.pixelix.social"
+          link="/work/pixelix"
+        />
+      ),
+    },
+    {
+      id: "Ferienhaus Lustenau" as const,
+      component: (
+        <Project
+          key="ferienhaus"
+          name="Ferienhaus Lustenau"
+          image="/img/projects/ferienhaus_lustenau_screenshot.png"
+          logo="/img/projects/pixelix_logo.webp"
+          category="Website"
+          description={t("ferienhaus_lustenau_description")}
+          link="/work/ferienhaus-lustenau"
         />
       ),
     },
@@ -45,7 +60,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/veritate_logo.webp"
           category="Website"
           description={t("veritate_description")}
-          link="https://veritate.at"
+          link="/work/veritate"
         />
       ),
     },
@@ -59,7 +74,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/socialfolio_logo.svg"
           category={t("web_app")}
           description={t("socialfolio_description")}
-          link="https://socialfolio.me"
+          link="/work/socialfolio"
         />
       ),
     },
@@ -73,7 +88,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/dailytasks_logo.webp"
           category={t("android_application")}
           description={t("daily_tasks_description")}
-          link="https://play.google.com/store/apps/details?id=com.daniebeler.dailytasks"
+          link="/work/daily-tasks"
         />
       ),
     },
@@ -87,7 +102,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/together_logo.webp"
           category={t("web_app")}
           description={t("together_description")}
-          link="https://together.ghostbyte.dev/"
+          link="/work/together"
         />
       ),
     },
@@ -101,7 +116,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/github_release_stats_logo.svg"
           category={t("web_app")}
           description={t("github_release_stast_description")}
-          link="https://github-release-stats.ghostbyte.dev/"
+          link="/work/github-release-stats"
         />
       ),
     },
@@ -115,7 +130,7 @@ export default async function MoreProjects({ lang, projectsToShow }: Props) {
           logo="/img/projects/ghostbyte_library_logo.webp"
           category={t("resource_hub")}
           description={t("library_description")}
-          link="https://library.ghostbyte.dev"
+          link="/work/ghostbyte-library"
         />
       ),
     },

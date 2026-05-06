@@ -37,7 +37,7 @@ export default async function VeritatePage(props: {
           },
           {
             label: "Users",
-            value: "180+",
+            value: "220+",
           },
         ]}
       />
@@ -61,7 +61,10 @@ export default async function VeritatePage(props: {
 
       <div className="container"></div>
 
-      <MoreProjects lang={lang} projectsToShow={["Veritate", "Pixelix"]} />
+      <MoreProjects
+        lang={lang}
+        projectsToShow={["Ferienhaus Lustenau", "Pixelix"]}
+      />
     </div>
   );
 }
