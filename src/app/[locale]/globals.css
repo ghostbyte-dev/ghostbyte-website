@@ -10,11 +10,13 @@
 
   html,
   body {
-    @apply text-neutral-600 font-light bg-light
+    @apply text-neutral-600 font-light bg-light;
   }
 
-  h1, h2, h3 {
-    @apply text-neutral-800 font-extrabold
+  h1,
+  h2,
+  h3 {
+    @apply text-neutral-800 font-extrabold;
   }
 
   button {
@@ -22,7 +24,7 @@
   }
 
   .container {
-    @apply px-5 md:px-6 mx-auto
+    @apply px-5 md:px-6 mx-auto;
   }
 }
 
@@ -111,15 +113,15 @@
   }
 
   .markdown a {
-    @apply underline font-medium hover:text-neutral-800
+    @apply underline font-medium hover:text-neutral-800;
   }
 
   .markdown ul {
-    @apply list-disc ml-5
+    @apply list-disc ml-5;
   }
 
   .markdown ol {
-    @apply list-decimal ml-5
+    @apply list-decimal ml-5;
   }
 
   .markdown code {
@@ -131,10 +133,10 @@
   }
 
   .markdown blockquote {
-    @apply relative bg-white border-l-4 border-l-neutral-800 p-2.5 pl-5 my-5 italic rounded-xl
+    @apply relative bg-white border-l-4 border-l-neutral-800 p-2.5 pl-5 my-5 italic rounded-xl;
   }
 
   .markdown blockquote p {
-    @apply m-0
+    @apply m-0;
   }
 }

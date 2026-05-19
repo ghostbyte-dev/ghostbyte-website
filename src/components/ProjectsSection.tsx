@@ -39,6 +39,15 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
           />
 
           <Project
+            name="Ferienhaus Lustenau Website"
+            image="/img/projects/ferienhaus_lustenau_screenshot.png"
+            logo=""
+            category="Website"
+            description={t("ferienhaus_lustenau_description")}
+            link="/work/ferienhaus-lustenau"
+          />
+
+          <Project
             name="Socialfolio"
             image="/img/projects/socialfolio_screenshot.webp"
             logo="/img/projects/socialfolio_logo.svg"
@@ -63,15 +72,6 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
             category={t("web_app")}
             description={t("together_description")}
             link="/work/together"
-          />
-
-          <Project
-            name="Github Release Stats"
-            image="/img/projects/github_release_stats_screenshot.webp"
-            logo="/img/projects/github_release_stats_logo.svg"
-            category={t("web_app")}
-            description={t("github_release_stast_description")}
-            link="/work/github-release-stats"
           />
         </div>
 
