@@ -1,4 +1,5 @@
-import { ArrowLeftIcon } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowLeft01Icon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 
 interface ProjectStat {
@@ -20,7 +21,7 @@ const ProjectHero = ({ title, stats }: ProjectHeroProps) => {
           href="/work"
           className="flex items-center space-x-1.5 text-neutral-800"
         >
-          <ArrowLeftIcon size={20} />
+          <HugeiconsIcon icon={ArrowLeft01Icon} size={20} />
           <span className="font-medium">All projects</span>
         </Link>
         <div className="w-full">

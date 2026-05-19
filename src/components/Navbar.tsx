@@ -1,12 +1,6 @@
 "use client";
-
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  Menu,
-  XIcon,
-} from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Cancel01Icon, GithubIcon, InstagramIcon, Linkedin01Icon, Menu01Icon } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -91,7 +85,7 @@ export default function Navbar() {
               className="md:hidden p-2"
               onClick={() => setIsOpen(true)}
             >
-              <Menu className="h-6 w-6 text-black" />
+              <HugeiconsIcon icon={Menu01Icon} className="h-6 w-6 text-black" />
             </button>
           </div>
         </div>
@@ -116,7 +110,7 @@ export default function Navbar() {
               className="p-2"
               onClick={() => setIsOpen(false)}
             >
-              <XIcon className="h-6 w-6 text-light" />
+              <HugeiconsIcon icon={Cancel01Icon} className="h-6 w-6 text-light" />
             </button>
           </div>
         </div>
@@ -153,21 +147,21 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GithubIcon className="h-6 w-6" />
+              <HugeiconsIcon icon={GithubIcon} className="h-6 w-6" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/ghostbyte/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkedinIcon className="h-6 w-6" />
+              <HugeiconsIcon icon={Linkedin01Icon} className="h-6 w-6" />
             </Link>
             <Link
               href="https://www.instagram.com/ghostbyte.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <InstagramIcon className="h-6 w-6" />
+              <HugeiconsIcon icon={InstagramIcon} className="h-6 w-6" />
             </Link>
             <Link
               href="https://mastodon.social/@ghostbyte"

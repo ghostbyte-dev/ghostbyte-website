@@ -1,7 +1,11 @@
-// components/TeamMemberCard.tsx
 "use client";
-
-import { Github, Globe, Instagram, Linkedin } from "lucide-react";
+import {
+  GithubIcon,
+  Globe02Icon,
+  InstagramIcon,
+  Linkedin01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -55,7 +59,7 @@ export default function TeamMemberCard({
               rel="noopener noreferrer"
               className="text-neutral-600 hover:text-neutral-900 transition-colors"
             >
-              <Github className="h-5 w-5" />
+              <HugeiconsIcon icon={GithubIcon} className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
           )}
@@ -66,7 +70,7 @@ export default function TeamMemberCard({
               rel="noopener noreferrer"
               className="text-neutral-600 hover:text-neutral-900 transition-colors"
             >
-              <Instagram className="h-5 w-5" />
+              <HugeiconsIcon icon={InstagramIcon} className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </Link>
           )}
@@ -77,7 +81,7 @@ export default function TeamMemberCard({
               rel="noopener noreferrer"
               className="text-neutral-600 hover:text-neutral-900 transition-colors"
             >
-              <Linkedin className="h-5 w-5" />
+              <HugeiconsIcon icon={Linkedin01Icon} className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
           )}
@@ -88,7 +92,7 @@ export default function TeamMemberCard({
               rel="noopener noreferrer"
               className="text-neutral-600 hover:text-neutral-900 transition-colors"
             >
-              <Globe className="h-5 w-5" />
+              <HugeiconsIcon icon={Globe02Icon} className="h-5 w-5" />
               <span className="sr-only">Website</span>
             </Link>
           )}

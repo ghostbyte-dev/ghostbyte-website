@@ -1,10 +1,10 @@
 import {
-  GlobeIcon,
+  CanvasIcon,
+  CustomerService01Icon,
   LaptopIcon,
-  SearchIcon,
-  ServerIcon,
-  SmartphoneIcon,
-} from "lucide-react";
+  RankingIcon,
+  SmartPhone01Icon,
+} from "@hugeicons/core-free-icons";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import Service from "./Service";
@@ -28,31 +28,31 @@ export default async function ServiceSection({ lang }: { lang: Locale }) {
 
         <div className="mt-8 divide-neutral-300 divide-y">
           <Service
-            icon={SmartphoneIcon}
+            icon={SmartPhone01Icon}
             name={t("mobile_development")}
             description={t("mobile_development_description")}
           />
 
           <Service
-            icon={GlobeIcon}
+            icon={LaptopIcon}
             name={t("web_development")}
             description={t("web_development_description")}
           />
 
           <Service
-            icon={SearchIcon}
+            icon={RankingIcon}
             name={t("seo")}
             description={t("seo_description")}
           />
 
           <Service
-            icon={LaptopIcon}
+            icon={CanvasIcon}
             name={t("ui_ux_design")}
             description={t("ui_ux_design_description")}
           />
 
           <Service
-            icon={ServerIcon}
+            icon={CustomerService01Icon}
             name={t("maintainance_support")}
             description={t("maintainance_support_description")}
           />
