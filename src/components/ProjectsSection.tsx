@@ -1,10 +1,27 @@
 import Link from "next/link";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import {
+  PROJECTS,
+  type ProjectName,
+  type ResolvedProjectData,
+} from "../data/projects";
 import Project from "./Project";
+
+const FEATURED_PROJECT_IDS: ProjectName[] = [
+  "Pixelix",
+  "Veritate",
+  "Zahn Leitner",
+  "Ferienhaus Lustenau",
+  "Socialfolio",
+  "Together",
+];
 
 export default async function ProjectsSection({ lang }: { lang: Locale }) {
   const t = await getTranslations({ namespace: "Projects", locale: lang });
+
+  const projectMap = new Map(PROJECTS.map((p) => [p.id, p]));
+
   return (
     <section
       id="projects"
@@ -20,59 +37,20 @@ export default async function ProjectsSection({ lang }: { lang: Locale }) {
         </div>
 
         <div className="grid gap-x-10 gap-y-16 mt-6 lg:grid-cols-2">
-          <Project
-            name="Pixelix"
-            image="/img/projects/pixelix_screenshot.webp"
-            logo="/img/projects/pixelix_logo.webp"
-            category={t("mobile_application")}
-            description={t("pixelix_description")}
-            link="/work/pixelix"
-          />
+          {FEATURED_PROJECT_IDS.map((id) => {
+            const rawProject = projectMap.get(id);
+            if (!rawProject) return null;
 
-          <Project
-            name="Veritate Website"
-            image="/img/projects/veritate_screenshot.webp"
-            logo="/img/projects/veritate_logo.webp"
-            category="Website"
-            description={t("veritate_description")}
-            link="/work/veritate"
-          />
+            const projectDetails: ResolvedProjectData = {
+              ...rawProject,
+              category: t(rawProject.categoryKey),
+              description: t(rawProject.descriptionKey),
+            };
 
-          <Project
-            name="Ferienhaus Lustenau Website"
-            image="/img/projects/ferienhaus_lustenau_screenshot.png"
-            logo=""
-            category="Website"
-            description={t("ferienhaus_lustenau_description")}
-            link="/work/ferienhaus-lustenau"
-          />
-
-          <Project
-            name="Socialfolio"
-            image="/img/projects/socialfolio_screenshot.webp"
-            logo="/img/projects/socialfolio_logo.svg"
-            category={t("web_app")}
-            description={t("socialfolio_description")}
-            link="/work/socialfolio"
-          />
-
-          <Project
-            name="Daily Tasks"
-            image="/img/projects/dailytasks_screenshot.webp"
-            logo="/img/projects/dailytasks_logo.webp"
-            category={t("android_application")}
-            description={t("daily_tasks_description")}
-            link="/work/daily-tasks"
-          />
-
-          <Project
-            name="Together"
-            image="/img/projects/together_screenshot.webp"
-            logo="/img/projects/together_logo.webp"
-            category={t("web_app")}
-            description={t("together_description")}
-            link="/work/together"
-          />
+            return (
+              <Project key={rawProject.id} projectDetails={projectDetails} />
+            );
+          })}
         </div>
 
         <div className="w-full flex justify-center">
