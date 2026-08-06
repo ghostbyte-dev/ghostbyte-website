@@ -1,8 +1,15 @@
 "use client";
 
-import maplibregl, { type LngLatLike } from "maplibre-gl";
+import * as maplibregl from "maplibre-gl";
 import { useEffect, useRef } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
+import type { LngLatLike } from "maplibre-gl";
+
+if (typeof window !== "undefined") {
+  maplibregl.setWorkerUrl(
+    `https://unpkg.com/maplibre-gl@${maplibregl.getVersion()}/dist/maplibre-gl-worker.mjs`,
+  );
+}
 
 type Props = {
   center: [number, number]; // [lng, lat]
