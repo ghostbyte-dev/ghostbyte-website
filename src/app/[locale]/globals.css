@@ -139,4 +139,24 @@
   .markdown blockquote p {
     @apply m-0;
   }
+
+  .project-page h2 {
+    @apply text-3xl mt-6 mb-2;
+  }
+
+  .project-page h3 {
+    @apply text-xl mt-5 mb-2;
+  }
+
+  .project-page a {
+    @apply underline font-medium;
+  }
+
+  .project-page p {
+    @apply mb-5;
+  }
+
+  .project-page>img {
+    @apply my-5;
+  }
 }
