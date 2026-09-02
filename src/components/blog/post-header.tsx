@@ -13,12 +13,12 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-2">
+        <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-7">
           {title}
         </h1>{" "}
-        <p className="font-semibold text-md md:text-lg text-neutral-800 mb-10">
+        {/* <p className="font-semibold text-md md:text-lg text-neutral-800 mb-10">
           A Ghostbyte Story
-        </p>
+        </p> */}
         <div className="hidden md:block md:mb-12">
           <Avatar name={author.name} picture={author.picture} date={date} />
         </div>

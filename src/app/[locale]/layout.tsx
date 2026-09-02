@@ -72,6 +72,7 @@ export async function generateMetadata({
   const t = await getTranslations({ namespace: "Meta", locale: locale });
 
   return {
+    metadataBase: new URL("https://ghostbyte.dev"),
     title: t("title"),
     description: t("description"),
     icons: [

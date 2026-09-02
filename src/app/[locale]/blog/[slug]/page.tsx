@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PostHeader } from "@/src/components/blog/post-header";
 import { getAllPosts, getPostBySlug } from "@/src/utils/blogApi";
@@ -29,7 +28,7 @@ export default async function Post(props: Params) {
           <div className="max-w-2xl mx-auto">
             <div
               className="markdown"
-              // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+              // biome-ignore lint/security/noDangerouslySetInnerHtml: <>
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
