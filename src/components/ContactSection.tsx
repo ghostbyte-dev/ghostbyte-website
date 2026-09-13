@@ -1,11 +1,10 @@
 "use client";
 
-import { LocationEditIcon, MailIcon, PinIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../utils/sendEmail";
-import LeafletMapWrapper from "./LeafletMapWrapper";
+import MapLibreMap from "./LeafletMap";
 
 export type FormData = {
   name: string;
@@ -52,10 +51,8 @@ export default function ContactSection() {
                 </Link>
               </div>
             </div>
-            <div className="aspect-3/2">
-              <LeafletMapWrapper
-                center={[47.42339831023843, 9.656724735140145]}
-              />
+            <div className="aspect-3/2 rounded-2xl overflow-hidden">
+              <MapLibreMap center={[9.656724735140145, 47.42339831023843]} />
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -74,27 +71,25 @@ export default function ContactSection() {
                 </Link>
               </div>
             </div>
-            <div className="aspect-3/2">
-              <LeafletMapWrapper
-                center={[48.231090761843014, 16.37625516840938]}
-              />
+            <div className="aspect-3/2 rounded-2xl overflow-hidden">
+              <MapLibreMap center={[16.37625516840938, 48.231090761843014]} />
             </div>
           </div>
         </div>
         <div className="max-w-3xl mt-36 mx-auto">
           <h3 className="text-light text-3xl mb-2">{t("title")}</h3>
           <div className="relative">
-            <form onSubmit={handleSubmit(onSubmit)} className="">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="space-y-2">
                 <label
                   htmlFor="name"
-                  className="text-sm font-medium text-white"
+                  className="text-sm font-medium text-light"
                 >
                   {t("name_label")}
                 </label>
                 <input
                   id="name"
-                  className="input w-1/2"
+                  className="input w-full"
                   placeholder={t("name_placeholder")}
                   {...register("name", { required: true })}
                 />
@@ -102,14 +97,14 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <label
                   htmlFor="email"
-                  className="text-sm font-medium text-white"
+                  className="text-sm font-medium text-light"
                 >
                   {t("email_label")}
                 </label>
                 <input
                   id="email"
                   type="email"
-                  className="input w-1/2"
+                  className="input w-full"
                   placeholder={t("email_placeholder")}
                   {...register("email", { required: true })}
                 />
@@ -118,7 +113,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <label
                   htmlFor="subject"
-                  className="text-sm font-medium text-white"
+                  className="text-sm font-medium text-light"
                 >
                   {t("subject_label")}
                 </label>
@@ -133,7 +128,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <label
                   htmlFor="message"
-                  className="text-sm font-medium text-white"
+                  className="text-sm font-medium text-light"
                 >
                   {t("message_label")}
                 </label>
@@ -148,7 +143,7 @@ export default function ContactSection() {
               <div className="flex flex-col space-y-4 mt-6">
                 <button
                   type="submit"
-                  className="w-full h-10 rounded-md font-semibold bg-neutral-600 text-white"
+                  className="w-full h-10 rounded-md font-semibold bg-light text-neutral-800"
                 >
                   {t("send_message")}
                 </button>
@@ -157,7 +152,7 @@ export default function ContactSection() {
                   {t("mail_directly")}{" "}
                   <Link
                     href="mailto:hey@ghostbyte.dev"
-                    className="font-bold hover:text-light duration-300 transition-colors"
+                    className="font-bold text-light hover:text-light duration-300 transition-colors"
                   >
                     hey@ghostbyte.dev
                   </Link>

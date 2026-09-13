@@ -10,8 +10,8 @@ export function sendEmail(data: FormData) {
   })
     .then((res) => res.json())
     .then((response) => {
-      console.error(response.message);
-      toast.error("Failed to send email")
+      console.log(response.message);
+      toast.success("Thank you for your email")
     })
     .catch((err) => {
       console.error(err);

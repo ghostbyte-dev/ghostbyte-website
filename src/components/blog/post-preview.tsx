@@ -25,7 +25,7 @@ export function PostPreview({
       href={`/blog/${slug}`}
       className="group flex flex-col h-full overflow-hidden"
     >
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-video overflow-hidden rounded-xl">
         <div className="absolute inset-0 z-10" />
         <Image
           src={coverImage}
@@ -35,12 +35,12 @@ export function PostPreview({
         />
       </div>
       <div className="pt-5">
-        <h3 className="text-3xl font-bold text-neutral-800">{title}</h3>
+        <h3 className="text-2xl font-bold text-neutral-800">{title}</h3>
 
-        <p className="text-lg font-light text-neutral-600 mb-6 mt-2">
+        <p className="text-l font-light text-neutral-600 mb-5 mt-1">
           {excerpt}
         </p>
-        <Avatar name={author.name} picture={author.picture} date={date} />
+        {/* <Avatar name={author.name} picture={author.picture} date={date} /> */}
       </div>
     </Link>
   );

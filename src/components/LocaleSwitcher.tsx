@@ -1,26 +1,24 @@
 "use client";
 
-import { useRouter, usePathname } from "../i18n/navigation";
-import Flag from "react-world-flags";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "../i18n/navigation";
 
 const LocaleSwitcher = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const currentLocale = useLocale();
 
-  const handleLocaleChange = (newLocale: string) => {
-    // `pathname` is localized, e.g., /en/about or /de/kontakt
-    router.replace(pathname, { locale: newLocale, scroll: false });
+  const targetLocale = currentLocale === "de" ? "en" : "de";
+  const label = currentLocale === "de" ? "English page" : "Deutsche Seite";
+
+  const handleLocaleChange = () => {
+    router.replace(pathname, { locale: targetLocale, scroll: false });
   };
 
   return (
-    <div className="flex space-x-4 items-center">
-      <button type="button" onClick={() => handleLocaleChange("de")}>
-        <Flag code="DE" style={{ height: 24 }} className="rounded-xs" />
-      </button>
-      <button type="button" onClick={() => handleLocaleChange("en")}>
-        <Flag code="GB" style={{ height: 24 }} className="rounded-xs" />
-      </button>
-    </div>
+    <button type="button" onClick={handleLocaleChange} className="link-text">
+      {label}
+    </button>
   );
 };
 

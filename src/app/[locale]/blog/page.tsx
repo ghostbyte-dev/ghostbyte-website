@@ -24,20 +24,19 @@ export default function BlogOverviewPage() {
         title="Our Blog"
         description="At Ghostbyte, we love building thoughtful software and sharing what
             we learn along the way. Here you'll find deep dives into web and app
-            development, behind-the-scenes looks at our projects, and practical
-            tips that you can apply to your own work."
+            development and behind-the-scenes looks at our projects."
       />
 
       <div className="container">
-        <HeroPost
+        {/* <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
           date={heroPost.date}
           author={heroPost.author}
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        /> */}
+        {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </div>
     </div>
   );

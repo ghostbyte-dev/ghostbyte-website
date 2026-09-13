@@ -12,7 +12,6 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import PlausibleProvider from "next-plausible";
 import { ToastContainer } from "react-toastify";
 import type { Organization, WithContext } from "schema-dts";
 import ConsoleGhost from "@/src/components/ConsoleGhost";
@@ -73,6 +72,7 @@ export async function generateMetadata({
   const t = await getTranslations({ namespace: "Meta", locale: locale });
 
   return {
+    metadataBase: new URL("https://ghostbyte.dev"),
     title: t("title"),
     description: t("description"),
     icons: [

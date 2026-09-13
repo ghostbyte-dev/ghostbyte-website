@@ -10,12 +10,12 @@ export default async function HeroSection({ lang }: { lang: Locale }) {
         <div className="flex flex-row">
           <div className="flex flex-col justify-cente space-y-4">
             <div className="space-y-2">
-              <h1 className="text-6xl sm:text-6xl md:text-7xl xl:text-8xl font-extrabold text-neutral-800 uppercase">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-extrabold text-neutral-800 uppercase">
                 <span>We build</span>
                 <br />
-                <span className="">Digital</span>
+                <span className="">Modern</span>
                 <br />
-                <span className="">Magic</span>
+                <span className="">Software</span>
               </h1>
               <p className="max-w-4/5 md:max-w-[600px] text-neutral-600 mt-6 md:text-xl">
                 {t("description")}
