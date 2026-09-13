@@ -117,6 +117,7 @@ export default async function RootLayout({
           data-domain="ghostbyte.dev"
           src="/js/script.hash.outbound-links.js"
         />
+        <link rel="me" href="https://mastodon.social/@Pixelix" />
       </head>
 
       <body className={inter.className}>
