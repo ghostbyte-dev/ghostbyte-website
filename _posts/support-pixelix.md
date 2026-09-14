@@ -60,9 +60,7 @@ For new features, we want to keep control of the project's direction. So if havi
 ## Financial support
 Finally, you can also support Pixelix financially.
 
-Pixelix is free and open source, and is available for free through F-Droid and GitHub. We also offer paid versions on the App Store for €4 and Google Play for €2. Purchasing the app is one of the simplest ways to support its continued development.
-
-We are two students developing Pixelix in our free time, and running the project comes with ongoing costs. We pay for servers, domains and other services, including the Pixelfed server [pixelix.social](https://pixelix.social) and the Fediverse crawler [fedisea.surf](https://fedisea.surf), which provides Pixelix with server and software information.
+Pixelix is free and open source, and is available for free on App Store, Play Store, F-Droid and GitHub. We are two students developing Pixelix in our free time, and running the project comes with ongoing costs. We pay for servers, domains and other services, including the Pixelfed server [pixelix.social](https://pixelix.social) and the Fediverse crawler [fedisea.surf](https://fedisea.surf), which provides Pixelix with server and software information.
 
 We also invested a significant portion of Pixelix's earnings back into the project when we bought a MacBook Air specifically because Apple requires an Apple device to build and publish apps for the App Store. This allowed us to bring Pixelix to iOS.
 

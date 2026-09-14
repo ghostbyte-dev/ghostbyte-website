@@ -64,10 +64,8 @@ export default async function VeritatePage(props: {
         </p>
 
         <p>
-          Pixelix is available on multiple sources. The app is available to
-          purchase on Google Play Store (2€) and on Apple App Store (4€) to
-          support ongoing development. It is available for free on F-Droid and
-          GitHub Releases.
+          Pixelix is available for free on Google Play Store, Apple App Store,
+          F-Droid and GitHub Releases.
         </p>
 
         <div className="flex flex-wrap gap-3 my-5">
@@ -304,6 +302,12 @@ export default async function VeritatePage(props: {
           but more specialized towards photographers. So we refactored Pixelix
           to support multiple platforms in a clean way. And with Pixelix update
           5.0.0 in July 2026 we added support for Vernissage.
+        </p>
+
+        <h3>Pixelix is free</h3>
+        <p>
+          After two and a half years of developing Pixelix and having it as a
+          paid app, we've decided to make Pixelix free for everyone.
         </p>
       </div>
 

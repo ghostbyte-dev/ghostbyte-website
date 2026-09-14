@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { HeroPost } from "@/src/components/blog/hero-post";
 import { MoreStories } from "@/src/components/blog/more-stories";
 import { Hero } from "@/src/components/Hero";
 import { getAllPosts } from "@/src/utils/blogApi";
@@ -14,10 +13,6 @@ export const metadata: Metadata = {
 export default function BlogOverviewPage() {
   const allPosts = getAllPosts();
 
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
   return (
     <div>
       <Hero
@@ -28,14 +23,6 @@ export default function BlogOverviewPage() {
       />
 
       <div className="container">
-        {/* <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        /> */}
         {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </div>
     </div>
